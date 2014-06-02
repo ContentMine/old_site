@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% if public %}
+        {% include 'nav/nav.html' ignore missing %}
+    {% else %}
+        <p>Nav is simply defined by adding list items to this textbox...</p>
+        <p>Dropdown lists are possible, look at the source code of this page for 
+        the dropdown code used in the user settings cog dropdown up there in the top right :)</p>
+        <p>(Or read the <a href="http://getbootstrap.com/">bootstrap docs</a>, for more info, all bootstrap functionality 
+        is already available on this site.)</p>
+        <form action="" method="POST">
+            <textarea name="nav" class="form-control" style="min-height:200px;margin-bottom:10px;">{% include 'nav/nav.html' ignore missing %}</textarea>
+            <input type="submit" name="submit" value="Save changes" class="btn btn-default">
+        </form>
+    {% endif %}
+
+{% endblock %}

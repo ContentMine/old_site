@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    jQuery('#panel').facetview( {{ search_options | safe }} )
+});
+</script>
+
+{% if current_user.id == account.id or current_user.is_super %}
+
+    <p>Hello {{ account.id }}. As a signed in user you can create new pages by just going to the URL of the page you wish to create.
+    When you create a page you can edit it via an etherpad, and other people can edit it with you. You can use plain test or markdown
+    or HTML. You can also upload supporting media on the <a href="/media">/media</a> page. It can then be included in your posts just by 
+    linking to /media/FILENAME.</p>
+
+    {% if current_user.is_super %}
+        <h2 style="color:red;">Hi <span style="color:#333">{{ current_user.id }}</span>, you are the superuser<br /> 
+        Viewing account: <span style="color:#333">{{ account.id }}</span><br />
+        You have full edit permissions</h2>
+    {% endif %}
+    <h2>Hi {{ account.id }}</h2>
+    <p>{{ account.data.description }}</p>
+
+    <p>
+    {% if current_user.id == account.id %}
+    <a href="/account/logout" class="btn btn-default">Logout</a> or <a href="/media" class="btn btn-default">Manage media</a>
+    {% endif %}
+
+    {% if current_user.is_super and current_user.id == account.id %}
+    or <a href="/account/" class="btn btn-default">Manage user accounts</a>
+    {% endif %}
+
+    </p>
+
+{% else %}
+
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="hero-unit">
+                <h2>{{ account.id }}</h2>
+                <p>{{ account.data.description }}</p>
+            </div>
+        </div>
+        <div class="span6">
+            <p>You are not logged in as this user. Use the <a href="/account/login">login page</a> if you want to change this</p>
+        </div>
+    </div>
+    
+{% endif %}
+
+{% endblock %}
+
