@@ -97,12 +97,10 @@ def quickscrape():
         resp = make_response( json.dumps({
             "description": "The quickscrape crawler, our first demo crawler, and actually a scraper too.",
             "GET": "GETs this instruction page",
-            "POST": "POST your instructions to the crawler and receive answers. Specify which scraper definition you wish to use from the list provided here. See the example_POST and use the url parameter as either a single URL string or a list of URLs.",
+            "POST": "POST your instructions to the crawler and receive answers. Specify which scraper definition you wish to use from the list provided here. See the example_POST and use the url parameter as either a single URL string or a list of URLs. Make sure your POST specifices the Content-Type:application/json",
             "example_POST": {
                 "scraper": "peerj",
                 "url": ["https://peerj.com/articles/384"]
-            },
-            "example_response": {
             },
             # TODO: this listing should be auto-populated and updated when new
             # journal definitions are available
