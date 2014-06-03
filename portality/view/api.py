@@ -11,6 +11,7 @@ from portality.view.query import query as query
 import portality.models as models
 from portality.core import app
 import portality.util as util
+import portality.callscraper as callscraper
 
 from datetime import datetime
 
@@ -78,13 +79,60 @@ def crawler():
     # each crawler should then be accessible via /api/crawler/NAME
     # and should have specified inputs and outputs
     # should also make an effort to conventionalise the IOs required
+    # For now quickscrape has been manually added so that it can be used as demo
     resp = make_response( json.dumps({
-        "description": "Will eventually list all the crawlers and explain what they do and how to call them."
+        "description": "Lists all the crawlers that are available so they can be accessed. Append the crawler name to the crawler/ url to access each one.",
+        "quickscrape": {
+            "description": "our first crawler - actually a crawler and a scraper."
+        }
     }) )
     resp.mimetype = "application/json"
     return resp
 
+@blueprint.route('/crawler/quickscrape', methods=['GET','POST'])
+@util.jsonp
+def quickscrape():
+    if request.method == 'GET':
+        # show the instructions
+        resp = make_response( json.dumps({
+            "description": "The quickscrape crawler, our first demo crawler, and actually a scraper too.",
+            "GET": "GETs this instruction page",
+            "POST": "POST your instructions to the crawler and receive answers. Specify which scraper definition you wish to use from the list provided here. See the example_POST and use the url parameter as either a single URL string or a list of URLs.",
+            "example_POST": {
+                "scraper": "peerj",
+                "url": ["https://peerj.com/articles/384"]
+            },
+            "example_response": {
+            },
+            # TODO: this listing should be auto-populated and updated when new
+            # journal definitions are available
+            # would it be worth allowing people to submit definitions via the API?
+            # or just keep it to submissions to the repo?
+            "available_scrapers": {
+                "generic_open": "Matches generically, as per https://github.com/ContentMine/journal-scrapers/blob/master/generic_open.json",
+                "peerj": "Matches peerj as per https://github.com/ContentMine/journal-scrapers/blob/master/peerj.json",
+                "plos": "Matches PLoS as per https://github.com/ContentMine/journal-scrapers/blob/master/plos.json"
+            }
+        }) )
+        resp.mimetype = "application/json"
+        return resp
+        
+    elif request.method == 'POST':
+        params = request.json if request.json else request.values
+        if params.get('url',False) and params.get('scraper',False):
+            if isinstance(params['url'],list):
+                urls = params['url']
+            else:
+                urls = [params['url']]
+            output = callscraper.call(scraper=params['scraper'],urls=urls)
 
+        else:
+            output = {"error": "Sorry, your request was missing one of the main params (url, scraper), or something else went wrong."}
+
+        resp = make_response( json.dumps(output) )
+        resp.mimetype = "application/json"
+        return resp
+            
 
 
 # provide access to the list of available scrapers -----------------------------
@@ -129,6 +177,7 @@ def visitor():
 
 # provide access to catalogue of article metadata ------------------------------
 @blueprint.route('/catalogue', methods=['GET','POST'])
+@blueprint.route('/catalogue/', methods=['GET','POST'])
 @util.jsonp
 def catalogue():
     if request.method == 'GET':
@@ -152,6 +201,8 @@ def catalogue():
         return resp
         
     elif request.method == 'POST':
+        # TODO: this will allow placing of IDs in the supplied records
+        # consider this once we decide what sort of auth-control to have
         f = models.Catalogue()
         if request.json:
             for k in request.json.keys():

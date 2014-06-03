@@ -5,7 +5,7 @@ from datetime import datetime
 from portality.core import app, current_user
 
 '''
-All models in models.py should inherig this DomainObject to know how to save themselves in the index and so on.
+All models in models.py should inherit this DomainObject to know how to save themselves in the index and so on.
 You can overwrite and add to the DomainObject functions as required. See models.py for some examples.
 '''
     

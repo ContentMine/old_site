@@ -60,7 +60,7 @@ class Everything(DomainObject):
 
     @classmethod
     def target(cls):
-        t = 'http://' + str(app.config['ELASTIC_SEARCH_HOST']).lstrip('http://').rstrip('/') + '/'
+        t = 'http://' + str(app.config['ELASTIC_SEARCH_HOST']).rstrip('/') + '/'
         t += app.config['ELASTIC_SEARCH_DB'] + '/'
         return t
 

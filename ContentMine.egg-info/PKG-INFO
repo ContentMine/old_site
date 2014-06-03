@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: ContentMine
+Version: 0.0.2
+Summary: The ContentMine site and API
+Home-page: http://contentmine.org/
+Author: Content Mine
+Author-email: contact@contentmine.org
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: Copyheart
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
