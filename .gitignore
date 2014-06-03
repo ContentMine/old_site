@@ -1,0 +1,11 @@
+*.pyc
+*.egg-info/*
+.*.swp
+src*
+.Python
+build/*
+dist/*
+
+app.cfg
+
+media/*
