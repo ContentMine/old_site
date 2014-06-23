@@ -11,7 +11,7 @@ from portality.view.query import query as query
 import portality.models as models
 from portality.core import app
 import portality.util as util
-import portality.callscraper as callscraper
+import portality.callers as callers
 
 from datetime import datetime
 
@@ -122,7 +122,7 @@ def quickscrape():
                 urls = params['url']
             else:
                 urls = [params['url']]
-            output = callscraper.call(scraper=params['scraper'],urls=urls)
+            output = callers.quickscrape(scraper=params['scraper'],urls=urls)
 
         else:
             output = {"error": "Sorry, your request was missing one of the main params (url, scraper), or something else went wrong."}
@@ -165,11 +165,44 @@ def visitor():
     # and should have specified inputs and outputs
     # should also make an effort to conventionalise the IOs required
     resp = make_response( json.dumps({
-        "description": "Will eventually list all the visitors and explain what they do and how to call them."
+        "description": "Will eventually list all the visitors and explain what they do and how to call them.",
+        "visitor": {
+            "description": "our first visitor - call it to look for species in stuff."
+        }
     }) )
     resp.mimetype = "application/json"
     return resp
 
+
+# call the species visitor
+@blueprint.route('/visitor/species', methods=['GET','POST'])
+@util.jsonp
+def species():
+    if request.method == 'GET':
+        # show the instructions
+        resp = make_response( json.dumps({
+            "description": "The species visitor, our first visitor.",
+            "GET": "GETs this instruction page",
+            "POST": "POST your instructions to the visitor and receive answers.",
+            "example_POST": {
+                "scraper": "peerj",
+                "url": ["https://peerj.com/articles/384"]
+            },
+        }) )
+        resp.mimetype = "application/json"
+        return resp
+        
+    elif request.method == 'POST':
+        params = request.json if request.json else request.values
+        if 1==1:
+            output = callers.species()# expects an input file or file address or some text
+
+        else:
+            output = {"error": "Sorry, your request was missing one of the main params (url, scraper), or something else went wrong."}
+
+        resp = make_response( json.dumps(output) )
+        resp.mimetype = "application/json"
+        return resp
 
 
 
