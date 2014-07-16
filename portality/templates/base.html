@@ -32,12 +32,12 @@
             </li>
             {% else %}
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:black;padding-bottom:100px;"><span class="glyphicon glyphicon-cog"></span> <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:black;"><span class="glyphicon glyphicon-cog"></span> <b class="caret"></b></a>
               <ul class="dropdown-menu" style="background-color:#eee;">
                 <li><a href="{{ url_for('account.index') }}{{current_user.id}}">Your account</a></li>
                 <li><a href="{{ url_for('account.index') }}logout">Logout</a></li>
                 <li class="divider"></li>
-                <li><a href="/nav">Manage nav</a></li>
+                <!--<li><a href="/nav">Manage nav</a></li>--
                 <li><a href="/media">Manage media</a></li>
                 <li class="divider"></li>
                 <li><a href="{% if record %}{{ record.url }}{% else %}/index{% endif %}/edit">Edit this page</a></li>
