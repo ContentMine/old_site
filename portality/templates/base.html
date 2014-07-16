@@ -37,7 +37,6 @@
                 <li><a href="{{ url_for('account.index') }}{{current_user.id}}">Your account</a></li>
                 <li><a href="{{ url_for('account.index') }}logout">Logout</a></li>
                 <li class="divider"></li>
-                <!--<li><a href="/nav">Manage nav</a></li>--
                 <li><a href="/media">Manage media</a></li>
                 <li class="divider"></li>
                 <li><a href="{% if record %}{{ record.url }}{% else %}/index{% endif %}/edit">Edit this page</a></li>
@@ -45,7 +44,6 @@
                 {% if current_user.is_super %}
                 <li class="divider"></li>
                 <li><a href="/account">Manage user accounts</a></li>
-                <!--<li><a href="/admin">Admin</a></li>-->
                 {% endif %}
               </ul>
             </li>
