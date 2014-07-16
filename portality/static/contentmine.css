@@ -1,3 +1,48 @@
+/*
+
+CM bright green is #92ce73
+CM dark green is #187c83
+
+*/
+
 html, body{
-    padding:40px 0 0 0;
+    padding:0;
+    background-color:#eff8e9;
+    font-family: 'Roboto Slab', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', serif;
+}
+
+.jumbotron{
+    background-color:#92ce73;
+}
+
+.navbar {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #92ce73;
+  background-image:none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+.navbar .nav > li > a {
+  color: #333;
+  text-decoration: none;
+  text-shadow: none;
+}
+.navbar .nav > li > a:hover {
+  background-color: transparent;
+  color: #ffffff;
+  text-decoration: none;
+}
+.navbar .nav .active > a, .navbar .nav .active > a:hover {
+  color: #53afdf;
+  text-decoration: none;
+  background-color: white;
 }
