@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = 'ContentMine',
-    version = '0.0.2',
+    version = '0.0.3',
     packages = find_packages(),
     install_requires = [
         "Flask==0.10.1",
@@ -11,7 +11,7 @@ setup(
         "GitPython==0.1.7",
         "Markdown==2.3.1",
         "WTForms==1.0.5",
-        "Werkzeug==0.9.4",
+        "Werkzeug==0.9.6",
         "requests==2.1.0"
     ],
     url = 'http://contentmine.org/',

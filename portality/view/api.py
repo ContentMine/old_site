@@ -7,6 +7,9 @@ import json, urllib2
 from flask import Blueprint, request, abort, make_response, redirect
 from flask.ext.login import current_user
 
+from functools import wraps
+from flask import g, request, redirect, url_for
+
 from portality.view.query import query as query
 import portality.models as models
 from portality.core import app
@@ -19,9 +22,17 @@ from datetime import datetime
 blueprint = Blueprint('api', __name__)
 
 
-# TODO: add auth control
-
-
+# add auth control
+def login_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if g.user is None:
+            return redirect(url_for('login', next=request.url))
+        return f(*args, **kwargs)
+    return decorated_function
+    
+    
+    
 # return the API instructions --------------------------------------------------
 @blueprint.route('/<path:path>', methods=['GET','POST'])
 @blueprint.route('/', methods=['GET','POST'])
@@ -32,17 +43,8 @@ def api():
             "description": "Welcome to the ContentMine API. The endpoints listed here are available for their described functions. Append the name of each endpoint to the /api/ URL to gain access to each one.",
             "version": "0.1"
         },
-        "crawler": {
-            "description": "Lists all available crawlers, with further instructions for how to use them. Crawlers are used to crawl across some location or dataset, say a website of a given publisher or a listing of articles provided by an organisation. Each crawler has a specific target and operating process for that target. The purpose of a crawler is to extract metadata from these sources, and that metadata can then be uploaded to the catalogue API.",
-            "note": "It is not mandatory nor even expected that all crawlers will run directly at ContentMine. However this API will list the crawlers we know about and will make them available for execution on sources that can be accessed publicly. Individual users are instead encouraged to download and run crawlers (or to create their own) themselves across their own permitted access connections to the various useful resources they wish to scrape, then they can crawl those contents for facts that can then be uploaded directly to the fact API."
-        },
-        "scraper": {
-            "description": "Lists all available scrapers, with further instructions for how to use them. Scrapers act on the metadata output of crawlers, and are used to extract content from the sources described by said metadata. For example a particular scraper may know how to extract the full-text article content from a given website or perhaps to retrieve a particular file format. The content retrieved by a scraper can be uploaded to the content API - BUT ONLY IF it is permissible to do so; otherwise it should only be stored and processed locally.",
-            "note": "It is not mandatory nor even expected that all scrapers will run directly at ContentMine. However this API will list the scrapers we know about and will make them available for execution on crawled sources that are publicly accessible. Individual users are encouraged to download and run scrapers (or to create their own) themselves across the contents that they have access to and that they wish to mine, then they can upload extracted facts directly to the fact API."
-
-        },
-        "visitor": {
-            "description": "Lists all available visitors, with further instructions for how to use them. Visitors are used to extract certain types of fact from contents. For example once a crawler has identified the metadata of an article from a web page, and a scraper has retrieved the full-text content object, various visitors may be appropriate to run on the content to extract facts. Extracted facts can then be uploaded to the fact API.",
+        "processor": {
+            "description": "Lists all available processors (crawlers, scrapers, visitors, or combinations of those) with further instructions for how to use them. Visitors are used to extract certain types of fact from contents. For example once a crawler has identified the metadata of an article from a web page, and a scraper has retrieved the full-text content object, various visitors may be appropriate to run on the content to extract facts. Extracted facts can then be uploaded to the fact API.",
             "note": "It is not mandatory nor even expected that all visitors will run directly at ContentMine. However this API will list the visitors we know about and will make them available for execution on contents that are publicly accessible. Individual users are encouraged to download and run visitors (or to create their own) themselves across the contents that they have scraped and that they wish to mine, then they can upload extracted facts directly to the fact API."
 
         },
@@ -57,9 +59,6 @@ def api():
         "fact": {
             "description": "THE MAIN EVENT! Here is access to the facts extracted and stored by ContentMine. Also, new facts can be uploaded for storage. Any process that extracts a fact can send such fact (or batch of facts) to this API and it will then become available via the ContentMine stream. The fact API also provides powerful search features too. Long term storage of facts may not be provided - it is hoped to be, but to be decided later in the project.",
             "note": "There will also be access to daily lists of extracted facts, and perhaps larger dumps such as weeklies."
-        },
-        "activity": {
-            "description": "Intended to be a useful API for checking what processes are going on in the ContentMine. Probably not useful in general, but will be useful for development debugging and perhaps for technically proficient API users to check on progress of processes."
         }
     }) )
     resp.mimetype = "application/json"
@@ -68,34 +67,34 @@ def api():
 
 
 
-# provide access to the listing of available crawlers --------------------------
-@blueprint.route('/crawler/<path:path>', methods=['GET','POST'])
+# provide access to the listing of available processors --------------------------
+@blueprint.route('/processor/<path:path>', methods=['GET','POST'])
 @blueprint.route('/crawler', methods=['GET','POST'])
 @util.jsonp
 def crawler():
-    # TODO: each crawler should be made available in the crawler folder
+    # TODO: each processor should be made available in the crawler folder
     # each one should be able to report what it does
-    # see the bibserver codebase for something similar
-    # each crawler should then be accessible via /api/crawler/NAME
+    # each crawler should then be accessible via /api/processor/NAME
     # and should have specified inputs and outputs
     # should also make an effort to conventionalise the IOs required
     # For now quickscrape has been manually added so that it can be used as demo
     resp = make_response( json.dumps({
-        "description": "Lists all the crawlers that are available so they can be accessed. Append the crawler name to the crawler/ url to access each one.",
+        "description": "Lists all the processors that are available so they can be accessed. Append the processor name to the processor/ url to access each one.",
         "quickscrape": {
-            "description": "our first crawler - actually a crawler and a scraper."
+            "description": "crawls and scrapes."
         }
     }) )
     resp.mimetype = "application/json"
     return resp
 
-@blueprint.route('/crawler/quickscrape', methods=['GET','POST'])
+@blueprint.route('/processor/quickscrape', methods=['GET','POST'])
 @util.jsonp
 def quickscrape():
     if request.method == 'GET':
         # show the instructions
         resp = make_response( json.dumps({
-            "description": "The quickscrape crawler, our first demo crawler, and actually a scraper too.",
+            "description": "The quickscrape processor.",
+            "type": ["crawler","scraper"],
             "GET": "GETs this instruction page",
             "POST": "POST your instructions to the crawler and receive answers. Specify which scraper definition you wish to use from the list provided here. See the example_POST and use the url parameter as either a single URL string or a list of URLs. Make sure your POST specifices the Content-Type:application/json",
             "example_POST": {
@@ -129,63 +128,23 @@ def quickscrape():
 
         resp = make_response( json.dumps(output) )
         resp.mimetype = "application/json"
-        return resp
-            
-
-
-# provide access to the list of available scrapers -----------------------------
-@blueprint.route('/scraper/<path:path>', methods=['GET','POST'])
-@blueprint.route('/scraper', methods=['GET','POST'])
-@util.jsonp
-def scraper():
-    # TODO: each scraper should be made available in the scraper folder
-    # each one should be able to report what it does
-    # see the bibserver codebase for something similar
-    # each scraper should then be accessible via /api/scraper/NAME
-    # and should have specified inputs and outputs
-    # should also make an effort to conventionalise the IOs required
-    resp = make_response( json.dumps({
-        "description": "Will eventually list all the scrapers and explain what they do and how to call them."
-    }) )
-    resp.mimetype = "application/json"
-    return resp
+        return resp    
     
     
     
-    
-# provide access to the list of available visitors -----------------------------
-@blueprint.route('/visitor/<path:path>', methods=['GET','POST'])
-@blueprint.route('/visitor', methods=['GET','POST'])
-@util.jsonp
-def visitor():
-    # TODO: each visitor should be made available in the visitor folder
-    # each one should be able to report what it does
-    # see the bibserver codebase for something similar
-    # each visitor should then be accessible via /api/visitor/NAME
-    # and should have specified inputs and outputs
-    # should also make an effort to conventionalise the IOs required
-    resp = make_response( json.dumps({
-        "description": "Will eventually list all the visitors and explain what they do and how to call them.",
-        "visitor": {
-            "description": "our first visitor - call it to look for species in stuff."
-        }
-    }) )
-    resp.mimetype = "application/json"
-    return resp
-
 
 # call the species visitor
-@blueprint.route('/visitor/species', methods=['GET','POST'])
+@blueprint.route('/processor/species', methods=['GET','POST'])
 @util.jsonp
 def species():
     if request.method == 'GET':
         # show the instructions
         resp = make_response( json.dumps({
-            "description": "The species visitor, our first visitor.",
+            "description": "The species processor",
+            "type": ["visitor"],
             "GET": "GETs this instruction page",
             "POST": "POST your instructions to the visitor and receive answers.",
             "example_POST": {
-                "scraper": "peerj",
                 "url": ["https://peerj.com/articles/384"]
             },
         }) )
@@ -195,7 +154,7 @@ def species():
     elif request.method == 'POST':
         params = request.json if request.json else request.values
         if 1==1:
-            output = callers.species()# expects an input file or file address or some text
+            output = callers.species(params['url'])# expects a file url
 
         else:
             output = {"error": "Sorry, your request was missing one of the main params (url, scraper), or something else went wrong."}
@@ -232,17 +191,20 @@ def catalogue():
         return resp
         
     elif request.method == 'POST':
-        # TODO: this will allow placing of IDs in the supplied records
-        # consider this once we decide what sort of auth-control to have
-        f = models.Catalogue()
-        if request.json:
-            for k in request.json.keys():
-                f.data[k] = request.json[k]
+        if current_user.is_anonymous():
+            abort(401)
         else:
-            for k, v in request.values.items():
-                f.data[k] = v
-        f.save()
-        return redirect('/api/catalogue/' + f.id)
+            f = models.Catalogue()
+            if request.json:
+                for k in request.json.keys():
+                    if k not in ['submit']:
+                        f.data[k] = request.json[k]
+            else:
+                for k, v in request.values.items():
+                    if k not in ['submit']:
+                        f.data[k] = v
+            f.save()
+            return redirect('/api/catalogue/' + f.id)
 
 @blueprint.route('/catalogue/<ident>', methods=['GET','PUT','POST'])
 @util.jsonp
@@ -259,21 +221,25 @@ def cataloguedirect(ident):
         resp.mimetype = "application/json"
         return resp
     elif request.method in ['PUT','POST']:
-        inp = {}
-        if request.json:
-            inp = request.json
+        if current_user.is_anonymous():
+            abort(401)
         else:
-            for k, v in request.values.items():
-                inp[k] = v
-        # TODO: strip any control keys that get passed in, 
-        # if they should generally be ignored
-        if request.method == 'PUT':
-            f.data = inp
-        else:
-            for k in inp.keys():
-                f.data[k] = inp[k]
-        f.save()
-        return redirect('/api/catalogue/' + ident)    
+            inp = {}
+            if request.json:
+                for k in request.json.keys():
+                    if k not in ['submit']:
+                        inp[k] = request.json[k]
+            else:
+                for k, v in request.values.items():
+                    if k not in ['submit']:
+                        inp[k] = v
+            if request.method == 'PUT':
+                f.data = inp
+            else:
+                for k in inp.keys():
+                    f.data[k] = inp[k]
+            f.save()
+            return redirect('/api/catalogue/' + ident)    
 
 @blueprint.route('/catalogue/query', methods=['GET','POST'])
 @util.jsonp
@@ -298,6 +264,7 @@ def cataloguequery():
 @blueprint.route('/content/<path:path>', methods=['GET','POST'])
 @blueprint.route('/content', methods=['GET','POST'])
 @util.jsonp
+@login_required
 def content():
     if request.method == 'GET':
         # TODO: this should become a listing of stored content
@@ -344,15 +311,18 @@ def fact():
         return resp
                 
     elif request.method == 'POST':
-        f = models.Fact()
-        if request.json:
-            for k in request.json.keys():
-                f.data[k] = request.json[k]
+        if current_user.is_anonymous():
+            abort(401)
         else:
-            for k, v in request.values.items():
-                f.data[k] = v        
-        f.save()
-        return redirect('/api/fact/' + f.id)
+            f = models.Fact()
+            if request.json:
+                for k in request.json.keys():
+                    f.data[k] = request.json[k]
+            else:
+                for k, v in request.values.items():
+                    f.data[k] = v        
+            f.save()
+            return redirect('/api/fact/' + f.id)
 
 @blueprint.route('/fact/<ident>', methods=['GET','POST'])
 @util.jsonp
@@ -369,21 +339,26 @@ def factdirect(ident):
         resp.mimetype = "application/json"
         return resp
     elif request.method in ['PUT','POST']:
-        inp = {}
-        if request.json:
-            inp = request.json
+        if current_user.is_anonymous():
+            abort(401)
         else:
-            for k, v in request.values.items():
-                inp[k] = v
-        # TODO: strip any control keys that get passed in, 
-        # if they should generally be ignored
-        if request.method == 'PUT':
-            f.data = inp
-        else:
-            for k in inp.keys():
-                f.data[k] = inp[k]
-        f.save()
-        return redirect('/api/fact/' + ident)    
+            inp = {}
+            if request.json:
+                for k in request.json.keys():
+                    if k not in ['submit']:
+                        inp[k] = request.json[k]
+            else:
+                for k, v in request.values.items():
+                    if k not in ['submit']:
+                        inp[k] = v
+            if request.method == 'PUT':
+                f.data = inp
+            else:
+                for k in inp.keys():
+                    f.data[k] = inp[k]
+            f.save()
+            return redirect('/api/fact/' + ident)    
+
 
 @blueprint.route('/fact/query', methods=['GET','POST'])
 @util.jsonp
@@ -424,18 +399,146 @@ def factdaily():
     return resp
     
 
-
-    
-# list running activities ------------------------------------------------------
-@blueprint.route('/activity/<path:path>', methods=['GET','POST'])
-@blueprint.route('/activity', methods=['GET','POST'])
+# queue up article metadata records that need processing -----------------------
+@blueprint.route('/queue', methods=['GET','POST'])
 @util.jsonp
-def activity():
-    # TODO: useful stuff here
-    resp = make_response( json.dumps({
-    }) )
+def queue():
+    qry = {
+        'query': {
+            'bool': {
+                'must_not': [
+                    {
+                        'exists': {
+                            'field': 'processing'
+                        }
+                    }
+                ]
+            }
+        },
+        'sort': [{"created_date.exact":{"order":"desc"}}]
+    }
+    # TODO: enable query paging parameters through the queue
+    r = query(path='Fact',qry=qry,raw=True)
+    res = [i['_source'] for i in r.get('hits',{}).get('hits',[])]
+    resp = make_response( json.dumps(res) )
     resp.mimetype = "application/json"
     return resp
+
+@blueprint.route('/queue/assign', methods=['GET','POST'])
+@util.jsonp
+@login_required
+def assign():
+    try:
+        ids = request.json
+    except:
+        try:
+            ids = request.values['ids'].split(',')
+        except:
+            qry = {
+                'query': {
+                    'bool': {
+                        'must_not': [
+                            {
+                                'exists': {
+                                    'field': 'processing'
+                                }
+                            }
+                        ]
+                    }
+                },
+                'sort': [{"processing.created_date.exact":{"order":"desc"}}],
+                'size': 1
+            }
+            # TODO: allow for accepting query params here
+            r = query(path='Record',qry=qry,raw=True)
+            ids = [i['_source']['id'] for i in r.get('hits',{}).get('hits',[])]
+
+    if request.method == 'POST':
+        assigned = []
+        for rid in ids:
+            rec = models.Catalogue().pull(rid)
+            if rec is None:
+                abort(404)
+            elif not rec.data.get('processing',False):
+                rec.data['processing'] = {'assigned_date':datetime.datetime.now(), 'assigned_to':current_user.id}
+                rec.save()
+                assigned.append(rec.id)
+    else:
+        assigned = ids
+        
+    resp = make_response( json.dumps(assigned) )
+    resp.mimetype = "application/json"
+    return resp
+
+@blueprint.route('/queue/assigned', methods=['GET'])
+@blueprint.route('/queue/assigned/<userid>', methods=['GET'])
+@util.jsonp
+def assigned(userid=False):
+    qry = {
+        'query': {
+            'bool': {
+                'must': [
+                    {
+                        'exists': {
+                            'field': 'processing'
+                        }
+                    }
+                ]
+            }
+        },
+        'sort': [{"processing.assigned_date.exact":{"order":"desc"}}]
+    }
+    if userid:
+        qry['query']['bool']['must'].append({
+            'term': {
+                'processing.assigned_to.exact': current_user.id
+            }
+        })
+
+    r = query(path='Record',qry=qry,raw=True)
+    res = [i['_source']['id'] for i in r.get('hits',{}).get('hits',[])]
+
+    resp = make_response( json.dumps(res) )
+    resp.mimetype = "application/json"
+    return resp
+
+@blueprint.route('/queue/next', methods=['GET','POST'])
+@util.jsonp
+def next():
+    qry = {
+        'query': {
+            'bool': {
+                'must_not': [
+                    {
+                        'exists': {
+                            'field': 'processing'
+                        }
+                    }
+                ]
+            }
+        },
+        'sort': [{"processing.created_date.exact":{"order":"desc"}}],
+        'size': 1
+    }
+    r = query(path='Record',qry=qry,raw=True)
+    
+    try:
+        next = r['hits']['hits'][0]['_source']['id']
+    except:
+        abort(404)
+
+    if request.method == 'POST':
+        if current_user.is_anonymous():
+            abort(401)
+        else:
+            rec = models.article.pull(next)
+            rec.data['processing'] = {'assigned_date':datetime.datetime.now(), 'assigned_to':current_user.id}
+            rec.save()
+
+    resp = make_response( next )
+    resp.mimetype = "application/json"
+    return resp
+
     
     
 

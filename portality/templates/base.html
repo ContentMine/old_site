@@ -7,7 +7,7 @@
 
     <a href="#getinvolved" class="hidden-phone"><img style="position:fixed;top:0;right:0;z-index:10000000;" src="/static/beta.png" /></a>
 
-    <div class="navbar" style="border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;">
+    <div class="navbar navbar-fixed-top" style="border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -21,8 +21,8 @@
             <li{% if request.path == "/#about" %} class="active"{% endif %}><a href="/#about">About</a></li>
             <li{% if request.path == "/#getinvolved" %} class="active"{% endif %}><a href="/#getinvolved">Get involved</a></li>
             <li{% if request.path == "/blog" %} class="active"{% endif %}><a href="/blog">Blog</a></li>
-            <li{% if request.path == "/docs" %} class="active"{% endif %}><a href="/docs">Docs</a></li>
-            <li{% if request.path == "/api" %} class="active"{% endif %}><a href="/api">API</a></li>
+            <li{% if request.path == "/software" %} class="active"{% endif %}><a href="/software">Software</a></li>
+            <li{% if request.path == "/docs" %} class="active"{% endif %}><a href="/docs">API (docs)</a></li>
             <li{% if request.path == "/facts" %} class="active"{% endif %}><a href="/facts">FACTS</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
