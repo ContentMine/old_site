@@ -83,7 +83,7 @@ def settings(path='/'):
 
     elif (  request.method == 'DELETE' or 
             (request.method == 'POST' and 
-            request.values.get('submit',False) == 'Delete') ):
+            request.values.get('submit','').lower() == 'delete') ):
         if record is None:
             abort(404)
         else:
