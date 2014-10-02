@@ -6,7 +6,7 @@ CM dark green is #187c83
 */
 
 html, body{
-    padding:0;
+    padding:40px 0 0 0;
     background-color:#eff8e9;
     font-family: 'Roboto Slab', serif;
 }
