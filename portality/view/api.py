@@ -41,7 +41,8 @@ def api():
     resp = make_response( json.dumps({
         "README": {
             "description": "Welcome to the ContentMine API. The endpoints listed here are available for their described functions. Append the name of each endpoint to the /api/ URL to gain access to each one.",
-            "version": "0.1"
+            "version": "0.1",
+            "documentation": "http://contentmine.org/docs"
         },
         "processor": {
             "description": "Lists all available processors (crawlers, scrapers, visitors, or combinations of those) with further instructions for how to use them. Visitors are used to extract certain types of fact from contents. For example once a crawler has identified the metadata of an article from a web page, and a scraper has retrieved the full-text content object, various visitors may be appropriate to run on the content to extract facts. Extracted facts can then be uploaded to the fact API.",
@@ -52,13 +53,12 @@ def api():
             "description": "Provides access to all the metadata of all the items crawled or scraped by ContentMine. New catalogue records can be uploaded too, either as the output of ContentMine scraping or of any other process deemed appropriate. The catalogue provides powerful search features too.",
             "note": "Any useful article metadata is welcome to the catalogue API, whether it was retrieved as a result of ContentMine crawling either by ContentMine or by users locally. We will endeavour to store and make available all such metadata for use as a growing and eventually comprehensive catalogue of academic materials."
         },
-        "content": {
-            "description": "Lists all the content items currently stored for processing by ContentMine. Content objects such as article PDFs can also be uploaded to the content API, BUT ONLY IF it is permissible to do so, and only if absolutely necessary.",
-            "note": "The aim of ContentMine is to extract facts rather than to archive content, so this feature is only available to assist in that service and is not guaranteed to be a reliable long term storage service. The content API is therefore just a useful place to temporarily make some content available after crawling and scraping for visitors to run on."
-        },
         "fact": {
             "description": "THE MAIN EVENT! Here is access to the facts extracted and stored by ContentMine. Also, new facts can be uploaded for storage. Any process that extracts a fact can send such fact (or batch of facts) to this API and it will then become available via the ContentMine stream. The fact API also provides powerful search features too. Long term storage of facts may not be provided - it is hoped to be, but to be decided later in the project.",
             "note": "There will also be access to daily lists of extracted facts, and perhaps larger dumps such as weeklies."
+        },
+        "queue": {
+            "description": "The queue provides various ways to get hold of article metadata and assign them to user accounts for processing. This enables users - human or machine - to claim articles for certain tasks, to help avoid duplication of effort"
         }
     }) )
     resp.mimetype = "application/json"
@@ -70,6 +70,7 @@ def api():
 # provide access to the listing of available processors --------------------------
 @blueprint.route('/processor/<path:path>', methods=['GET','POST'])
 @blueprint.route('/processor', methods=['GET','POST'])
+@blueprint.route('/processor/', methods=['GET','POST'])
 @util.jsonp
 def crawler():
     # TODO: each processor should be made available in the crawler folder
@@ -79,9 +80,13 @@ def crawler():
     # should also make an effort to conventionalise the IOs required
     # For now quickscrape has been manually added so that it can be used as demo
     resp = make_response( json.dumps({
-        "description": "Lists all the processors that are available so they can be accessed. Append the processor name to the processor/ url to access each one.",
+        "description": "Lists all the processors that are available so they can be accessed. \
+        Processors tend to do one or more of crawling (finding articles), scraping (retrieving the \
+        documents that contain the content of articels), structuring (normalising the strucutre of the \
+        content of an article), or visiting (searching the article content for facts and extracting them). \
+        Append the processor name to the processor/ url to access each one.",
         "quickscrape": {
-            "description": "crawls and scrapes."
+            "description": "Crawls for article locations and scrapes the files that make up the articles."
         }
     }) )
     resp.mimetype = "application/json"
@@ -261,8 +266,8 @@ def cataloguequery():
 
 
 # provide access to retrieved content objects that can and have been stored ----
-@blueprint.route('/content/<path:path>', methods=['GET','POST'])
-@blueprint.route('/content', methods=['GET','POST'])
+@blueprint.route('/storage/<path:path>', methods=['GET','POST'])
+@blueprint.route('/storage', methods=['GET','POST'])
 @util.jsonp
 @login_required
 def content():
@@ -270,7 +275,7 @@ def content():
         # TODO: this should become a listing of stored content
         # perhaps with a paging / search facility
         resp = make_response( json.dumps({
-            "description": "Will eventually list all the content stored in ContentMine for processing."
+            "description": "Temporary storage for items during processing."
         }) )
         resp.mimetype = "application/json"
         return resp
