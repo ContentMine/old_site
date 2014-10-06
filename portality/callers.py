@@ -12,7 +12,7 @@ class callers(object):
 
         # this is just a demo, so just hardcoding some locations for now
         d = '/opt/contentmine/src/scraping/'
-        dd = '/opt/contentmine/src/journal-scrapers/scrapers'
+        dd = '/opt/contentmine/src/journal-scrapers/scrapers/'
         
         # make an ident for this proces and create a dir
         ident = uuid.uuid4().hex
