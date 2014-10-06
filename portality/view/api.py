@@ -130,7 +130,7 @@ def quickscrape():
             else:
                 urls = [params['url']]
             try:
-                output = callers.quickscrape(scraper=params.get('scraper','generic_open'),urls=urls)
+                output = callers().quickscrape(scraper=params.get('scraper','generic_open'),urls=urls)
             except Exception, e:
                 resp = make_response(json.dumps({'errors': [str(e)]}))
                 resp.mimetype = "application/json"
