@@ -48,7 +48,7 @@ class callers(object):
         out, err = p.communicate()
         
         if err:
-            return {"error": "Sorry, something went wrong during processing"}
+            return {"error": err}
 
         # find and read the metadata file
         if 1==1:
