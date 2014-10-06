@@ -129,7 +129,12 @@ def quickscrape():
                 urls = params['url']
             else:
                 urls = [params['url']]
-            output = callers.quickscrape(scraper=params.get('scraper','generic_open'),urls=urls)
+            try:
+                output = callers.quickscrape(scraper=params.get('scraper','generic_open'),urls=urls)
+            except Exception, e:
+                resp = make_response(json.dumps({'errors': [str(e)]}))
+                resp.mimetype = "application/json"
+                return resp, 400
 
         else:
             output = {"error": "Sorry, your request was missing one of the main params (url, scraper), or something else went wrong."}
