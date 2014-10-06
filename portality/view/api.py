@@ -18,6 +18,10 @@ import portality.callers as callers
 
 from datetime import datetime
 
+from os import listdir
+from os.path import isfile, join
+
+
 
 blueprint = Blueprint('api', __name__)
 
@@ -84,10 +88,8 @@ def crawler():
         Processors tend to do one or more of crawling (finding articles), scraping (retrieving the \
         documents that contain the content of articels), structuring (normalising the strucutre of the \
         content of an article), or visiting (searching the article content for facts and extracting them). \
-        Append the processor name to the processor/ url to access each one.",
-        "quickscrape": {
-            "description": "Crawls for article locations and scrapes the files that make up the articles."
-        }
+        Append the processor name to the processor/ url to access each one and read more about what they do.",
+        "processors": ["quickscrape"]
     }) )
     resp.mimetype = "application/json"
     return resp
@@ -97,6 +99,15 @@ def crawler():
 def quickscrape():
     if request.method == 'GET':
         # show the instructions
+        scraperdir = '/opt/contentmine/src/journal-scrapers/scrapers/'
+        try:
+            scrp = [ f.replace('.json','') for f in listdir(scraperdir) if isfile(join(scraperdir,f)) ]
+        except:
+            try:
+                scraperdir = '/Users/one/Code/contentmine/src/journal-scrapers/scrapers/'
+                scrp = [ f.replace('.json','') for f in listdir(scraperdir) if isfile(join(scraperdir,f)) ]
+            except:
+                scrp = ["check the route to the scrapers folder!"]
         resp = make_response( json.dumps({
             "description": "The quickscrape processor.",
             "type": ["crawler","scraper"],
@@ -106,27 +117,19 @@ def quickscrape():
                 "scraper": "peerj",
                 "url": ["https://peerj.com/articles/384"]
             },
-            # TODO: this listing should be auto-populated and updated when new
-            # journal definitions are available
-            # would it be worth allowing people to submit definitions via the API?
-            # or just keep it to submissions to the repo?
-            "available_scrapers": {
-                "generic_open": "Matches generically, as per https://github.com/ContentMine/journal-scrapers/blob/master/generic_open.json",
-                "peerj": "Matches peerj as per https://github.com/ContentMine/journal-scrapers/blob/master/peerj.json",
-                "plos": "Matches PLoS as per https://github.com/ContentMine/journal-scrapers/blob/master/plos.json"
-            }
+            "available_scrapers": scrp
         }) )
         resp.mimetype = "application/json"
         return resp
         
     elif request.method == 'POST':
         params = request.json if request.json else request.values
-        if params.get('url',False) and params.get('scraper',False):
+        if params.get('url',False):
             if isinstance(params['url'],list):
                 urls = params['url']
             else:
                 urls = [params['url']]
-            output = callers.quickscrape(scraper=params['scraper'],urls=urls)
+            output = callers.quickscrape(scraper=params.get('scraper','generic_open'),urls=urls)
 
         else:
             output = {"error": "Sorry, your request was missing one of the main params (url, scraper), or something else went wrong."}
