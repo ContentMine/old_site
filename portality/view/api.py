@@ -14,7 +14,7 @@ from portality.view.query import query as query
 import portality.models as models
 from portality.core import app
 import portality.util as util
-import portality.callers as callers
+from portality.callers import callers as callers
 
 from datetime import datetime
 
