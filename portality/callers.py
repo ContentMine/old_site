@@ -5,7 +5,7 @@ import portality.models as models
 
 class callers(object):
 
-    def quickscrape(self,scraper='generic_open',urls=[]):
+    def quickscrape(self,scraper=False,urls=[]):
         # TODO: add some sanitisation of user input here
         if len(urls) == 0 or ';' in scraper:
             return {"error": "You need to provide some URLs"}
@@ -29,11 +29,15 @@ class callers(object):
         # run quickscrape with provided params
         co = [
             '/usr/bin/quickscrape',
-            '--scraper',
-            dd + scraper + '.json',
             '--output',
             directory
         ]
+        if scraper:
+            co.append('--scraper')
+            co.append(dd + scraper.replace('.json','') + '.json')
+        else:
+            co.append('--scraperdir')
+            co.append(dd)
         if len(urls) == 1:
             co.append('--url')
             co.append(urls[0])
@@ -48,10 +52,10 @@ class callers(object):
         out, err = p.communicate()
         
         if err:
-            return {"error": err}
+            return {"errors": err}
 
         # find and read the metadata file
-        if 1==1:
+        try:
             # TODO: note this should operate on all the listed URLs...
             slug = urls[0].replace('://','_').replace('/','_')
             m = json.load(open(directory + '/' + slug + '/results.json','r'))
@@ -75,8 +79,8 @@ class callers(object):
             f = models.Catalogue()
             f.data = b
             f.save()
-        else:
-            result["metadata"] = {"error": "Something went wrong getting metadata"}
+        except Exception, e:
+            result["errors"] = [str(e)]
             del result["catalogued"]
         
         # then send the extracted content files to the content API

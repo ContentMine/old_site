@@ -97,7 +97,7 @@ def crawler():
 @blueprint.route('/processor/quickscrape', methods=['GET','POST'])
 @util.jsonp
 def quickscrape():
-    if request.method == 'GET':
+    if request.method == 'GET' and 'url' not in request.values:
         # show the instructions
         scraperdir = '/opt/contentmine/src/journal-scrapers/scrapers/'
         try:
@@ -112,17 +112,17 @@ def quickscrape():
             "description": "The quickscrape processor.",
             "type": ["crawler","scraper"],
             "GET": "GETs this instruction page",
-            "POST": "POST your instructions to the crawler and receive answers. Specify which scraper definition you wish to use from the list provided here. See the example_POST and use the url parameter as either a single URL string or a list of URLs. Make sure your POST specifices the Content-Type:application/json",
+            "POST": "POST your instructions to the crawler and receive answers. Can scrape by trying to choose automatically from the listed scrapers, or specify one in the provided options. See the example_POST and use the url parameter as either a single URL string or a list of URLs. Make sure your POST specifices the Content-Type:application/json",
             "example_POST": {
-                "scraper": "peerj",
-                "url": ["https://peerj.com/articles/384"]
+                "url": ["https://peerj.com/articles/384"],
+                "scraper": "peerj"
             },
             "available_scrapers": scrp
         }) )
         resp.mimetype = "application/json"
         return resp
         
-    elif request.method == 'POST':
+    else:
         params = request.json if request.json else request.values
         if params.get('url',False):
             if isinstance(params['url'],list):
@@ -130,18 +130,18 @@ def quickscrape():
             else:
                 urls = [params['url']]
             try:
-                output = callers().quickscrape(scraper=params.get('scraper','generic_open'),urls=urls)
+                output = callers().quickscrape(scraper=params.get('scraper',False),urls=urls)
             except Exception, e:
                 resp = make_response(json.dumps({'errors': [str(e)]}))
                 resp.mimetype = "application/json"
                 return resp, 400
 
         else:
-            output = {"error": "Sorry, your request was missing one of the main params (url, scraper), or something else went wrong."}
+            output = {"error": "Sorry, your request was missing a url! So there is nothing to do"}
 
         resp = make_response( json.dumps(output) )
         resp.mimetype = "application/json"
-        return resp    
+        return resp
     
     
     
