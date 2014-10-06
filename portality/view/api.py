@@ -69,7 +69,7 @@ def api():
 
 # provide access to the listing of available processors --------------------------
 @blueprint.route('/processor/<path:path>', methods=['GET','POST'])
-@blueprint.route('/crawler', methods=['GET','POST'])
+@blueprint.route('/processor', methods=['GET','POST'])
 @util.jsonp
 def crawler():
     # TODO: each processor should be made available in the crawler folder
