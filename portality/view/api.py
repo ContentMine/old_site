@@ -172,7 +172,7 @@ def species():
                 input_file_location=params.get('input_file_location',False), 
                 slug=params.get('slug',False),
                 ident=params.get('ident',False),
-                filetype=params.get('filetype',False),
+                filetype=params.get('filetype','xml'),
             )
         except Exception, e:
             resp = make_response(json.dumps({'errors': [str(e)]}))
