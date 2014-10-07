@@ -11,13 +11,13 @@ class callers(object):
             return {"error": "You need to provide some URLs"}
 
         # this is just a demo, so just hardcoding some locations for now
-        d = '/opt/contentmine/src/scraping/'
-        dd = '/opt/contentmine/src/journal-scrapers/scrapers/'
+        scraperdir = '/opt/contentmine/src/journal-scrapers/scrapers/'
         
-        # make an ident for this proces and create a dir
+        # make an ident for this proces and create a dir to put the output
+        d = '/opt/contentmine/src/site/portality/static/scraping/'
         ident = uuid.uuid4().hex
-        directory = d + ident
-        if not os.path.exists(directory): os.makedirs(directory)
+        outputdirectory = d + ident
+        if not os.path.exists(outputdirectory): os.makedirs(outputdirectory)
         
         # make a result object to populate
         result = {
@@ -30,24 +30,24 @@ class callers(object):
         co = [
             '/usr/bin/quickscrape',
             '--output',
-            directory
+            outputdirectory
         ]
         if scraper:
             co.append('--scraper')
-            co.append(dd + scraper.replace('.json','') + '.json')
+            co.append(scraperdir + scraper.replace('.json','') + '.json')
         else:
             co.append('--scraperdir')
-            co.append(dd)
+            co.append(scraperdir)
         if len(urls) == 1:
             co.append('--url')
             co.append(urls[0])
         else:
-            fl = open(directory + '/urllist','w')
+            fl = open(outputdirectory + '/urllist','w')
             for u in urls:
                 fl.write(u + '\n')
             fl.close()
             co.append('--urllist')
-            co.append(directory + '/urllist')
+            co.append(outputdirectory + '/urllist')
         p = subprocess.Popen(co, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         out, err = p.communicate()
         
@@ -57,8 +57,10 @@ class callers(object):
         # find and read the metadata file
         try:
             # TODO: note this should operate on all the listed URLs...
-            slug = urls[0].replace('://','_').replace('/','_')
-            m = json.load(open(directory + '/' + slug + '/results.json','r'))
+            slug = urls[0].replace('://','_').replace('/','_').replace(':','')
+            result['slug'] = slug
+            result["output"] = "http://contentmine.org/static/scraping/" + ident + '/' + slug
+            m = json.load(open(outputdirectory + '/' + slug + '/results.json','r'))
             # TODO: process the metadata into bibjson (this should perhaps happen in the scraper proper)
             b = {}
             for obj in m:
@@ -78,16 +80,16 @@ class callers(object):
             result["catalogued"] = api + ident
             f = models.Catalogue()
             f.data = b
+            f.id = ident
             f.save()
         except Exception, e:
             result["errors"] = [str(e)]
             del result["catalogued"]
         
-        # then send the extracted content files to the content API
-        result["content"] = "This part has not been implemented yet, but once complete then this will be a list of the file objects extracted by quickscrape and placed in the content API for use in further processing."
+        # TODO: move the extracted content files to proper storage
         
         # then tidy up by removing the ident directory
-        shutil.rmtree(directory)
+        #shutil.rmtree(outputdirectory)
         
         # return the result object
         return result
@@ -95,57 +97,72 @@ class callers(object):
 
 
 
-    def species(self, input_file=False):
-    
-        if not input_file:
-            return {"error": "You need to provide some input text or an input file"}
 
-        # this is just a demo, so just hardcoding some locations for now
-        d = '/opt/contentmine/src/xhtml2stmdev/'
+    def ami(self, cmd='species', input_file_location=False, ident=False, slug=False, filetype='xml'):
+        # TODO: this should not need slug long term
+    
+        if not input_file_location or ident:
+            return {"errors": "You need to provide an input file or a contentmine catalogue id"}
         
         # make an ident for this proces and create a dir
-        ident = uuid.uuid4().hex
-        directory = d + ident
-        if not os.path.exists(directory): os.makedirs(directory)
+        d = '/opt/contentmine/src/site/portality/static/species/'
+        if not ident:
+            ident = uuid.uuid4().hex
+        outputdirectory = d + ident
+        if not os.path.exists(outputdirectory): os.makedirs(outputdirectory)
         
         # make a result object to populate
         result = {
+            "output": "http://contentmine.org/static/ami/" + ident
         }
         
-        # run quickscrape with provided params
+        # TODO: if input file is a web address, get it. If a file address, get it from local storage
+        
+        if input_file_location:
+            infile = input_file_location
+        else:
+            try:
+                # TODO: there should be a check for this folder existence
+                infile = '/opt/contentmine/src/site/portality/static/scraping/' + ident + '/' + slug + '/fulltext.' + filetype
+            except:
+                # TODO: if the folder does not exist check the catalogue, maybe return more useful info or re-run quickscrape
+                return {"errors": "The provided contentmine catalogue ID no longer matches any stored files to process"}
+        
+        # run code with provided params
         co = [
-            'sh',
-            d + 'appassembler/bin/species',
+            'ami-' + cmd,
             '-i',
-            input_file,
-            '-o',
-            directory
+            infile,
+            '-e',
+            filetype
         ]
         p = subprocess.Popen(co, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         out, err = p.communicate()
         
         if err:
-            return {"error": "Sorry, something went wrong during processing"}
+            return {"errors": err}
 
-        # find and read the metadata file
+        # find and read the output file
+        outputfile = '/opt/contentmine/src/xhtml2stm/target/xml.xml/results.xml'
         result['facts'] = []
-        if 1==1:
+        try:
             # read the result file and make fact objects and save them all
             for a in []:
                 b = {}
+                
                 result['facts'].append(b)
                 # send the facts to the fact api
                 api = "http://contentmine.org/api/fact/"
                 result["catalogued"] = api + ident
-                f = models.fact()
+                f = models.Fact()
                 f.data = b
+                f.id = ident
                 f.save()
-        else:
-            result["metadata"] = {"error": "Something went wrong getting metadata"}
-            del result["catalogued"]
+        except Exception, e:
+            result["errors"] = [str(e)]
                 
         # then tidy up by removing the ident directory
-        shutil.rmtree(directory)
+        #shutil.rmtree(outputdirectory)
         
         # return the result object
         return result

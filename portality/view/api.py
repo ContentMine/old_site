@@ -166,11 +166,10 @@ def species():
         
     elif request.method == 'POST':
         params = request.json if request.json else request.values
-        if 1==1:
-            output = callers.species(params['url'])# expects a file url
-
-        else:
-            output = {"error": "Sorry, your request was missing one of the main params (url, scraper), or something else went wrong."}
+        try:
+            output = callers.ami(cmd='species', **params)
+        except:
+            output = {"errors": "Sorry, your request was missing one of the main params (url, scraper), or something else went wrong calling AMI."}
 
         resp = make_response( json.dumps(output) )
         resp.mimetype = "application/json"
