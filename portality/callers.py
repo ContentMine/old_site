@@ -107,7 +107,7 @@ class callers(object):
     def ami(self, cmd='species', input_file_location=False, ident=False, slug=False, filetype='xml'):
         # TODO: this should not need slug long term
     
-        if not input_file_location or ident:
+        if not input_file_location and not ident:
             return {"errors": "You need to provide an input file or a contentmine catalogue id"}
         
         # make an ident for this proces and create a dir
