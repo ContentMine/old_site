@@ -149,7 +149,7 @@ class callers(object):
             return {"errors": err}
 
         # find and read the output file
-        outputfile = '/opt/contentmine/src/xhtml2stm/target/xml.xml/results.xml'
+        outputfile = '/opt/contentmine/src/xhtml2stm/target/fulltext.xml/results.xml'
         result['facts'] = []
         try:
             # read the result file and make fact objects and save them all
