@@ -6,6 +6,12 @@ import portality.models as models
 class callers(object):
 
     def quickscrape(self,scraper=False,urls=[]):
+        # TODO: there should be a check to see if this is already in the catalogue
+        # and if the files are already extracted
+        # and if they have already been processed
+        # then some sort of concept of when they are worth refreshing - if ever? 
+        # the publication should not change except as a re-print so would get picked up in a new cycle
+    
         # TODO: add some sanitisation of user input here
         if len(urls) == 0 or ';' in scraper:
             return {"error": "You need to provide some URLs"}

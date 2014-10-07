@@ -150,7 +150,7 @@ def quickscrape():
 @blueprint.route('/processor/species', methods=['GET','POST'])
 @util.jsonp
 def species():
-    if request.method == 'GET':
+    if request.method == 'GET' and 'ident' not in request.values:
         # show the instructions
         resp = make_response( json.dumps({
             "description": "The species processor",
@@ -164,7 +164,7 @@ def species():
         resp.mimetype = "application/json"
         return resp
         
-    elif request.method == 'POST':
+    else:
         params = request.json if request.json else request.values
         try:
             output = callers.ami(cmd='species', **params)
