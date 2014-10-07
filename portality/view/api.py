@@ -167,9 +167,11 @@ def species():
     else:
         params = request.json if request.json else request.values
         try:
-            output = callers.ami(cmd='species', **params)
-        except:
-            output = {"errors": "Sorry, your request was missing one of the main params (url, scraper), or something else went wrong calling AMI."}
+            output = callers().ami(cmd='species', **params)
+        except Exception, e:
+            resp = make_response(json.dumps({'errors': [str(e)]}))
+            resp.mimetype = "application/json"
+            return resp, 400
 
         resp = make_response( json.dumps(output) )
         resp.mimetype = "application/json"
