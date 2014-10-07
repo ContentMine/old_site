@@ -167,7 +167,13 @@ def species():
     else:
         params = request.json if request.json else request.values
         try:
-            output = callers().ami(cmd='species', **params)
+            output = callers().ami(
+                cmd='species', 
+                input_file_location=params.get('input_file_location',False), 
+                slug=params.get('slug',False),
+                ident=params.get('ident',False),
+                filetype=params.get('filetype',False),
+            )
         except Exception, e:
             resp = make_response(json.dumps({'errors': [str(e)]}))
             resp.mimetype = "application/json"
