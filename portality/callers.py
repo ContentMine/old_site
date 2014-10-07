@@ -147,7 +147,11 @@ class callers(object):
         result['facts'] = []
         try:
             # read the result file and make fact objects and save them all
-            for a in []:
+            m = open(outputfile,'r').read()
+            o = _xml_to_dict(m)
+            result['facts'] = o
+            # TODO: properly handle the xml output and save some facts
+            '''for a in []:
                 b = {}
                 
                 result['facts'].append(b)
@@ -157,7 +161,7 @@ class callers(object):
                 f = models.Fact()
                 f.data = b
                 f.id = ident
-                f.save()
+                f.save()'''
         except Exception, e:
             result["errors"] = [str(e)]
                 
@@ -170,3 +174,24 @@ class callers(object):
 
         
         
+from collections import defaultdict
+
+def _xml_to_dict(t):
+    d = {t.tag: {} if t.attrib else None}
+    children = list(t)
+    if children:
+        dd = defaultdict(list)
+        for dc in map(_xml_to_dict, children):
+            for k, v in dc.iteritems():
+                dd[k].append(v)
+        d = {t.tag: {k:v[0] if len(v) == 1 else v for k, v in dd.iteritems()}}
+    if t.attrib:
+        d[t.tag].update(('@' + k, v) for k, v in t.attrib.iteritems())
+    if t.text:
+        text = t.text.strip()
+        if children or t.attrib:
+            if text:
+              d[t.tag]['#text'] = text
+        else:
+            d[t.tag] = text
+    return d
