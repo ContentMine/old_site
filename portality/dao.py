@@ -130,7 +130,7 @@ class DomainObject(UserDict.IterableUserDict):
         return keys
         
     @classmethod
-    def query(cls, recid='', endpoint='_search', q='', terms=None, facets=None, **kwargs):
+    def query(cls, recid='', endpoint='_search', q='', **kwargs):
         '''Perform a query on backend.
 
         :param recid: needed if endpoint is about a record, e.g. mlt
@@ -144,12 +144,6 @@ class DomainObject(UserDict.IterableUserDict):
         if recid and not recid.endswith('/'): recid += '/'
         if isinstance(q,dict):
             query = q
-            if 'bool' not in query['query']:
-                boolean = {'bool':{'must': [] }}
-                boolean['bool']['must'].append( query['query'] )
-                query['query'] = boolean
-            if 'must' not in query['query']['bool']:
-                query['query']['bool']['must'] = []
         elif q:
             query = {
                 'query': {
@@ -162,34 +156,8 @@ class DomainObject(UserDict.IterableUserDict):
             }
         else:
             query = {
-                'query': {
-                    'bool': {
-                        'must': [
-                            {'match_all': {}}
-                        ]
-                    }
-                }
+                'match_all': {}
             }
-
-        if facets:
-            if 'facets' not in query:
-                query['facets'] = {}
-            for k, v in facets.items():
-                query['facets'][k] = {"terms":v}
-
-        if terms:
-            boolean = {'must': [] }
-            for term in terms:
-                if not isinstance(terms[term],list): terms[term] = [terms[term]]
-                for val in terms[term]:
-                    obj = {'term': {}}
-                    obj['term'][ term ] = val
-                    boolean['must'].append(obj)
-            if q and not isinstance(q,dict):
-                boolean['must'].append( {'query_string': { 'query': q } } )
-            elif q and 'query' in q:
-                boolean['must'].append( query['query'] )
-            query['query'] = {'bool': boolean}
 
         for k,v in kwargs.items():
             if k == '_from':

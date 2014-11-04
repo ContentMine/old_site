@@ -1,7 +1,7 @@
 
 # this runs the Pagemanager endpoint for standard display of web pages
 
-import json, time, requests, markdown, os, re
+import json, time, requests, markdown, os, re, codecs
 
 from flask import Blueprint, request, url_for, abort, make_response, flash
 from flask import render_template, redirect
@@ -314,7 +314,7 @@ def _sync_es_from_ep(rec):
         a += rec.id + '/export/txt'
         c = requests.get(a)
         if rec.data.get('content',False) != c.text:
-            rec.data['content'] = c.text
+            rec.data['content'] = c.text.encode('iso-8859-1')
             rec.save()
         return True
     except:

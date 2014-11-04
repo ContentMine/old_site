@@ -6,6 +6,11 @@ src*
 build/*
 dist/*
 
+portality/static/scraping/*
+portality/static/species/*
+portality/target/*
+target/*
+
 app.cfg
 
 media/*

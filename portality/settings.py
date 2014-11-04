@@ -59,8 +59,9 @@ MAPPINGS = {
 }
 MAPPINGS['account'] = {'account':MAPPINGS['record']['record']}
 MAPPINGS['pages'] = {'pages':MAPPINGS['record']['record']}
-MAPPINGS['fact'] = {'fact':MAPPINGS['record']['record']}
 MAPPINGS['catalogue'] = {'catalogue':MAPPINGS['record']['record']}
+MAPPINGS['fact'] = {'fact':MAPPINGS['record']['record']}
+MAPPINGS['assignment'] = {'assignment':MAPPINGS['record']['record']}
 
 
 # ========================
@@ -110,6 +111,16 @@ DELETE_REMOVES_EP = False # MUST BE THE ETHERPAD API-KEY OR DELETES WILL FAIL
 # disqus account shortname if available for page comments
 COMMENTS = ''
 
+
+# ========================
+# CALLERS SETTINGS
+# expected to be relative to wherever the contentmine site/API service is cloned and running
+# e.g. /opt/contentmine/src/site/
+
+SCRAPER_DIRECTORY = 'journal-scrapers/scrapers/'
+STORAGE_DIRECTORY = 'portality/static/scraping/'
+SPECIES_DIRECTORY = 'portality/static/species/'
+SPECIES_OUTPUT = 'target/'
 
 # ========================
 # HOOK SETTINGS

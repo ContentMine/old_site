@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if record %}
+
+<div class="row">
+    <div class="col-md-12">
+        <p>Proper record display forthcoming, along with exciting things to do with them, links to their facts, etc</p>
+        <pre id="record"></pre>
+    </div>
+</div>
+
+<script>
+var rec = {{record.data|tojson|safe}}
+$('#record').html(JSON.stringify(rec,"","    "));
+</script>
+
+{% else %}
+
+<div class="row">
+    <div class="col-md-12">
+        <div id="searchrecords"></pre>
+    </div>
+</div>
+
+<script>
+</script>
+
+{% endif %}
+
+
+{% endblock %}

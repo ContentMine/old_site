@@ -19,6 +19,7 @@ if len(app.config.get('SUPER_USER',[])) > 0:
     if models.Account.pull(firstsu) is None:
         su = models.Account(id=firstsu)
         su.set_password(firstsu)
+        su.data['api_key'] = firstsu
         su.save()
         print 'superuser account named - ' + firstsu + ' created.'
         print 'default password matches username. Change it.'

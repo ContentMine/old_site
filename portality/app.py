@@ -1,9 +1,10 @@
 
-from flask import Flask, request, abort, render_template
+from flask import Flask, request, abort, render_template, make_response
 from flask.views import View
 from flask.ext.login import login_user, current_user
 
 import portality.models as models
+import portality.util as util
 from portality.core import app, login_manager
 
 from portality.view.account import blueprint as account
@@ -61,6 +62,28 @@ def page_not_found(e):
 def page_not_found(e):
     return render_template('401.html'), 401
         
+
+@app.route('/docs')
+def docs():
+    return render_template('docs.html')
+
+
+@app.route('/catalogue')
+@app.route('/catalogue/<rid>')
+def record(rid=False):
+    if rid:
+        record = models.Catalogue.pull(rid.replace('.json',''))
+        if record is None:
+            abort(404)
+        elif util.request_wants_json():
+            resp = make_response( record.json )
+            resp.mimetype = "application/json"
+            return resp
+        else:
+            return render_template('record.html',record=record)
+    else:
+        return render_template('record.html')
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=app.config['DEBUG'], port=app.config['PORT'])

@@ -1,0 +1,535 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="container" style="padding-bottom:40px;">
+    <div class="content">
+
+        <div class="jumbotron">
+            <h1>The API documentation <br>(and also a working example)<br>
+            <small><a href="/api" style="color:white;" id="apiaddr">https://contentmine.org/api</a></small></h1>
+        </div>
+    
+        
+        
+        <div class="row" style="padding:0;margin:0;">
+            <div class="col-md-12">
+                <h1>GENERAL NOTES</h1>
+
+                <div class="alert alert-info">
+                    {% if current_user.is_anonymous() %}
+                    <h2>First - <a href="/account/register">register for an account</a> 
+                        (or <a href="/account/login">login</a> if you already have one)</h2>
+                    <p>You need to <a href="/account/register">register for an account</a>, which will provide you an API key.
+                    <br>All calls to the API must include an api_key parameter.</p>
+                    {% else %}
+                    <h2>You need your API key to use the API.</h2>
+                    <p>It must be included in any API call as the api_key parameter.
+                    <br>Your API key is listed on your <a href="/account/{{current_user.id}}">account page</a> if you need to look it up.<br>
+                    Your API key is <code>{{current_user.data.api_key}}</code></p>
+                    {% endif %}
+                </div>
+
+                <p>When returning any query result set, the default size is 10. It can be changed using the size parameter, 
+                and it can be paged using the from parameter.</p>
+                
+                <p>We have exposed full elasticsearch query capability to the API, and will keep it this way for as long 
+                as we can maintain the query load. So, to find out how to issue full queries, read the elasticsearch 
+                documentation. Alternatively, use our own fact search page along with browser dev tools to examine the queries 
+                created by our javascript code to get some ideas.</p>
+                
+                <p>The simple things to keep in mind are:</p>
+                
+                <ul>
+                    <li>any simple query can be passed as the q parameter: ?q=thing</li>
+                    <li>* wildcards can be used such as *hin*, and also similar matches can be done with ~ such as thin~</li>
+                    <li>AND, OR are available as expected such as thing AND other</li>
+                    <li>Matching precise or sentences can be done with quotes, such as "this thing"</li>
+                    <li>It is easiest to build complex queries as JSON objects and POST them, but if that is problematic then 
+                    the complex query objects can be serialised into the "source" url parameter (as long as they do not get too long)</li>
+                </ul>
+                
+                <p>We are going to allow API usage as much as we possibly can, and we will only place restrictions where it becomes 
+                necessary for us to maintain a stable service. If one particular account is hitting the service hard, we will disable 
+                it if we have to, but will happily re-enable after hearing from the account holder. If you really want something quite 
+                big or resource intensive, feel free to contact us first. For example, we'd be glad to send you a copy of our entire 
+                index. And all our software is open source and freely available online too.</p>
+                
+                <p>Remember - the ContentMine extracts and stores FACTS, not creative works. You can mine the content of any creative work 
+                that you wish, and as long as you are within the law to mine anything that you have access to read. You can share an 
+                extracted fact to ContentMine, but if you share copies of copyrighted works that you do not have the right to share, 
+                you do so at your own risk.</p>
+            </div>
+        </div>
+
+        
+        
+        <hr>
+        
+        
+        <div class="row" style="padding:0;margin:0;">
+            <div class="col-md-12">
+                <h1>PROCESSOR</h1>
+
+                <p>ContentMine exists to enable the mining of contect from articles. This is made possible 
+                by various processors, which we roughly group into three categories - although some processors 
+                span multiple categories, and it is possible there may be different fucntions in future.</p>
+                
+                <p><b>CRAWLERS</b> crawl the web looking for potentially useful resources, and ideally they 
+                return a link to where the resource itself can be retrieved.</p>
+                
+                <p><b>SCRAPERS</b> scrape resources into ContentMine - so, if a crawler finds some useful  
+                links to research articles, a scraper may visit those links and retrieve the article then 
+                scrape useful metadata out of it.</p>
+                
+                <p><b>VISITORS</b> should be capable of extracting a specific sort of information out of a given resource. 
+                For example, given an article that may have useful information in it about dinosaur species, a visitor 
+                may be designed that can find and extract the species mentioned in the article.</p>
+                
+                <p>All of the processors that we have available can be called via the /processor API. 
+                Here's an example of how I could call the /processor API to run a processor.</p>
+            </div>
+        </div>            
+    
+        <div class="row" style="padding:0;margin:0;">
+            <div class="col-md-6">                
+<pre><p>
+var serviceaddress = <span id="serviceaddress">'https://contentmine.org'</span>;
+var apiaddress = serviceaddress + '/api';
+var processor = function(process) {
+    $.ajax({
+        'type': 'POST',
+        'url': apiaddress + '/processor/' + process,
+        'contentType': 'application/json; charset=utf-8',
+        'dataType': 'JSON',
+        'processData': false,
+        'cache': false,
+        'data': JSON.stringify({
+            'api_key': '{% if current_user.is_anonymous() %}&lt;YOUR_API_KEY&gt;{% else %}{{current_user.data['api_key']}}{% endif %}',
+            '...': '...',
+            ...
+        }),
+        'success': asuccessfunction,
+        'error': anerrorfunction
+    });
+}
+</p></pre>
+
+                <p>Now, let's run a /processor call and get some output back from a couple of processors. This example 
+                calls quickscrape on a journal article web page that we suspect of containing information about certain 
+                types of species, and then it runs our AMI species visitor on the full text content of the article.</p>
+
+                <p><input type="text" class="form-control" id="url" value="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0081580" placeholder="provide a url"></p>
+                <p><select class="form-control" id="scraper"><option></option></select></p>
+                <p><select class="form-control" id="cmd"><option></option></select></p>
+                <p><a class="btn btn-info btn-block" href="#" id="doit">Run it</a></p>
+                <div id="quickscraperesult"></div>
+                <div id="amiresult"></div>
+                <p><img src="/static/loading.gif" style="width:100px;display:none;" id="loadinggif"></p>
+
+            </div>
+
+            <div class="col-md-6">
+<pre><p>
+<b>/processor</b>
+
+POST (ideally JSON) requests with the relevant parameters (processor-dependent, see their individual pages) 
+to register a user account here (or GET with suitable parameters).
+
+(A GET request with same parameters will also work, so as to avoid cross-site request complications)
+
+See the relevant processor endpoints to find out what each one REQUIRES, EXPECTS, ACCEPTS, RESPONDS with, and ERRORS with:
+
+<select class="form-control" id="availableprocessors"><option></option></option></select>
+
+<div id="processorinstructions"></div>
+</p></pre>
+
+            </div>
+        </div>      
+        
+        
+        <hr>
+        
+        
+
+        <div class="row" style="padding:0;margin:0;">
+            <div class="col-md-12">
+                <h1>CATALOGUE</h1>
+                <p>Whenever one of our crawlers runs, we store the article metadata in the catalogue. We can also store 
+                article metadata extracted by other methods here, and we welcome submissions of any such data or suggestions 
+                for improvements to our records. We use the <a target="_blank" href="http://okfnlabs.org/bibjson">bibJSON</a> 
+                format for catalogue records.</p>
+                
+                <p>The catalogue can be accessed, queried, and updated via the API.</p>
+                
+                <p>Here is an example in javascript of getting a record by calling the /catalogue API.</p>
+            </div>        
+        </div>
+
+        <div class="row" style="padding:0;margin:0;">
+            <div class="col-md-6">                
+<pre><p>
+var catalogue = function(cid) {
+    $.ajax({
+        'type': 'GET',
+        'url': apiaddress + '/catalogue/' + cid,
+        'dataType': 'JSONP',
+        'cache': false,
+        'success': asuccessfunction,
+        'error': anerrorfunction
+    });
+}
+</p></pre>
+
+                <p>Let's retrieve a record from the catalogue.</p>
+                <p>
+                    <select class="form-control" id="cataloguerecord" style="margin-bottom:2px;"><option></option></select>
+                    <a class="btn btn-block btn-info performaction" href="catalogue">Retrieve the record</a> 
+                </p>
+                <div id="catalogueresult"></div>
+                
+                <p>The catalogue query API allows issue of simple and complex queries to the Catalogue index. Here are some examples, 
+                    which open the result directly in the API. To view them easily, use a browser extension such as JSONview.</p>
+                <p>A simple query using URL parameters on a GET request:<br>
+                    <a target="_blank" href="/api/catalogue/query?q=open AND bibliography">?q=open AND bibliography</a></p>
+                <p>A GET query on the catalogue ignoring records that are assigned for processing to a user:<br>
+                    <a target="_blank" href="/api/catalogue/query?q=NOT assigned_to:*">NOT assigned_to:*</a></p>
+                <p>A complex query POSTing a JSON object (results appear below):</p>                
+<pre id="postcatqueryquery">
+</pre>
+                <p><a href="#" id="postcatqueryex" class="btn btn-info btn-block">Submit the query</a></p>
+<pre id="postcatqueryresult">
+</pre>
+                <p>(We use the .exact key suffix for queries against exact values rather than the processed values used for text searching.)</p>
+                <p>Read the <a target="_blank" href="http://www.elasticsearch.org">elasticsearch</a> query DSL documentation to learn more.</p>
+            </div>
+
+            <div class="col-md-6">
+<pre><p>
+<b>/catalogue</b>
+
+<div id="catalogueinstructions"></div>
+</p></pre>
+            </div>
+        </div>
+
+
+        
+        
+        <hr>
+        
+        
+        <div class="row" style="padding:0;margin:0;">
+            <div class="col-md-12">
+                <h1>PROCESS</h1>
+                <p>Our catalogue can contain metadata records about items that have not yet been processed. 
+                In this case it can be useful to be able to query for what records have been processed by which processors, 
+                and also on occasion to track assignment of processing tasks to user accounts.</p>        
+                <p>To decide what items you wish to process, try using the Catalogue API to search for relevant records. 
+                It is possible to filter out records that are already assigned to a user for processing, but of course once 
+                they are processed they become unassigned again. So it may be useful to query for unassigned records created 
+                since a given date. There is an example of such a query above.</p>
+            </div>        
+        </div>
+
+        <div class="row" style="padding:0;margin:0;">
+            <div class="col-md-12">                
+<pre id="processdocs">
+</pre>
+            </div>
+        </div>
+
+
+
+
+        
+        
+        <hr>
+        
+        
+        <div class="row" style="padding:0;margin:0;">
+            <div class="col-md-12">
+                <h1>FACT</h1>
+                <p>Any facts extracted by a visitor get stored in our fact
+                index, and they can be queried from there.</p>
+                
+                <p>/fact accepts POSTs of data for creating new fact records. It is also then possible to 
+                <br>GET /fact/&lt;IDENTIFIER&gt; to retrieve the details of a fact or to <br>
+                POST /fact/&lt;IDENTIFIER&gt; to update particular key values of the record, or to <br>
+                PUT /fact/&lt;IDENTIFIER&gt; to completely overwrite a fact with new data.</p>
+                
+                <p>/fact/daily is the simplest way to interact with the facts API, and it provides a stream of all facts 
+                discovered by our systems during the current day, ordered by descending datetime since time of query.</p>
+                
+                <p>/fact/query gives full access to the fact index with all the querying power of elasticsearch</p>                
+            </div>        
+        </div>
+
+        <div class="row" style="padding:0;margin:0;">
+            <div class="col-md-12">
+<pre id="factdocs">
+</pre>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="{{url_for('static', filename='contentmine.js')}}"></script>
+<script>
+jQuery(document).ready(function() {
+
+// a useful ID generator
+var makeuuid = function(simple) {
+    var pt = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx';
+    simple ? pt = 'xxxxxxxx' : false;
+    return pt.replace(/[xy]/g, function(c) {
+        var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+        return v.toString(16);
+    });
+}
+
+// set some vars and create a client
+var anid = makeuuid(true);
+var serviceaddress = window.location.protocol + '//' + window.location.host;
+var apiaddress = serviceaddress + '/api';
+var client = new contentmine({
+    api: apiaddress
+});
+
+// update the page with some vars to look nice
+$('#serviceaddress').html(serviceaddress);
+$('#apiaddr').html(apiaddress);
+
+// insert the catalogue instructions and some records
+$.ajax({
+    url: apiaddress + '/catalogue',
+    dataType: 'JSONP',
+    cache: false,
+    crossDomain: true,
+    success: function(data) {
+        $('#catalogueinstructions').html(JSON.stringify(data,"","    ").replace(/</g,'&lt;').replace(/>/g,'&gt;'));
+    }
+});
+var getcats = function() {
+    $('#cataloguerecord').html('<option></option>');
+    $.ajax({
+        url: apiaddress + '/catalogue/query',
+        dataType: 'JSONP',
+        cache: false,
+        crossDomain: true,
+        success: function(d) {
+            for ( var p in d.hits.hits ) {
+                var rec = d.hits.hits[p]._source;
+                var title = rec.id;
+                rec.title ? title = rec.title : false;
+                $('#cataloguerecord').append('<option value="' + rec.id + '">' + title + '</option>');
+            }
+        }
+    });
+}
+getcats();
+    
+// put some info about the available processors into the docs
+$.ajax({
+    url: apiaddress + '/processor',
+    dataType: 'JSONP',
+    crossDomain: true,
+    success: function(data) {
+        for ( var ptype in data.processors ) {
+            $('#availableprocessors').append('<option>' + data.processors[ptype] + '</option>');
+            $('#cmd').append('<option>' + data.processors[ptype] + '</option>');
+        }
+        $('#cmd').val('species');
+    }
+});
+$.ajax({
+    url: apiaddress + '/processor/quickscrape',
+    dataType: 'JSONP',
+    crossDomain: true,
+    success: function(data) {
+        for ( var ptype in data.available_scrapers ) {
+            $('#scraper').append('<option>' + data.available_scrapers[ptype] + '</option>');
+        }
+        $('#scraper').val('plos');
+    }
+});
+$('#availableprocessors').bind('change',function() {
+    if ( $(this).val() ) {
+        $.ajax({
+            url: apiaddress + '/processor/' + $(this).val(),
+            dataType: 'JSONP',
+            crossDomain: true,
+            success: function(r) {
+                $('#processorinstructions').html(JSON.stringify(r,"","    ").replace(/</g,'&lt;').replace(/>/g,'&gt;'));
+            }
+        });
+    } else {
+        $('#processorinstructions').html("");
+    }
+});
+$.ajax({
+    url: apiaddress + '/process',
+    dataType: 'JSONP',
+    crossDomain: true,
+    success: function(data) {
+        $('#processdocs').html(JSON.stringify(data,"","    ").replace(/</g,'&lt;').replace(/>/g,'&gt;'));
+    }
+});
+$.ajax({
+    url: apiaddress + '/fact',
+    dataType: 'JSONP',
+    crossDomain: true,
+    success: function(data) {
+        $('#factdocs').html(JSON.stringify(data,"","    ").replace(/</g,'&lt;').replace(/>/g,'&gt;'));
+    }
+});
+
+    
+// run the first processor examples
+var alldone = function(out) {
+    $('#loadinggif').hide();
+    $('#amiresult').html('<p>AMI completed. Output below.</p><div class="well"><pre>' + out.facts.replace('><','><br><').replace('<','&lt;').replace('>','&gt;') + '</pre></div><p>Next steps would be to extract this to JSON and save it to the fact API - coming soon, this will happen automatically and then facts will be searchable and viewable by daily listing!</p>');
+    getcats();
+}
+
+var ami = function(data) {
+    var qsa = '<p>Quickscrape has retrieved the metadata about this article:</p>';
+    qsa += '<p><i>' + data[0].metadata.title + '</i></p>';
+    qsa += '<p>A record has also been created in our catalogue (which you will learn about shortly). ';
+    qsa += 'Visit the record to view all the extracted metadata: <br><a target="_blank" href="' + serviceaddress + '/catalogue/';
+    qsa += data[0].metadata.id + '">' + serviceaddress + '/catalogue/' + data[0].metadata.id + '</a></p>';
+    $('#quickscraperesult').html(qsa);
+    var dd = {
+        ident: data[0].metadata.id
+    }
+    var vv = {
+        type: 'POST',             
+        url: '/api/processor/species',
+        contentType: 'application/json',             
+        dataType: 'JSON',             
+        processData: false,             
+        cache: false,             
+        context: this,             
+        data: JSON.stringify(dd),
+        success: alldone,
+        error: function() { $('#loadinggif').hide().after('Sorry, something went wrong.') }
+    }
+    $.ajax(vv);
+}
+
+var doit = function(event) {
+    $('#loadinggif').show();
+    event.preventDefault();
+    var data = {
+        url: $('#url').val(),
+        scraper: $('#scraper').val()
+    };
+    var vars = {             
+        type: 'POST',             
+        url: '/api/processor/quickscrape',
+        contentType: 'application/json',             
+        dataType: 'JSON',             
+        processData: false,             
+        cache: false,             
+        context: this,             
+        data: JSON.stringify(data),
+        success: ami,
+        error: function() { $('#loadinggif').hide().after('Sorry, something went wrong.') }
+    }         
+    $.ajax(vars); 
+}
+$('#doit').bind('click',doit);
+
+
+// functions to be performed on success of various API actions
+var successfunctions = {
+    catalogue: function(data) {
+        var out = '<p>You can view this record directly at <br><a target="_blank" href="' + apiaddress + '/catalogue/' + data.id + '">';
+        out += apiaddress + '/catalogue/' + data.id + '</a><br>';
+        out += 'or view it via the UI at <a target="_blank" href="' + serviceaddress + '/catalogue/' + data.id + '">';
+        out += serviceaddress + '/catalogue/' + data.id + '</a></p><pre>';
+        out += JSON.stringify(data,"","    ");
+        out += '</pre>';
+        $('#catalogueresult').html( out );
+    }
+}
+// execute the various API actions via the instantiated client
+var performaction = function(event) {
+    event.preventDefault();
+    // the data required for the various API actions
+    var getdata = {
+        catalogue: { catalogue: $('#cataloguerecord').val() }
+    }
+    var a = $(this).attr('href');
+    getdata[a].success = successfunctions[a];
+    client[a](getdata[a]);
+}
+$('.performaction').bind('click',performaction);
+
+
+var postcatqueryquery = {
+    'query': {
+        'filtered': {
+            'filter': {
+                'bool': {
+                    'must': [
+                        {
+                            'missing': {
+                                'field': 'assigned_to'
+                            }
+                        },
+                        {
+                            'range': {
+                                'created_date': {
+                                    'gte': '2014-01-01'
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    'sort': {'created_date.exact': 'desc'},
+    'size': 4,
+    'from':2,
+    'fields': ['id','title']
+}
+$('#postcatqueryquery').html(JSON.stringify(postcatqueryquery,"","    "));
+
+var postcatquery = function(event) {
+    event.preventDefault();
+    $.ajax({             
+        type: 'POST',             
+        url: '/api/catalogue/query',
+        contentType: 'application/json',             
+        dataType: 'JSON',             
+        processData: false,             
+        cache: false,             
+        context: this,
+        data: JSON.stringify(postcatqueryquery),
+        success: function(data) {
+            $('#postcatqueryresult').html(JSON.stringify(data,"","    "));
+        }
+    });
+}
+$('#postcatqueryex').bind('click',postcatquery);
+
+});
+</script>
+
+
+{% endblock %}

@@ -10,17 +10,11 @@ from flask.ext.login import current_user
 from functools import wraps
 from flask import g, request, redirect, url_for
 
-from portality.view.query import query as query
 import portality.models as models
-from portality.core import app
 import portality.util as util
 from portality.callers import callers as callers
 
 from datetime import datetime
-
-from os import listdir
-from os.path import isfile, join
-
 
 
 blueprint = Blueprint('api', __name__)
@@ -38,7 +32,6 @@ def login_required(f):
     
     
 # return the API instructions --------------------------------------------------
-@blueprint.route('/<path:path>', methods=['GET','POST'])
 @blueprint.route('/', methods=['GET','POST'])
 @util.jsonp
 def api():
@@ -51,7 +44,9 @@ def api():
         "processor": {
             "description": "Lists all available processors (crawlers, scrapers, visitors, or combinations of those) with further instructions for how to use them. Visitors are used to extract certain types of fact from contents. For example once a crawler has identified the metadata of an article from a web page, and a scraper has retrieved the full-text content object, various visitors may be appropriate to run on the content to extract facts. Extracted facts can then be uploaded to the fact API.",
             "note": "It is not mandatory nor even expected that all visitors will run directly at ContentMine. However this API will list the visitors we know about and will make them available for execution on contents that are publicly accessible. Individual users are encouraged to download and run visitors (or to create their own) themselves across the contents that they have scraped and that they wish to mine, then they can upload extracted facts directly to the fact API."
-
+        },
+        "process": {
+            "description": "The process queue lists catalogue entries by their processing status, so that they can be quickly queried to provide lists of articles to perform various processing tasks upon"
         },
         "catalogue": {
             "description": "Provides access to all the metadata of all the items crawled or scraped by ContentMine. New catalogue records can be uploaded too, either as the output of ContentMine scraping or of any other process deemed appropriate. The catalogue provides powerful search features too.",
@@ -60,9 +55,6 @@ def api():
         "fact": {
             "description": "THE MAIN EVENT! Here is access to the facts extracted and stored by ContentMine. Also, new facts can be uploaded for storage. Any process that extracts a fact can send such fact (or batch of facts) to this API and it will then become available via the ContentMine stream. The fact API also provides powerful search features too. Long term storage of facts may not be provided - it is hoped to be, but to be decided later in the project.",
             "note": "There will also be access to daily lists of extracted facts, and perhaps larger dumps such as weeklies."
-        },
-        "queue": {
-            "description": "The queue provides various ways to get hold of article metadata and assign them to user accounts for processing. This enables users - human or machine - to claim articles for certain tasks, to help avoid duplication of effort"
         }
     }) )
     resp.mimetype = "application/json"
@@ -72,11 +64,9 @@ def api():
 
 
 # provide access to the listing of available processors --------------------------
-@blueprint.route('/processor/<path:path>', methods=['GET','POST'])
-@blueprint.route('/processor', methods=['GET','POST'])
-@blueprint.route('/processor/', methods=['GET','POST'])
+@blueprint.route('/processor')
 @util.jsonp
-def crawler():
+def processor():
     # TODO: each processor should be made available in the crawler folder
     # each one should be able to report what it does
     # each crawler should then be accessible via /api/processor/NAME
@@ -89,7 +79,10 @@ def crawler():
         documents that contain the content of articels), structuring (normalising the strucutre of the \
         content of an article), or visiting (searching the article content for facts and extracting them). \
         Append the processor name to the processor/ url to access each one and read more about what they do.",
-        "processors": ["quickscrape"]
+        "processors": ["quickscrape","species"],
+        "crawlers": "Crawlers find and list web pages. They must produce at least a link to a resource. They may also produce metadata about that resources. A crawler should create a Catalogue record as output. Crawlers and scrapers are similar and a processor may well be a crawler and a scraper",
+        "scrapers": "Scrapers should produce metadata about a given resource, and should also provide a link to the full text of a resource in the various formats available (if any). A scraper should create a Catalogue record as output, along with links to files (or files themselves) containing the full resource",
+        "visitors": "Visitors extract facts from resources. They should operate on the full text of an item that has a ContentMine catalogue entry. A visitor could operate remotely on an full text item not stored or availabl to ContentMine, but in this case the first thing it must do before providing creating Fact records in ContentMine is to check if a Catalogue record exists for the resource, and if not then create one. Facts must have a Catalogue record parent."
     }) )
     resp.mimetype = "application/json"
     return resp
@@ -99,25 +92,16 @@ def crawler():
 def quickscrape():
     if request.method == 'GET' and 'url' not in request.values:
         # show the instructions
-        scraperdir = '/opt/contentmine/src/journal-scrapers/scrapers/'
-        try:
-            scrp = [ f.replace('.json','') for f in listdir(scraperdir) if isfile(join(scraperdir,f)) ]
-        except:
-            try:
-                scraperdir = '/Users/one/Code/contentmine/src/journal-scrapers/scrapers/'
-                scrp = [ f.replace('.json','') for f in listdir(scraperdir) if isfile(join(scraperdir,f)) ]
-            except:
-                scrp = ["check the route to the scrapers folder!"]
         resp = make_response( json.dumps({
             "description": "The quickscrape processor.",
             "type": ["crawler","scraper"],
-            "GET": "GETs this instruction page",
+            "GET": "GETs this instruction page (or, given a url query parameter, emulates the POST)",
             "POST": "POST your instructions to the crawler and receive answers. Can scrape by trying to choose automatically from the listed scrapers, or specify one in the provided options. See the example_POST and use the url parameter as either a single URL string or a list of URLs. Make sure your POST specifices the Content-Type:application/json",
             "example_POST": {
                 "url": ["https://peerj.com/articles/384"],
                 "scraper": "peerj"
             },
-            "available_scrapers": scrp
+            "available_scrapers": callers().scrapers
         }) )
         resp.mimetype = "application/json"
         return resp
@@ -127,6 +111,8 @@ def quickscrape():
         if params.get('url',False):
             if isinstance(params['url'],list):
                 urls = params['url']
+            elif ',' in params['url']:
+                urls = params['url'].split(',')
             else:
                 urls = [params['url']]
             try:
@@ -153,13 +139,13 @@ def species():
     if request.method == 'GET' and 'ident' not in request.values:
         # show the instructions
         resp = make_response( json.dumps({
-            "description": "The species processor",
+            "description": "The species processor. Searches a resource for species names",
             "type": ["visitor"],
-            "GET": "GETs this instruction page",
+            "GET": "GETs this instruction page (or, provided at least a catalogue parameter, emulates the POST)",
             "POST": "POST your instructions to the visitor and receive answers.",
             "example_POST": {
-                "url": ["https://peerj.com/articles/384"]
-            },
+                "catalogue": "<CATALOGUE_IDENTIFIER>"  #https://peerj.com/articles/384
+            }
         }) )
         resp.mimetype = "application/json"
         return resp
@@ -169,10 +155,8 @@ def species():
         try:
             output = callers().ami(
                 cmd='species', 
-                input_file_location=params.get('input_file_location',False), 
-                slug=params.get('slug',False),
-                ident=params.get('ident',False),
-                filetype=params.get('filetype','xml'),
+                ident=params['ident']
+                #filetype=params.get('filetype','xml')
             )
         except Exception, e:
             resp = make_response(json.dumps({'errors': [str(e)]}))
@@ -195,7 +179,7 @@ def catalogue():
             "README": {
                 "description": "The ContentMine catalogue API. The endpoints listed here are available for their described functions. Append the name of each endpoint to the /api/catalogue/ URL to gain access to each one.",
                 "GET": "Returns this documentation page",
-                "POST": "POST a JSON payload following the bibJSON metadata convention (www.bibjson.org), and it will be saved in the ContentMine. This action redirects to the saved object, so the location/URL/ID of the object can be known."
+                "POST": "POST a JSON payload following the bibJSON metadata convention (www.okfnlabs.org/bibjson), and it will be saved in the ContentMine. This action redirects to the saved object, so the location/URL/ID of the object can be known."
             },
             "<identifier>": {
                 "GET": "GET /api/catalogue/SOME_IDENTIFIER will return the identified catalogue entry in (bib)JSON format",
@@ -275,32 +259,9 @@ def cataloguequery():
         qs = json.loads(urllib2.unquote(request.values['source']))
     else: 
         qs = {'query': {'match_all': {}}}
-    return query(path='Catalogue',qry=qs)
-
-
-
-
-# provide access to retrieved content objects that can and have been stored ----
-@blueprint.route('/storage/<path:path>', methods=['GET','POST'])
-@blueprint.route('/storage', methods=['GET','POST'])
-@util.jsonp
-@login_required
-def content():
-    if request.method == 'GET':
-        # TODO: this should become a listing of stored content
-        # perhaps with a paging / search facility
-        resp = make_response( json.dumps({
-            "description": "Temporary storage for items during processing."
-        }) )
-        resp.mimetype = "application/json"
-        return resp
-        
-    elif request.method == 'POST':
-        # TODO: this should save POSTed content to wherever we are saving stuff
-        # probably the saving of stuff should be handled by an archive class
-        pass    
-    
-    
+    resp = make_response( json.dumps(models.Catalogue.query(q=qs)) )
+    resp.mimetype = "application/json"
+    return resp
     
     
 # provide access to facts ------------------------------------------------------
@@ -312,7 +273,7 @@ def fact():
             "README": {
                 "description": "The ContentMine fact API. The endpoints listed here are available for their described functions. Append the name of each endpoint to the /api/fact/ URL to gain access to each one.",
                 "GET": "Returns this documentation page",
-                "POST": "POST a JSON payload following the fact metadata convention (err, which does not exist yet), and it will be saved in the ContentMine"
+                "POST": "POST a JSON payload following the fact metadata convention (err, which does not exist yet), and it will be saved in the ContentMine. NOTE: a fact MUST include the parent parameter, and that must be the ID of a ContentMine Catalogue record"
             },
             "<identifier>": {
                 "GET": "GET /api/fact/SOME_IDENTIFIER will return the identified fact in JSON format",
@@ -394,24 +355,24 @@ def factquery():
         qs = json.loads(urllib2.unquote(request.values['source']))
     else: 
         qs = {'query': {'match_all': {}}}
-    return query(path='Fact',qry=qs)
+    resp = make_response( json.dumps(models.Fact.query(q=qs)) )
+    resp.mimetype = "application/json"
+    return resp
 
 @blueprint.route('/fact/daily', methods=['GET','POST'])
 @util.jsonp
 def factdaily():
-    # TODO: should this accept user-provided queries too? So people can search 
-    # on the daily list? If so, just check the incoming query and build one 
-    # with a MUST that includes the following date-based restriction.
     qry = {
         'query': {
-            'query_string': {
-                'query': datetime.now().strftime("%Y-%m-%d"),
-                'default_field':'created_date'
+            'range': {
+                'created_date': {
+                    'gte': datetime.now().strftime("%Y-%m-%d")
+                }
             }
         },
         'sort': [{"created_date.exact":{"order":"desc"}}]
     }
-    r = query(path='Fact',qry=qry,raw=True)
+    r = models.Fact.query(q=qry)
     # TODO: decide if any control keys should be removed before displaying facts
     res = [i['_source'] for i in r.get('hits',{}).get('hits',[])]
     resp = make_response( json.dumps(res) )
@@ -420,145 +381,88 @@ def factdaily():
     
 
 # queue up article metadata records that need processing -----------------------
-@blueprint.route('/queue', methods=['GET','POST'])
+@blueprint.route('/process')
 @util.jsonp
-def queue():
-    qry = {
-        'query': {
-            'bool': {
-                'must_not': [
-                    {
-                        'exists': {
-                            'field': 'processing'
-                        }
-                    }
-                ]
-            }
+def process():
+    resp = make_response( json.dumps({
+        "README": {
+            "description": "The ContentMine process queue API. Returns a list of Catalogue metadata record IDs that have yet to be processed by a given (or all) processor. By default this shows records ever processed, but can be filtered by passing the since parameter with a datetime value",
+            "GET": "Returns this documentation page",
+            "Assignment": "If you want to track which records are being processed, it is possible to assign and unasssign records to user accounts. To filter by unassigned records just add unassigned=true to the URL parameters"
         },
-        'sort': [{"created_date.exact":{"order":"desc"}}]
-    }
-    # TODO: enable query paging parameters through the queue
-    r = query(path='Fact',qry=qry,raw=True)
-    res = [i['_source'] for i in r.get('hits',{}).get('hits',[])]
-    resp = make_response( json.dumps(res) )
+        "assign": {
+            "GET": "emulates the POST, accepts ids parameter with a CSV list of Catalogue identifiers",
+            "POST": "provided a list of Catalogue record identifiers in the ids parameter, marks them as assigned to the current user. Use the Catalogue query if you wish to find identifiers for specific records. Returns a list of the identifiers of records that actually were assigned (in case some were assigned in the interim)"
+        },
+        "assigned": {
+            "GET": "returns the list of IDs assigned to the current user"
+        },
+        "unassign": {
+            "GET": "unassigns all records assigned to the current user"
+        },
+        "next": {
+            "GET": "returns the next record available for assignment - i.e. the Catalogue record most recently created but not assigned to anyone",
+            "POST": "assigns the next record available to the current user"
+        }
+    }) )
     resp.mimetype = "application/json"
     return resp
 
-@blueprint.route('/queue/assign', methods=['GET','POST'])
+@blueprint.route('/process/assign')
 @util.jsonp
-@login_required
 def assign():
-    try:
-        ids = request.json
-    except:
-        try:
-            ids = request.values['ids'].split(',')
-        except:
-            qry = {
-                'query': {
-                    'bool': {
-                        'must_not': [
-                            {
-                                'exists': {
-                                    'field': 'processing'
-                                }
-                            }
-                        ]
-                    }
-                },
-                'sort': [{"processing.created_date.exact":{"order":"desc"}}],
-                'size': 1
-            }
-            # TODO: allow for accepting query params here
-            r = query(path='Record',qry=qry,raw=True)
-            ids = [i['_source']['id'] for i in r.get('hits',{}).get('hits',[])]
-
-    if request.method == 'POST':
-        assigned = []
-        for rid in ids:
-            rec = models.Catalogue().pull(rid)
-            if rec is None:
-                abort(404)
-            elif not rec.data.get('processing',False):
-                rec.data['processing'] = {'assigned_date':datetime.datetime.now(), 'assigned_to':current_user.id}
-                rec.save()
-                assigned.append(rec.id)
+    vals = request.json if request.json else request.values
+    if 'ids' in vals:
+        if ',' in vals['ids']:
+            vl = vals['ids'].split(',')
+        elif '[' not in vals['ids']:
+            vl = [vals['ids']]
+        else:
+            vl = vals['ids']
+        resp = make_response( json.dumps( current_user.assign(ids=vl) ) )
+        resp.mimetype = "application/json"
+        return resp
     else:
-        assigned = ids
+        abort(404)
         
-    resp = make_response( json.dumps(assigned) )
-    resp.mimetype = "application/json"
-    return resp
 
-@blueprint.route('/queue/assigned', methods=['GET'])
-@blueprint.route('/queue/assigned/<userid>', methods=['GET'])
+@blueprint.route('/process/assigned')
 @util.jsonp
-def assigned(userid=False):
-    qry = {
-        'query': {
-            'bool': {
-                'must': [
-                    {
-                        'exists': {
-                            'field': 'processing'
-                        }
-                    }
-                ]
-            }
-        },
-        'sort': [{"processing.assigned_date.exact":{"order":"desc"}}]
-    }
-    if userid:
-        qry['query']['bool']['must'].append({
-            'term': {
-                'processing.assigned_to.exact': current_user.id
-            }
-        })
-
-    r = query(path='Record',qry=qry,raw=True)
-    res = [i['_source']['id'] for i in r.get('hits',{}).get('hits',[])]
-
-    resp = make_response( json.dumps(res) )
+def assigned():
+    resp = make_response( json.dumps( current_user.assigned ) )
     resp.mimetype = "application/json"
     return resp
 
-@blueprint.route('/queue/next', methods=['GET','POST'])
+@blueprint.route('/process/unassign')
+@util.jsonp
+def unassign():
+    current_user.unassign()
+    resp = make_response( json.dumps( [] ) )
+    resp.mimetype = "application/json"
+    return resp
+
+@blueprint.route('/process/next')
 @util.jsonp
 def next():
-    qry = {
+    res = models.Catalogue.query(q={
         'query': {
-            'bool': {
-                'must_not': [
-                    {
-                        'exists': {
-                            'field': 'processing'
-                        }
+            'filtered': {
+                'filter': {
+                    'missing': {
+                        'field': 'assigned_to'
                     }
-                ]
+                }
             }
         },
-        'sort': [{"processing.created_date.exact":{"order":"desc"}}],
+        'sort': {'created_date.exact': 'desc'},
         'size': 1
-    }
-    r = query(path='Record',qry=qry,raw=True)
-    
+    })
     try:
-        next = r['hits']['hits'][0]['_source']['id']
+        rec = res['hits']['hits'][0]['_source']
+        if request.method == 'POST' or request.values.get('haveit',False):
+            current_user.assign(ids=[rec['id']])
+        resp = make_response( json.dumps( rec ) )
+        resp.mimetype = "application/json"
+        return resp
     except:
         abort(404)
-
-    if request.method == 'POST':
-        if current_user.is_anonymous():
-            abort(401)
-        else:
-            rec = models.article.pull(next)
-            rec.data['processing'] = {'assigned_date':datetime.datetime.now(), 'assigned_to':current_user.id}
-            rec.save()
-
-    resp = make_response( next )
-    resp.mimetype = "application/json"
-    return resp
-
-    
-    
-

@@ -15,6 +15,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto Slab', serif;
 }
 
+hr {
+    border:1px solid #187c83;
+}
+
 .jumbotron{
     background-color:#92ce73;
 }

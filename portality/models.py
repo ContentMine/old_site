@@ -5,6 +5,8 @@ from portality.core import app
 
 from portality.dao import DomainObject as DomainObject
 
+import requests
+
 '''
 Define models in here. They should all inherit from the DomainObject.
 Look in the dao.py to learn more about the default methods available to the Domain Object.
@@ -12,15 +14,13 @@ When using portality in your own flask app, perhaps better to make your own mode
 '''
 
 
-# a typical record object, with no special abilities
 class Fact(DomainObject):
-    __type__ = 'fact'
+    __type__ = ('fact')
 
-
-# a typical record object, with no special abilities
+    
 class Catalogue(DomainObject):
     __type__ = 'catalogue'
-
+        
 
 # an example account object, which requires the further additional imports
 # There is a more complex example below that also requires these imports
@@ -47,6 +47,36 @@ class Account(DomainObject, UserMixin):
     @property
     def is_super(self):
         return not self.is_anonymous() and self.id in app.config['SUPER_USER']
+    
+    def assign(self,ids=[]):
+        ln = len(ids)
+        if ln > 1000: ln = 1000
+        tlen = ln - len(self.assigned)
+        if tlen < 1:
+            return []
+        else:
+            ids = ids[:tlen]
+            assigned = []
+            for iid in ids:
+                check = Catalogue.pull(iid)
+                if check is not None and 'assigned_to' not in check.data:
+                    check.data['assigned_to'] = self.id
+                    check.data['assigned_date'] = datetime.now().strftime("%Y-%m-%d %H%M")
+                    check.save()
+                    assigned.append(iid)
+            return assigned
+    
+    def unassign(self):
+        for iid in self.assigned:
+            a = Catalogue.pull(iid)
+            if a.data.get('assigned_to',False) == self.id:
+                del a.data['assigned_to']
+                del a.data['assigned_date']
+                a.save()
+    
+    @property
+    def assigned(self):
+        return [i['_source']['id'] for i in Catalogue.query(q='assigned_to.exact:"' + self.id + '"', size=1000).get('hits',{}).get('hits',[])]
     
 
 # a typical record object, with no special abilities
