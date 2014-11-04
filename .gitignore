@@ -14,3 +14,5 @@ target/*
 app.cfg
 
 media/*
+
+portality/templates/pagemanager/content/*
