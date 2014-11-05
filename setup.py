@@ -12,7 +12,8 @@ setup(
         "Markdown==2.3.1",
         "WTForms==1.0.5",
         "Werkzeug==0.9.6",
-        "requests==2.1.0"
+        "requests==2.1.0",
+        "lxml"
     ],
     url = 'http://contentmine.org/',
     author = 'Content Mine',

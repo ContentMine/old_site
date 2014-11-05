@@ -73,7 +73,7 @@ def settings(path='/'):
         
     if request.method == 'GET':
         if record is None:
-            flash('There is no page here yet - create one.')
+            flash('There is no page here yet - create one.', 'info')
         return render_template(
             'pagemanager/settings.html', 
             tags = json.dumps(dropdowns('pagemanager','tags')),
@@ -88,7 +88,7 @@ def settings(path='/'):
             abort(404)
         else:
             _sync_delete(record)
-            flash('Page deleted')
+            flash('Page deleted', 'success')
             return redirect("/")
 
     elif request.method == 'POST':
@@ -102,15 +102,15 @@ def settings(path='/'):
         newdata = request.json if request.json else request.values
         # check the new url does not overwrite an already present url
         if 'url' not in newdata:
-            flash("A URL is required.")
+            flash("A URL is required.",'info')
         elif (record.data.get('url','') != newdata['url'] and 
                 models.Pages.pull_by_url(newdata['url']) is not None ):
             # update record data so form is up to date but don't save it
             record.update_from_form(request)
-            flash("There is already a page present at the URL you specifed. You must delete that page first.")
+            flash("There is already a page present at the URL you specifed. You must delete that page first.",'info')
         else:
             record.save_from_form(request)
-            flash('Settings updated')
+            flash('Settings updated', 'success')
             time.sleep(1)
 
         return render_template(
@@ -169,7 +169,7 @@ def manage():
             method = 'deleted'
         else:
             method = 'updated'
-        flash(str(updatecount) + " records have been " + method + ".")
+        flash(str(updatecount) + " records have been " + method + ".", 'success')
         
     return render_template('pagemanager/manage.html')
 

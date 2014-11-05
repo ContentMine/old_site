@@ -131,3 +131,29 @@ REPOS = {
     }
 }
 
+
+# ========================
+# FEED SETTINGS
+
+BASE_URL = "http://contentmine.org"
+FEED_TITLE = "ContentMine"
+
+# Maximum number of feed entries to be given in a single response.  If this is omitted, it will
+# default to 20
+MAX_FEED_ENTRIES = 100
+
+# Maximum age of feed entries (in seconds) (default value here is 30 days).
+MAX_FEED_ENTRY_AGE = 2592000
+
+# NOT USED IN THIS IMPLEMENTATION
+# Which index to run feeds from
+#FEED_INDEX = "journal"
+
+# Licensing terms for feed content
+FEED_LICENCE = "(c) ContentMine 2014. CC-BY."
+
+# name of the feed generator (goes in the atom:generator element)
+FEED_GENERATOR = "CottageLabs feed generator"
+
+# Larger image to use as the logo for all of the feeds
+FEED_LOGO = "http://contentmine.org/static/favicon.ico"

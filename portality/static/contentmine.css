@@ -4,11 +4,14 @@ CM bright green is #92ce73
 CM dark green is #187c83
 
 */
-
 html, body{
-    padding:40px 0 0 0;
+    margin:0;
+    padding:0;
     background-color:#eff8e9;
     font-family: 'Roboto Slab', serif;
+}
+body{
+    margin-top:70px;
 }
 
 h1, h2, h3, h4, h5, h6 {
