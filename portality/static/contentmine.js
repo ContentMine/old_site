@@ -60,7 +60,7 @@ contentmine.prototype = {
     },
     catalogue: function(o) {
         var addr = 'catalogue';
-        // catalogue can be query or a catalogue record ID
+        // catalogue can be a catalogue record ID
         o.catalogue ? addr += '/' + o.catalogue : false;
         this.send(addr, o);
     },

@@ -207,6 +207,11 @@ var catalogue = function(cid) {
 </pre>
                 <p>(We use the .exact key suffix for queries against exact values rather than the processed values used for text searching.)</p>
                 <p>Read the <a target="_blank" href="http://www.elasticsearch.org">elasticsearch</a> query DSL documentation to learn more.</p>
+                
+                <p>New records can be created by either POST to the Catalogue route, or if a record already exists, by PUT (overwrite) or POST 
+                (update) to the Catalogue record route (/api/catalogue/ID). Click the button below to create a new test record via POST and to 
+                open a page at the URL of that test record:</p>
+                <p><a href="#" id="posttestrecord" class="btn btn-info btn-block">Create a test record</a></p>
             </div>
 
             <div class="col-md-6">
@@ -531,6 +536,20 @@ var postcatquery = function(event) {
 }
 $('#postcatqueryex').bind('click',postcatquery);
 
+var posttestrecord = function(event) {
+    event.preventDefault();
+    client.catalogue({
+        data: {
+            title: 'test'
+        },
+        success: function(data) {
+            window.location = '/api/catalogue/' + data.id;
+        }
+    })
+}
+$('#posttestrecord').bind('click',posttestrecord);
+    
+    
 });
 </script>
 

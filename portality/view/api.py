@@ -171,7 +171,6 @@ def species():
 
 # provide access to catalogue of article metadata ------------------------------
 @blueprint.route('/catalogue', methods=['GET','POST'])
-@blueprint.route('/catalogue/', methods=['GET','POST'])
 @util.jsonp
 def catalogue():
     if request.method == 'GET':
@@ -179,7 +178,7 @@ def catalogue():
             "README": {
                 "description": "The ContentMine catalogue API. The endpoints listed here are available for their described functions. Append the name of each endpoint to the /api/catalogue/ URL to gain access to each one.",
                 "GET": "Returns this documentation page",
-                "POST": "POST a JSON payload following the bibJSON metadata convention (www.okfnlabs.org/bibjson), and it will be saved in the ContentMine. This action redirects to the saved object, so the location/URL/ID of the object can be known."
+                "POST": "POST a JSON payload following the bibJSON metadata convention (www.okfnlabs.org/bibjson), and it will be saved in the ContentMine. This saved object will be returned and from this the ID can be extracted, thus providing the object address at /api/catalogue/ID"
             },
             "<identifier>": {
                 "GET": "GET /api/catalogue/SOME_IDENTIFIER will return the identified catalogue entry in (bib)JSON format",
@@ -208,7 +207,9 @@ def catalogue():
                     if k not in ['submit']:
                         f.data[k] = v
             f.save()
-            return redirect('/api/catalogue/' + f.id)
+            resp = make_response( f.json )
+            resp.mimetype = "application/json"
+            return resp
 
 @blueprint.route('/catalogue/<ident>', methods=['GET','PUT','POST'])
 @util.jsonp
