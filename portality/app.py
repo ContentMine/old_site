@@ -43,16 +43,17 @@ def set_current_context():
 def standard_authentication():
     """Check remote_user on a per-request basis."""
     remote_user = request.headers.get('REMOTE_USER', '')
+    vals = request.json if request.json else request.values
     if remote_user:
         user = models.Account.pull(remote_user)
         if user:
             login_user(user, remember=False)
     # add a check for provision of api key
-    elif 'api_key' in request.values:
-        res = models.Account.query(q='api_key:"' + request.values['api_key'] + '"')['hits']['hits']
+    elif 'api_key' in vals:
+        res = models.Account.query(q='api_key:"' + vals['api_key'] + '"')['hits']['hits']
         if len(res) == 1:
             user = models.Account.pull(res[0]['_source']['id'])
-            if user:
+            if user is not None:
                 login_user(user, remember=False)
 
 
@@ -68,6 +69,11 @@ def page_not_found(e):
 @app.route('/docs')
 def docs():
     return render_template('docs.html')
+
+
+@app.route('/workflow')
+def workflow():
+    return render_template('workflow.html')
 
 
 @app.route('/catalogue')

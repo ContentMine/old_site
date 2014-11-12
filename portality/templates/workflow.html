@@ -1,0 +1,370 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+.stepper{
+    text-align:justify;
+    height:250px;
+    background-color:#c8c8c8;
+}
+.stepper:hover {
+    background-color:#5bc0de;
+}
+.stepper p {
+    font-size:0.8em;
+}
+</style>
+
+<div class="container" style="padding-bottom:40px;">
+    <div class="content">
+
+        <div class="row" style="padding:0;margin:0;">
+            <div class="col-md-4">
+                <div class="jumbotron" style="height:250px;">
+                    <h2>ContentMine<br><br>Processing<br>Workflow</h2>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <a href="#metadata">
+                <div class="jumbotron stepper">
+                    <h2>1. Metadata</h2>
+                    <p>First we need a ContentMine Catalogue metadata record for the article to be mined. 
+                    There are various ways to do this.</p>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#process">
+                <div class="jumbotron stepper">
+                    <h2>2. Process</h2>
+                    <p>Process the source object identified by a metadata record with your choice of 
+                    content mining tools.</p>
+                </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="row" style="padding:0;margin:0;">
+            <div class="col-md-4">
+                <a href="#share">
+                <div class="jumbotron stepper">
+                    <h2>3. Share</h2>
+                    <p>Find the facts extracted by the processors in our Fact index, now shared 
+                    with the world.</p>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#contribute">
+                <div class="jumbotron stepper">
+                    <h2>4. Contribute</h2>
+                    <p>Help us mine more content! We need metadata scrapers, fact processors, and more!</p>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <div class="jumbotron" style="height:250px;">
+                </div>
+            </div>
+        </div>
+
+        
+        
+        <hr>
+        
+        
+        
+        {% if current_user.is_anonymous() %}
+        <div class="row" style="padding:0;margin:0;">
+            <div class="col-md-6">
+                <div class="alert alert-info">
+                    <h3>You are not logged in. Before you can make a workflow you must have 
+                    a user account.</h3>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p><a href="/account/login" class="btn btn-info btn-block">Login to your account</a></p>
+                <p><a href="/account/register"class="btn btn-info btn-block">Register for a ContentMine account</a></p>
+            </div>
+        </div>
+        <hr>
+        {% endif %}
+
+        
+        
+        
+        <a id="metadata"></a>
+        <div class="row" style="padding:0;margin:0;text-align:justify;">
+            <div class="col-md-3">
+                <div class="well" style="text-align:center;">
+                    <h2>Step</h2>
+                    <h1 style="font-size:6em;">1.</h1>
+                    <h2>Metadata</h2>
+                </div>
+            </div>
+            
+            <div class="col-md-2" style="height:270px;">
+                <p>To start with we need the metadata about the articles you wish to process.
+                If we already have them in our Catalogue, then all you have to do is let us know 
+                which records you wish to process.</p>
+
+                <p style="bottom:0;position:absolute;"><a href="#" id="catalogue" class="btn btn-info choosedos">Select from the Catalogue</a></p>
+            </div>
+            
+            <div class="col-md-3" style="height:270px;">
+                <p>Otherwise, perhaps the easiest way to proceed where possible is to use our quickscrape processor 
+                to extract metadata from web page URLs. These web pages must be openly available on the web without 
+                requiring a login or payment. If you can provide such a URL (or list of URLs) then we can extract the 
+                metadata for you and add them to our Catalogue.</p>
+
+                <p style="bottom:0;position:absolute;"><a href="#" id="quickscrape" class="btn btn-info choosedos">Use quickscrape</a></p>
+            </div>
+
+            <div class="col-md-4" style="height:270px;">
+                <p>Alternatively you can upload an article that you have access to and we will process 
+                it for you. We will only process the article and will not keep a copy or make it available to anyone else. 
+                If you are in the UK you have the right to process any article that you have access to - 
+                <a href="/rights">read more about these rights</a>.</p>
+                
+                <p>(It is also possible for you to use our software to process articles locally, if you'd 
+                rather not upload articles you have local access to (such as via your university network).
+                <br><a href="/contribute/local">Read more about using our software locally</a>.</p>
+
+                <p style="bottom:0;position:absolute;"><a href="#" id="upload" class="btn btn-info choosedos">Upload an article</a></p>
+            </div>
+        </div>
+        
+        <div class="row" style="padding:0;margin:0;">
+            <div class="col-md-12 dos" id="doquickscrape">
+                <p>Enter the web address (URL) of the article you would like to add to the catalogue, 
+                and select the correct scraper to process it.</p>
+                <p>NOTE: we only have a few scrapers to start with, but you can help us by contributing 
+                more. It is easy to do so. <a href="/contribute/scraper">Read more about how to contribute a scraper.</a></p>
+                <p><input type="text" class="form-control" id="url" placeholder="provide a url"></p>
+                <p><select class="form-control" id="scraper"><option></option></select></p>
+                <p><a class="btn btn-info btn-block" href="#" id="scrapeit">Process the URL</a></p>
+            </div>
+            
+            <div class="col-md-12 dos" id="docatalogue">
+            </div>
+
+            <div class="col-md-12 dos" id="doupload">
+            </div>
+        </div>            
+        
+        
+        
+        
+        <hr>
+
+        
+        
+        <a id="process"></a>
+        <div class="row" style="padding:0;margin:0;">
+            <div class="col-md-3">
+                <div class="well" style="text-align:center;">
+                    <h2>Step</h2>
+                    <h1 style="font-size:6em;">2.</h1>
+                    <h2>Process</h2>
+                </div>
+            </div>
+            
+            <div class="col-md-9">
+                <p>Now that there are metadata records in our Catalogue for the articles you wish to process, 
+                we can proceed to get some facts out of them. (In some cases we may have been unsuccessful in 
+                retrieving a source object, or we may fail to parse the source object, but let's continue optimistically.)</p>
+                
+                <p>Select from our processors and run them on the identified articles.</p>
+
+                <p><select class="form-control" id="cmd"><option></option></select></p>
+                <p><a class="btn btn-info btn-block" href="#" id="processit">Do the processing</a></p>
+            </div>
+        </div>        
+        
+
+        
+        
+        <hr>
+
+        
+        
+        <a id="share"></a>
+        <div class="row" style="padding:0;margin:0;">
+            <div class="col-md-3">
+                <div class="well" style="text-align:center;">
+                    <h2>Step</h2>
+                    <h1 style="font-size:6em;">3.</h1>
+                    <h2>Share</h2>
+                </div>
+            </div>
+            
+            <div class="col-md-9">
+                <p>We have your facts. Browse them here and they are shared. Maybe make a collection / group?</p>
+            </div>
+        </div>        
+        
+        
+
+        
+        <hr>
+
+        
+        
+        
+        <a id="contribute"></a>
+        <div class="row" style="padding:0;margin:0;">
+            <div class="col-md-3">
+                <div class="well" style="text-align:center;">
+                    <h2>Step</h2>
+                    <h1 style="font-size:6em;">4.</h1>
+                    <h2>Contribute</h2>
+                </div>
+            </div>
+            
+            <div class="col-md-9">
+                <p>ContentMine works by using software to search, extract and store metadata sources, and then 
+                mining the source object identified by that metadata, where a source object is accessible.</p>
+                
+                <p>To do this we need contributions of scrapers that define how to extract metadata from different 
+                sources such as journal article web pages. These are easy to define, and do not require great technical 
+                skill.</p>
+                
+                <p>And we also need software that mine source objects for different sorts of fact. The facts that are 
+                worth extracting differ depending on the research field of interest, so of course to date we have focused 
+                on those of interest to our team! But we would love to expand the types of fact we can extract, so don't 
+                feel that there is any limitation to what should be attempted!</p>
+                
+                <p>We can accept contributions to our own tools, links to tools created by others that we can run, 
+                and also details of APIs that we can connect to for additional processing.</p>
+                
+                <p>We are also looking for project partners of various sorts - people who may wish to work with or 
+                perform research with us, and people or organisations that can fund us.</p>
+                
+                <p>If you can help with any of the above, then please do get in touch with us - we'd love to hear from you.</p>
+            </div>
+        </div>        
+        
+
+
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+<script type="text/javascript" src="{{url_for('static', filename='contentmine.js')}}"></script>
+<script>
+jQuery(document).ready(function() {
+
+// set some vars and create a client
+var serviceaddress = window.location.protocol + '//' + window.location.host;
+var apiaddress = serviceaddress + '/api';
+var client = new contentmine({
+    api: apiaddress
+});
+
+    
+// put some info about the available scrapers and processors into the page
+$.ajax({
+    url: apiaddress + '/processor',
+    dataType: 'JSONP',
+    crossDomain: true,
+    success: function(data) {
+        for ( var ptype in data.processors ) {
+            var ptp = data.processors[ptype];
+            if ( ptp != 'quickscrape' ) {
+                $.ajax({
+                    url: apiaddress + '/processor/' + ptp,
+                    dataType: 'JSONP',
+                    crossDomain: true,
+                    context: this,
+                    success: function(dt) {
+                        var desc = dt.description;
+                        $('#cmd').append('<option value="' + ptp + '">' + ptp + ' - ' + desc + '</option>');
+                    }
+                });
+            }
+        }
+    }
+});
+$.ajax({
+    url: apiaddress + '/processor/quickscrape',
+    dataType: 'JSONP',
+    crossDomain: true,
+    success: function(data) {
+        for ( var ptype in data.available_scrapers ) {
+            $('#scraper').append('<option>' + data.available_scrapers[ptype] + '</option>');
+        }
+    }
+});
+    
+// run the first processor examples
+var alldone = function(out) {
+    $('#loadinggif').hide();
+    $('#amiresult').html('<p>AMI completed. Output below.</p><div class="well"><pre>' + out.facts.replace('><','><br><').replace('<','&lt;').replace('>','&gt;') + '</pre></div><p>Next steps would be to extract this to JSON and save it to the fact API - coming soon, this will happen automatically and then facts will be searchable and viewable by daily listing!</p>');
+    getcats();
+}
+
+var processit = function(data) {
+    var dd = {
+        ident: data[0].metadata.id
+    }
+    var vv = {
+        type: 'POST',             
+        url: '/api/processor/species',
+        contentType: 'application/json',             
+        dataType: 'JSON',             
+        processData: false,             
+        cache: false,             
+        context: this,             
+        data: JSON.stringify(dd),
+        success: alldone,
+        error: function() { $('#loadinggif').hide().after('Sorry, something went wrong.') }
+    }
+    $.ajax(vv);
+}
+$('#processit').bind('click',processit);
+
+var scrapeit = function(event) {
+    event.preventDefault();
+    var data = {
+        url: $('#url').val(),
+        scraper: $('#scraper').val()
+    };
+    var vars = {             
+        type: 'POST',             
+        url: '/api/processor/quickscrape',
+        contentType: 'application/json',             
+        dataType: 'JSON',             
+        processData: false,             
+        cache: false,             
+        context: this,             
+        data: JSON.stringify(data),
+        success: function(data) {
+        },
+        error: function() {}
+    }         
+    $.ajax(vars); 
+}
+$('#scrapeit').bind('click',scrapeit);
+
+
+$('.dos').hide();
+var choosedos = function(event) {
+    event.preventDefault();
+    $('.dos').hide();
+    $('#do' + $(this).attr('id')).show();
+}
+$('.choosedos').bind('click',choosedos);
+
+    
+});
+</script>
+
+
+{% endblock %}

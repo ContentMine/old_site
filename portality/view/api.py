@@ -171,6 +171,7 @@ def species():
 
 # provide access to catalogue of article metadata ------------------------------
 @blueprint.route('/catalogue', methods=['GET','POST'])
+@blueprint.route('/catalogue/', methods=['GET','POST'])
 @util.jsonp
 def catalogue():
     if request.method == 'GET':

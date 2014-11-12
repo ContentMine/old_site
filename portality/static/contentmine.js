@@ -7,7 +7,7 @@ function contentmine(options) {
         description: "A javascript client that operates against the ContentMine API"
     };
     var defaults = {
-        api: 'https://contentmine.org/api',
+        api: 'http://contentmine.org/api',
         api_key: ''
     };
     this.options = $.extend(defaults, options);
