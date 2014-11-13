@@ -104,24 +104,20 @@
                 </div>
             </div>
             
-            <div class="col-md-2" style="height:270px;">
+            <div class="col-md-2">
                 <p>To start with we need the metadata about the articles you wish to process.
                 If we already have them in our Catalogue, then all you have to do is let us know 
                 which records you wish to process.</p>
-
-                <p style="bottom:0;position:absolute;"><a href="#" id="catalogue" class="btn btn-info choosedos">Select from the Catalogue</a></p>
             </div>
             
-            <div class="col-md-3" style="height:270px;">
+            <div class="col-md-3">
                 <p>Otherwise, perhaps the easiest way to proceed where possible is to use our quickscrape processor 
                 to extract metadata from web page URLs. These web pages must be openly available on the web without 
                 requiring a login or payment. If you can provide such a URL (or list of URLs) then we can extract the 
                 metadata for you and add them to our Catalogue.</p>
-
-                <p style="bottom:0;position:absolute;"><a href="#" id="quickscrape" class="btn btn-info choosedos">Use quickscrape</a></p>
             </div>
 
-            <div class="col-md-4" style="height:270px;">
+            <div class="col-md-4">
                 <p>Alternatively you can upload an article that you have access to and we will process 
                 it for you. We will only process the article and will not keep a copy or make it available to anyone else. 
                 If you are in the UK you have the right to process any article that you have access to - 
@@ -130,10 +126,22 @@
                 <p>(It is also possible for you to use our software to process articles locally, if you'd 
                 rather not upload articles you have local access to (such as via your university network).
                 <br><a href="/contribute/local">Read more about using our software locally</a>.</p>
-
-                <p style="bottom:0;position:absolute;"><a href="#" id="upload" class="btn btn-info choosedos">Upload an article</a></p>
             </div>
         </div>
+        
+        <div class="row" style="padding:0;margin:0;text-align:justify;">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-2">
+                <p><a href="#" id="catalogue" class="btn btn-info btn-block choosedos">Use the Catalogue</a></p>
+            </div>
+            <div class="col-md-3">
+                <p><a href="#" id="quickscrape" class="btn btn-info btn-block choosedos">Use quickscrape</a></p>
+            </div>
+            <div class="col-md-4">
+                <p><a href="#" id="upload" class="btn btn-info btn-block choosedos">Upload an article</a></p>
+            </div>
+
         
         <div class="row" style="padding:0;margin:0;">
             <div class="col-md-12 dos" id="doquickscrape">
@@ -147,9 +155,12 @@
             </div>
             
             <div class="col-md-12 dos" id="docatalogue">
+                <p>This option will be enabled soon, once we have more Catalogue records.</p>
             </div>
 
             <div class="col-md-12 dos" id="doupload">
+                <p>This option will be enabled soon, allowing you to upload a file along with some metadata for processing, 
+                but not for storing or sharing of the file itself - only the extracted facts will be shared.</p>
             </div>
         </div>            
         
