@@ -2,6 +2,8 @@
 
 {% block content %}
 
+{% if record %}
+
 <div class="row">
     <div class="col-md-12">
         <p>Proper fact display forthcoming, along with exciting things to do with them</p>
@@ -13,6 +15,102 @@
 var rec = {{record.data|tojson|safe}}
 $('#record').html(JSON.stringify(rec,"","    "));
 </script>
+
+{% else %}
+
+<div class="row">
+    <div class="col-md-12">
+        <div id="searchresults"></div>
+    </div>
+</div>
+
+
+
+
+
+<script>
+jQuery(document).ready(function() {
+
+function discoveryRecordView(data) {
+    var details = '<tr><td>';
+    details += '<h4><a href="/fact/' + data.id + '">' + data.title + '</a></h4>';
+    details += JSON.stringify(data,"","    ");
+    details += '</td></tr>';
+    return details;
+}
+
+var cshowresults = function(data) {
+    var restable = '<table id="searchresulttable" class="table table-striped table-bordered" style="background:white;">';
+    for ( var r in data.hits.hits ) {
+        restable += discoveryRecordView(data.hits.hits[r]._source);
+    }
+    restable += '</table>';
+    $('.graphview_panel').html(restable);
+    $('.graphview_total').html(data.hits.total);
+    $('.graphview_loading').html('... LOADING').hide();
+    if ( data.hits.total == 0 ) {
+        $('.graphview_loading').html('NO RESULTS FOUND').show();
+    }
+}
+
+var cuitemplate = function() {
+    var options = $.fn.graphview.options;
+    var ui = '<div class="graphview">';
+    ui += '<div class="row graphview_searcharea">';
+    ui += '<div class="col-md-12">';
+
+    ui += '<div style="margin-top:35px;"><input type="text" class="form-control query_string" style="width:97%;" data-option="query.bool.must.query_string.query"></div>';
+
+    ui += '<div style="margin-top:10px;">';
+    ui += '<input class="form-control graphview_from" type="text" value="';
+    ui += options.defaultquery.from;
+    ui += '" style="width:40px;margin:-5px 0 0 0;padding:1px 1px 0 0;color:#666;text-align:center;display:inline;">';
+    ui += ' to ';
+    ui += '<input class="form-control graphview_to" type="text" value="';
+    ui += options.defaultquery.size;
+    ui += '" style="width:40px;margin:-5px 0 0 0;padding:1px 1px 0 0;color:#666;text-align:center;display:inline;"> of \
+        <span class="graphview_total" style="font-size:16px;font-weight:bold;color:#999;"></span>';
+    ui += ' <span class="graphview_loading">... LOADING</span>';
+    ui += '</div>';
+
+    ui += '</div>';
+    ui += '</div>'; // closes searcharea
+
+    ui += '<div class="graphview_panel searchcontrols"></div>';
+
+    ui += '</div>'; // closes graphview
+
+    return ui;
+}
+
+$('#searchresults').graphview({
+    "target": "/api/fact/query",
+    "pushstate": false,
+    "searchhintline": "type search terms and click enter to search",
+    "titlefield": "title.exact",
+    "defaultquery": {
+        "query": {
+            "bool": {
+                "must":[
+                    {"match_all": {}}
+                ]
+            }
+        },
+        "from":0,
+        "size":25
+    },
+    showresults: cshowresults,
+    uitemplate: cuitemplate
+});
+    
+
+    
+});
+</script>
+
+
+
+{% endif %}
 
 
 {% endblock %}

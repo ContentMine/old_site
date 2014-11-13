@@ -71,30 +71,38 @@ def docs():
     return render_template('docs.html')
 
 
+@app.route('/catalogue')
 @app.route('/catalogue/<rid>')
-def record(rid):
-    record = models.Catalogue.pull(rid.replace('.json',''))
-    if record is None:
-        abort(404)
-    elif util.request_wants_json():
-        resp = make_response( record.json )
-        resp.mimetype = "application/json"
-        return resp
+def record(rid=False):
+    if rid:
+        record = models.Catalogue.pull(rid.replace('.json',''))
+        if record is None:
+            abort(404)
+        elif util.request_wants_json():
+            resp = make_response( record.json )
+            resp.mimetype = "application/json"
+            return resp
+        else:
+            return render_template('catalogue.html',record=record)
     else:
-        return render_template('catalogue.html',record=record)
+        return render_template('catalogue.html')
 
     
+@app.route('/fact')
 @app.route('/fact/<rid>')
-def fact():
-    record = models.Fact.pull(rid.replace('.json',''))
-    if record is None:
-        abort(404)
-    elif util.request_wants_json():
-        resp = make_response( record.json )
-        resp.mimetype = "application/json"
-        return resp
+def fact(rid=False):
+    if rid:
+        record = models.Fact.pull(rid.replace('.json',''))
+        if record is None:
+            abort(404)
+        elif util.request_wants_json():
+            resp = make_response( record.json )
+            resp.mimetype = "application/json"
+            return resp
+        else:
+            return render_template('fact.html',record=record)
     else:
-        return render_template('fact.html',record=record)
+        return render_template('fact.html')
 
 
 if __name__ == "__main__":
