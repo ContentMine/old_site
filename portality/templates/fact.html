@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-12">
+        <p>Proper fact display forthcoming, along with exciting things to do with them</p>
+        <pre id="record"></pre>
+    </div>
+</div>
+
+<script>
+var rec = {{record.data|tojson|safe}}
+$('#record').html(JSON.stringify(rec,"","    "));
+</script>
+
+
+{% endblock %}

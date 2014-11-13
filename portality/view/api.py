@@ -245,24 +245,6 @@ def cataloguedirect(ident):
                     f.data[k] = inp[k]
             f.save()
             return redirect('/api/catalogue/' + ident)    
-
-@blueprint.route('/catalogue/query', methods=['GET','POST'])
-@util.jsonp
-def cataloguequery():
-    if request.method == "POST":
-        if request.json:
-            qs = request.json
-        else:
-            qs = dict(request.form).keys()[-1]
-    elif 'q' in request.values:
-        qs = {'query': {'query_string': { 'query': request.values['q'] }}}
-    elif 'source' in request.values:
-        qs = json.loads(urllib2.unquote(request.values['source']))
-    else: 
-        qs = {'query': {'match_all': {}}}
-    resp = make_response( json.dumps(models.Catalogue.query(q=qs)) )
-    resp.mimetype = "application/json"
-    return resp
     
     
 # provide access to facts ------------------------------------------------------
@@ -343,20 +325,25 @@ def factdirect(ident):
 
 
 @blueprint.route('/fact/query', methods=['GET','POST'])
+@blueprint.route('/catalogue/query', methods=['GET','POST'])
 @util.jsonp
-def factquery():
+def fquery():
+    ftype = request.path.strip('/').split('/')[1]
+    klass = getattr(models, ftype[0].capitalize() + ftype[1:].lower() )
     if request.method == "POST":
         if request.json:
             qs = request.json
         else:
             qs = dict(request.form).keys()[-1]
+        res = klass.query(q=qs)
     elif 'q' in request.values:
-        qs = {'query': {'query_string': { 'query': request.values['q'] }}}
+        res = klass.query(**request.values)
     elif 'source' in request.values:
         qs = json.loads(urllib2.unquote(request.values['source']))
+        res = klass.query(q=qs)
     else: 
-        qs = {'query': {'match_all': {}}}
-    resp = make_response( json.dumps(models.Fact.query(q=qs)) )
+        res = klass.query(q='*')
+    resp = make_response( json.dumps(res) )
     resp.mimetype = "application/json"
     return resp
 
