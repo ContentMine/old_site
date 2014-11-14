@@ -2,13 +2,17 @@
 The contentmine API.
 '''
 
-import json, urllib2
+import json, urllib2, os
 
 from flask import Blueprint, request, abort, make_response, redirect
 from flask.ext.login import current_user
 
+from werkzeug import secure_filename
+
 from functools import wraps
 from flask import g, request, redirect, url_for
+
+from portality.core import app
 
 import portality.models as models
 import portality.util as util
@@ -20,12 +24,11 @@ from datetime import datetime
 blueprint = Blueprint('api', __name__)
 
 
-# add auth control
 def login_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
-        if g.user is None:
-            return redirect(url_for('login', next=request.url))
+        if current_user.is_anonymous():
+            abort(401)
         return f(*args, **kwargs)
     return decorated_function
     
@@ -144,7 +147,7 @@ def species():
             "GET": "GETs this instruction page (or, provided at least a catalogue parameter, emulates the POST)",
             "POST": "POST your instructions to the visitor and receive answers.",
             "example_POST": {
-                "catalogue": "<CATALOGUE_IDENTIFIER>"  #https://peerj.com/articles/384
+                "ident": "<CATALOGUE_IDENTIFIER>"  #https://peerj.com/articles/384
             }
         }) )
         resp.mimetype = "application/json"
@@ -454,3 +457,39 @@ def next():
         return resp
     except:
         abort(404)
+
+
+_allowed = set(['txt', 'pdf', 'xml', 'doc', 'html', 'png', 'jpg', 'jpeg', 'gif'])
+def _allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1] in _allowed
+
+@blueprint.route('/storage', methods=['GET','POST'])
+@blueprint.route('/storage/<catid>', methods=['GET','POST'])
+@blueprint.route('/storage/<catid>/<fn>', methods=['GET','POST'])
+@login_required
+@util.jsonp
+def storage(catid=False,fn=False):
+    res = models.Catalogue.pull(catid)
+    if res is None or 'STORAGE_DIRECTORY' not in app.config:
+        abort(404)
+    elif request.method == 'GET':
+        st = app.config['STORAGE_DIRECTORY'] + catid
+        if fn: st += '/' + fn
+        return redirect(st.replace('portality',''))
+    elif request.method == 'POST':
+        st = app.config['STORAGE_DIRECTORY'] + catid
+        if not os.path.exists(st): os.makedirs(st)
+        file = request.files['file']
+        if file and _allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(st, filename)
+            return ""
+        else:
+            abort(404)
+        
+
+        
+        
+        
+
