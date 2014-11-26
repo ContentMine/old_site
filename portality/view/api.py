@@ -340,7 +340,10 @@ def fquery():
             qs = dict(request.form).keys()[-1]
         res = klass.query(q=qs)
     elif 'q' in request.values:
-        res = klass.query(**request.values)
+        qryparams = {}
+        for k, v in request.values.items():
+            qryparams[k] = v
+        res = klass.query(**qryparams)
     elif 'source' in request.values:
         qs = json.loads(urllib2.unquote(request.values['source']))
         res = klass.query(q=qs)

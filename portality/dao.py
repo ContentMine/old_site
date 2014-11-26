@@ -156,7 +156,9 @@ class DomainObject(UserDict.IterableUserDict):
             }
         else:
             query = {
-                'match_all': {}
+                'query': {
+                    'match_all': {}
+                }
             }
 
         for k,v in kwargs.items():
