@@ -18,12 +18,7 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li{% if request.path == "/#about" %} class="active"{% endif %}><a href="/#about">About</a></li>
-            <li{% if request.path == "/#getinvolved" %} class="active"{% endif %}><a href="/#getinvolved">Get involved</a></li>
-            <li{% if request.path == "/blog" %} class="active"{% endif %}><a href="/blog">Blog</a></li>
-            <li{% if request.path == "/software" %} class="active"{% endif %}><a href="/software">Software</a></li>
-            <li{% if request.path == "/docs" %} class="active"{% endif %}><a href="/docs">API (docs)</a></li>
-            <li{% if request.path == "/facts" %} class="active"{% endif %}><a href="/facts">FACTS</a></li>
+            {% include 'nav/nav.html' %}
           </ul>
           <ul class="nav navbar-nav navbar-right">
             {% if current_user.is_anonymous() %}
@@ -38,6 +33,7 @@
                 <li><a href="{{ url_for('account.index') }}logout">Logout</a></li>
                 <li class="divider"></li>
                 <li><a href="/media">Manage media</a></li>
+                <li><a href="/nav">Manage the nav</a></li>
                 <li class="divider"></li>
                 <li><a href="{% if record %}{{ record.url }}{% else %}/index{% endif %}/edit">Edit this page</a></li>
                 <li><a href="{% if record %}{{ record.url }}{% else %}/index{% endif %}/settings">Settings for this page</a></li>
