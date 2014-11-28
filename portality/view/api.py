@@ -222,9 +222,12 @@ def cataloguedirect(ident):
     # created for them. Do we want people to be able to specify their own IDs?
     try:
         f = models.Catalogue.pull(ident)
+        print f
     except:
         abort(404)
-    if request.method == 'GET':
+    if f is None:
+        abort(404)
+    elif request.method == 'GET':
         resp = make_response( f.json )
         resp.mimetype = "application/json"
         return resp

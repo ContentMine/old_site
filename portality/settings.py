@@ -39,6 +39,7 @@ FACET_FIELD = ".exact"
 MAPPINGS = {
     "record" : {
         "record" : {
+            "date_detection": False,
             "dynamic_templates" : [
                 {
                     "default" : {

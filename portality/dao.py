@@ -64,6 +64,11 @@ class DomainObject(UserDict.IterableUserDict):
                 self.data['author'] = "anonymous"
 
         r = requests.post(self.target() + self.data['id'], data=json.dumps(self.data))
+        print r, r.status_code
+        try:
+            print r.json()
+        except:
+            pass
 
     def save_from_form(self,request):
         newdata = request.json if request.json else request.values
