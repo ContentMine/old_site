@@ -16,3 +16,4 @@ app.cfg
 media/*
 
 portality/templates/pagemanager/content/*
+portality/templates/nav/nav.html
