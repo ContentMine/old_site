@@ -17,13 +17,13 @@
     <div class="col-md-6">
         <div class="well" style="padding:5px;min-height:250px;overflow:hidden;border-color:#187c83;border-width:3px;background-color:#fff;color:#92ce73;">
             <p>Discovered in:<br>
-                {% if record.catalogue.title %}
-                <b><i>{{record.catalogue.title}}</i></b>
+                {% if record.parent.title %}
+                <b><i>{{record.parent.title}}</i></b>
                 {% else %}
-                <a href="/catalogue/{{record.catalogue.id}}">{{record.catalogue.id}}</a>
+                <a href="/catalogue/{{record.parent.id}}">{{record.parent.id}}</a>
                 {% endif %}
                 <br>
-                {% if record.catalogue.author %}Author(s): {{ ", ".join(record.catalogue.author) }}<br>{% endif %}
+                {% if record.parent.author %}Author(s): {{ ", ".join(record.parent.author) }}<br>{% endif %}
             </p>
         </div>
     </div>
