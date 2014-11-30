@@ -21,7 +21,7 @@ class Fact(DomainObject):
     def parent(self):
         try:
             catalogue = Catalogue.pull(self.data['source'])
-            return catalogue.json
+            return catalogue.data
         except:
             return False
 
