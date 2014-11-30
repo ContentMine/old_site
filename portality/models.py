@@ -16,6 +16,22 @@ When using portality in your own flask app, perhaps better to make your own mode
 
 class Fact(DomainObject):
     __type__ = ('fact')
+    
+    @property
+    def parent(self):
+        try:
+            catalogue = Catalogue.pull(self.data['source'])
+            return catalogue.json
+        except:
+            return False
+
+    @property
+    def siblings(self):
+        try:
+            count = self.query(q='source.exact:"' + self.data['source'] + '"')
+            return count['hits']['total']
+        except:
+            return 0
 
     
 class Catalogue(DomainObject):
