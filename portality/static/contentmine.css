@@ -28,6 +28,19 @@ hr {
     background-color:#92ce73;
 }
 
+.cm{
+    padding:5px;
+    border-color:#187c83;
+    border-width:3px;
+    background-color:#fff;
+    color:#92ce73;"
+}
+
+.tile {
+    height:250px;
+    overflow:hidden;
+}
+
 .navbar {
   padding-left: 20px;
   padding-right: 20px;
