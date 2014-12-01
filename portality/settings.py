@@ -76,7 +76,6 @@ NO_QUERY = ['account']
 # must be a list of objects that can be appended to an ES query.bool.must
 # for example [{'term':{'visible':True}},{'term':{'accessible':True}}]
 ANONYMOUS_SEARCH_TERMS = {
-    "pages": [{'term':{'visible':True}},{'term':{'accessible':True}}]
 }
 
 # a default sort to apply to query endpoint searches
