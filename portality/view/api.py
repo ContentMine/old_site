@@ -209,10 +209,15 @@ def catalogue():
                 for k, v in request.values.items():
                     if k not in ['submit']:
                         f.data[k] = v
-            f.save()
-            resp = make_response( f.json )
-            resp.mimetype = "application/json"
-            return resp
+            saved = f.save()
+            if saved.status_code in [200,201]:
+                resp = make_response( f.json )
+                resp.mimetype = "application/json"
+                return resp
+            else:
+                resp = make_response( saved.json() )
+                resp.mimetype = "application/json"
+                return resp, saved.status_code
 
 @blueprint.route('/catalogue/<ident>', methods=['GET','PUT','POST'])
 @util.jsonp

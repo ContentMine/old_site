@@ -63,19 +63,14 @@ class DomainObject(UserDict.IterableUserDict):
             except:
                 self.data['author'] = "anonymous"
 
-        r = requests.post(self.target() + self.data['id'], data=json.dumps(self.data))
-        print r, r.status_code
-        try:
-            print r.json()
-        except:
-            pass
+        return requests.post(self.target() + self.data['id'], data=json.dumps(self.data))
 
     def save_from_form(self,request):
         newdata = request.json if request.json else request.values
         for k, v in newdata.items():
             if k not in ['submit']:
                 self.data[k] = v
-        self.save()
+        return self.save()
 
     @classmethod
     def bulk(cls, bibjson_list, idkey='id', refresh=False):
