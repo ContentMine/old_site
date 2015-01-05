@@ -46,7 +46,7 @@ MAPPINGS = {
                 },
                 "last_updated": {
                     "type": "date",
-                    "format" : "yyyy-MM-dd mmss"
+                    "format" : "yyyy-MM-dd mmss||date_optional_time"
                 }
             },
             "date_detection": False,
@@ -58,7 +58,7 @@ MAPPINGS = {
                             "type" : "multi_field",
                             "fields" : {
                                 "{name}" : {"type" : "date"},
-                                "format" : "yyyy-MM-dd mmss"
+                                "format" : "yyyy-MM-dd mmss||date_optional_time"
                             }
                         }
                     }
