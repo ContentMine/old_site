@@ -203,14 +203,14 @@ def catalogue():
             f = models.Catalogue()
             if request.json:
                 for k in request.json.keys():
-                    if k not in ['submit']:
+                    if k.lower() not in ['submit','api_key']:
                         f.data[k] = request.json[k]
             else:
                 for k, v in request.values.items():
-                    if k not in ['submit']:
+                    if k.lower() not in ['submit','api_key']:
                         f.data[k] = v
             saved = f.save()
-            if saved.status_code in [200,201]:
+            if saved.status_code in [200,201,202]:
                 resp = make_response( f.json )
                 resp.mimetype = "application/json"
                 return resp
@@ -243,19 +243,24 @@ def cataloguedirect(ident):
             inp = {}
             if request.json:
                 for k in request.json.keys():
-                    if k not in ['submit']:
+                    if k.lower() not in ['submit','api_key']:
                         inp[k] = request.json[k]
             else:
                 for k, v in request.values.items():
-                    if k not in ['submit']:
+                    if k.lower() not in ['submit','api_key']:
                         inp[k] = v
             if request.method == 'PUT':
                 f.data = inp
             else:
                 for k in inp.keys():
                     f.data[k] = inp[k]
-            f.save()
-            return redirect('/api/catalogue/' + ident)    
+            saved = f.save()
+            if saved.status_code in [200,201,202]:
+                return ""
+            else:
+                resp = make_response( saved.json() )
+                resp.mimetype = "application/json"
+                return resp, saved.status_code
     
     
 # provide access to facts ------------------------------------------------------
@@ -292,12 +297,21 @@ def fact():
             f = models.Fact()
             if request.json:
                 for k in request.json.keys():
-                    f.data[k] = request.json[k]
+                    if k.lower() not in ['submit','api_key']:
+                        f.data[k] = request.json[k]
             else:
                 for k, v in request.values.items():
-                    f.data[k] = v        
-            f.save()
-            return redirect('/api/fact/' + f.id)
+                    if k.lower() not in ['submit','api_key']:
+                        f.data[k] = v        
+            saved = f.save()
+            if saved.status_code in [200,201,202]:
+                resp = make_response( f.json )
+                resp.mimetype = "application/json"
+                return resp
+            else:
+                resp = make_response( saved.json() )
+                resp.mimetype = "application/json"
+                return resp, saved.status_code
 
 @blueprint.route('/fact/<ident>', methods=['GET','POST'])
 @util.jsonp
@@ -320,19 +334,24 @@ def factdirect(ident):
             inp = {}
             if request.json:
                 for k in request.json.keys():
-                    if k not in ['submit']:
+                    if k.lower() not in ['submit','api_key']:
                         inp[k] = request.json[k]
             else:
                 for k, v in request.values.items():
-                    if k not in ['submit']:
+                    if k.lower() not in ['submit','api_key']:
                         inp[k] = v
             if request.method == 'PUT':
                 f.data = inp
             else:
                 for k in inp.keys():
                     f.data[k] = inp[k]
-            f.save()
-            return redirect('/api/fact/' + ident)    
+            saved = f.save()
+            if saved.status_code in [200,201,202]:
+                return ""
+            else:
+                resp = make_response( saved.json() )
+                resp.mimetype = "application/json"
+                return resp, saved.status_code
 
 
 @blueprint.route('/fact/query', methods=['GET','POST'])

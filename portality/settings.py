@@ -39,8 +39,27 @@ FACET_FIELD = ".exact"
 MAPPINGS = {
     "record" : {
         "record" : {
+            "properties": {
+                "created_date": {
+                    "type": "date"
+                },
+                "last_updated": {
+                    "type": "date"
+                }
+            },
             "date_detection": False,
             "dynamic_templates" : [
+                {
+                    "dates" : {
+                        "path_match" : "date.*",
+                        "mapping" : {
+                            "type" : "multi_field",
+                            "fields" : {
+                                "{name}" : {"type" : "date"}
+                            }
+                        }
+                    }
+                },
                 {
                     "default" : {
                         "match" : "*",
