@@ -43,7 +43,7 @@ def set_current_context():
 def standard_authentication():
     """Check remote_user on a per-request basis."""
     remote_user = request.headers.get('REMOTE_USER', '')
-    apik = request.headers['API_KEY', False]
+    apik = request.headers.get('API_KEY', False)
     if not apik: apik = request.headers.get('api_key', False)
     try:
         if not apik: apik = request.json.get('API_KEY', request.json.get('api_key', False))
