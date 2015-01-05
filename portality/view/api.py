@@ -215,7 +215,7 @@ def catalogue():
                 resp.mimetype = "application/json"
                 return resp
             else:
-                resp = make_response( saved.json() )
+                resp = make_response( json.dumps(saved.json()) )
                 resp.mimetype = "application/json"
                 return resp, saved.status_code
 
@@ -258,7 +258,7 @@ def cataloguedirect(ident):
             if saved.status_code in [200,201,202]:
                 return ""
             else:
-                resp = make_response( saved.json() )
+                resp = make_response( json.dumps(saved.json()) )
                 resp.mimetype = "application/json"
                 return resp, saved.status_code
     
@@ -309,7 +309,7 @@ def fact():
                 resp.mimetype = "application/json"
                 return resp
             else:
-                resp = make_response( saved.json() )
+                resp = make_response( json.dumps(saved.json()) )
                 resp.mimetype = "application/json"
                 return resp, saved.status_code
 
@@ -349,7 +349,7 @@ def factdirect(ident):
             if saved.status_code in [200,201,202]:
                 return ""
             else:
-                resp = make_response( saved.json() )
+                resp = make_response( json.dumps(saved.json()) )
                 resp.mimetype = "application/json"
                 return resp, saved.status_code
 

@@ -41,10 +41,12 @@ MAPPINGS = {
         "record" : {
             "properties": {
                 "created_date": {
-                    "type": "date"
+                    "type": "date",
+                    "format" : "yyyy-MM-dd mmss||date_optional_time"
                 },
                 "last_updated": {
-                    "type": "date"
+                    "type": "date",
+                    "format" : "yyyy-MM-dd mmss"
                 }
             },
             "date_detection": False,
@@ -55,7 +57,8 @@ MAPPINGS = {
                         "mapping" : {
                             "type" : "multi_field",
                             "fields" : {
-                                "{name}" : {"type" : "date"}
+                                "{name}" : {"type" : "date"},
+                                "format" : "yyyy-MM-dd mmss"
                             }
                         }
                     }
