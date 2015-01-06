@@ -2,7 +2,7 @@
 The contentmine API.
 '''
 
-import json, urllib2, os
+import os, json, urllib2, os
 
 from flask import Blueprint, request, abort, make_response, redirect
 from flask.ext.login import current_user
@@ -513,7 +513,7 @@ def storage(catid=False,fn=False):
         file = request.files['file']
         if file and _allowed_file(file.filename):
             filename = secure_filename(file.filename)
-            file.save(st, filename)
+            file.save(os.path.join(st, filename))
             return ""
         else:
             abort(404)
