@@ -475,7 +475,7 @@ def next():
                 }
             }
         },
-        'sort': {'created_date.exact': 'desc'},
+        'sort': {'created_date': 'desc'},
         'size': 1
     })
     try:
