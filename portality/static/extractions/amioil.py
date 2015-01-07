@@ -3,7 +3,7 @@ from datetime import datetime
 from lxml import etree
 
 urls = open('anadarko','r')
-regexurl = 'http://pads.cottagelabs.com/p/oilregexcombined/export/txt'
+regexurl = 'http://pads.cottagelabs.com/p/oilregex/export/txt'
 target = 'http://localhost:9200/contentmine/fact/'
 
 try:
