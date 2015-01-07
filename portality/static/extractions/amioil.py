@@ -21,6 +21,7 @@ hitscore = 0
 failures = []
 
 for url in urls:
+    url = url.strip().replace('\n','')
     print url
     # call AMI on the url if it is an htm or xml
     if url.endswith('.htm') or url.endswith('.xml'):
