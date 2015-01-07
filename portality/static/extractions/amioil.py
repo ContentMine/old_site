@@ -62,6 +62,7 @@ for url in urls:
                 doc['id'] = uuid.uuid4().hex
                 doc['file'] = url
                 doc['berlin'] = 'yes'
+                doc['company'] = 'yes'
                 doc['keywords'] = requests.get('http://cottagelabs.com/parser?blurb="' + doc['pre'] + ' ' + doc['fact'] + ' ' + doc['post'] + '"').json()
                 requests.post(target + str(doc['id']), data=json.dumps(doc))
                 time.sleep(0.05)
