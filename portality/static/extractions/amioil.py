@@ -41,6 +41,7 @@ for url in urls:
 
         if err:
             failures.append(url)
+            print err
         else:
             amisuccess += 1
             # find and read the output file
