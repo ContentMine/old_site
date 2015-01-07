@@ -8,8 +8,8 @@
   <regex fields="word" weight="1.0">\W(premier energy corp)\W</regex>
   <regex fields="word" weight="1.0">\W(mallon resources corp)\W</regex>
   <regex fields="word" weight="1.0">\W(rocky mountain dealerships)\W</regex>
-  <regex fields="word" weight="1.0">\W(delta international oil & gas)\W</regex>
-  <regex fields="word" weight="1.0">\W(pt medco e&p lemantang)\W</regex>
+  <regex fields="word" weight="1.0">\W(delta international oil \& gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(pt medco e\&p lemantang)\W</regex>
   <regex fields="word" weight="1.0">\W(walkabout resources)\W</regex>
   <regex fields="word" weight="1.0">\W(lonesa resources)\W</regex>
   <regex fields="word" weight="1.0">\W(regent ventures)\W</regex>
@@ -36,10 +36,10 @@
   <regex fields="word" weight="1.0">\W(tamerlane ventures)\W</regex>
   <regex fields="word" weight="1.0">\W(sirona biochem corp)\W</regex>
   <regex fields="word" weight="1.0">\W(columbusaquisition corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(jubilant oil & gas pvt.)\W</regex>
+  <regex fields="word" weight="1.0">\W(jubilant oil \& gas pvt.)\W</regex>
   <regex fields="word" weight="1.0">\W(mayan iron corp)\W</regex>
   <regex fields="word" weight="1.0">\W(exmouth exploration pty)\W</regex>
-  <regex fields="word" weight="1.0">\W(tamm oil & gas corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(tamm oil \& gas corp)\W</regex>
   <regex fields="word" weight="1.0">\W(pure nickel)\W</regex>
   <regex fields="word" weight="1.0">\W(resolute forest products)\W</regex>
   <regex fields="word" weight="1.0">\W(ithaca energy)\W</regex>
@@ -47,7 +47,7 @@
   <regex fields="word" weight="1.0">\W(input capital corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(rich coast)\W</regex>
   <regex fields="word" weight="1.0">\W(toney fork)\W</regex>
-  <regex fields="word" weight="1.0">\W(daybreak oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(daybreak oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(circa enterprises)\W</regex>
   <regex fields="word" weight="1.0">\W(orion gold nl)\W</regex>
   <regex fields="word" weight="1.0">\W(orion metals)\W</regex>
@@ -66,7 +66,7 @@
   <regex fields="word" weight="1.0">\W(exterra resources)\W</regex>
   <regex fields="word" weight="1.0">\W(ecosse energy bengkulu pty)\W</regex>
   <regex fields="word" weight="1.0">\W(dvm international sarl (tangiers petroleum))\W</regex>
-  <regex fields="word" weight="1.0">\W(first asset pipes & power income fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(first asset pipes \& power income fund)\W</regex>
   <regex fields="word" weight="1.0">\W(foran mining corp)\W</regex>
   <regex fields="word" weight="1.0">\W(kdr industrials)\W</regex>
   <regex fields="word" weight="1.0">\W(brumby resources)\W</regex>
@@ -90,7 +90,7 @@
   <regex fields="word" weight="1.0">\W(chevron rapak)\W</regex>
   <regex fields="word" weight="1.0">\W(crh medical corp)\W</regex>
   <regex fields="word" weight="1.0">\W(sacore international mines)\W</regex>
-  <regex fields="word" weight="1.0">\W(china daqing m&h petroleum)\W</regex>
+  <regex fields="word" weight="1.0">\W(china daqing m\&h petroleum)\W</regex>
   <regex fields="word" weight="1.0">\W(franchise services of north america)\W</regex>
   <regex fields="word" weight="1.0">\W(byron energy)\W</regex>
   <regex fields="word" weight="1.0">\W(cematrix corp)\W</regex>
@@ -98,7 +98,7 @@
   <regex fields="word" weight="1.0">\W(pc ketapang ii)\W</regex>
   <regex fields="word" weight="1.0">\W(mincor resources nl)\W</regex>
   <regex fields="word" weight="1.0">\W(ward lake drilling)\W</regex>
-  <regex fields="word" weight="1.0">\W(grupo c&c energia barbados sucursal colombia)\W</regex>
+  <regex fields="word" weight="1.0">\W(grupo c\&c energia barbados sucursal colombia)\W</regex>
   <regex fields="word" weight="1.0">\W(horizons betapro nasa-100 bear plus etf)\W</regex>
   <regex fields="word" weight="1.0">\W(guyana goldfields)\W</regex>
   <regex fields="word" weight="1.0">\W(ocean rig udw)\W</regex>
@@ -106,7 +106,7 @@
   <regex fields="word" weight="1.0">\W(aeon metals)\W</regex>
   <regex fields="word" weight="1.0">\W(ivernia inc)\W</regex>
   <regex fields="word" weight="1.0">\W(nanton nickel corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(total e&p south east mahakam)\W</regex>
+  <regex fields="word" weight="1.0">\W(total e\&p south east mahakam)\W</regex>
   <regex fields="word" weight="1.0">\W(pt anugerah mutiara sentosa)\W</regex>
   <regex fields="word" weight="1.0">\W(extenway solutions)\W</regex>
   <regex fields="word" weight="1.0">\W(williams coal sa gas royalty trust)\W</regex>
@@ -133,7 +133,7 @@
   <regex fields="word" weight="1.0">\W(north american advantaged convertibles fund)\W</regex>
   <regex fields="word" weight="1.0">\W(new forest oil)\W</regex>
   <regex fields="word" weight="1.0">\W(dunnedin ventures)\W</regex>
-  <regex fields="word" weight="1.0">\W(radiant oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(radiant oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(glv inc)\W</regex>
   <regex fields="word" weight="1.0">\W(valmec limited)\W</regex>
   <regex fields="word" weight="1.0">\W(eni muara bakau)\W</regex>
@@ -169,7 +169,7 @@
   <regex fields="word" weight="1.0">\W(goldrush resources)\W</regex>
   <regex fields="word" weight="1.0">\W(genting oil kasuri pte)\W</regex>
   <regex fields="word" weight="1.0">\W(quest rare minerals)\W</regex>
-  <regex fields="word" weight="1.0">\W(southwest oil & gas income fund xi a lp)\W</regex>
+  <regex fields="word" weight="1.0">\W(southwest oil \& gas income fund xi a lp)\W</regex>
   <regex fields="word" weight="1.0">\W(inform exploration corp)\W</regex>
   <regex fields="word" weight="1.0">\W(macmillan minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(metro inc)\W</regex>
@@ -183,7 +183,7 @@
   <regex fields="word" weight="1.0">\W(tinka resources)\W</regex>
   <regex fields="word" weight="1.0">\W(sonoma resources)\W</regex>
   <regex fields="word" weight="1.0">\W(horizons betapro comex copper bear plus etf)\W</regex>
-  <regex fields="word" weight="1.0">\W(job pertamina-medco e&p simenggaris)\W</regex>
+  <regex fields="word" weight="1.0">\W(job pertamina-medco e\&p simenggaris)\W</regex>
   <regex fields="word" weight="1.0">\W(royalgate)\W</regex>
   <regex fields="word" weight="1.0">\W(afri-can marine minerals corp)\W</regex>
   <regex fields="word" weight="1.0">\W(apache finance pty)\W</regex>
@@ -214,12 +214,12 @@
   <regex fields="word" weight="1.0">\W(tlo capital corp)\W</regex>
   <regex fields="word" weight="1.0">\W(porto energy corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(memorial resource development corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(carrizo oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(carrizo oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(western mining network)\W</regex>
   <regex fields="word" weight="1.0">\W(rbc target 2021 corporate bond index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(maple gas corp del peru s.r.l.)\W</regex>
-  <regex fields="word" weight="1.0">\W(majestic oil & gas)\W</regex>
-  <regex fields="word" weight="1.0">\W(china health labs & diagnostics)\W</regex>
+  <regex fields="word" weight="1.0">\W(majestic oil \& gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(china health labs \& diagnostics)\W</regex>
   <regex fields="word" weight="1.0">\W(wolverine minerals corp)\W</regex>
   <regex fields="word" weight="1.0">\W(full metal minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(altima resources)\W</regex>
@@ -238,7 +238,7 @@
   <regex fields="word" weight="1.0">\W(genworth mi canada)\W</regex>
   <regex fields="word" weight="1.0">\W(tree isad steel)\W</regex>
   <regex fields="word" weight="1.0">\W(hastings rare metals)\W</regex>
-  <regex fields="word" weight="1.0">\W(first asset u.s. & canada lifeco income fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(first asset u.s. \& canada lifeco income fund)\W</regex>
   <regex fields="word" weight="1.0">\W(ypf sociedad anonima)\W</regex>
   <regex fields="word" weight="1.0">\W(vtti energy partners lp)\W</regex>
   <regex fields="word" weight="1.0">\W(hydrocarbon exploration)\W</regex>
@@ -274,16 +274,16 @@
   <regex fields="word" weight="1.0">\W(moneda latam fixed income fund)\W</regex>
   <regex fields="word" weight="1.0">\W(pt mri energy)\W</regex>
   <regex fields="word" weight="1.0">\W(superior well services)\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p/tsx capped reit index fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p/tsx capped reit index fund)\W</regex>
   <regex fields="word" weight="1.0">\W(excellium inc)\W</regex>
   <regex fields="word" weight="1.0">\W(sarama resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(crown oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(crown oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(unbridled energy corp)\W</regex>
   <regex fields="word" weight="1.0">\W(torrey charles p jr)\W</regex>
   <regex fields="word" weight="1.0">\W(northwest international healthcare properties reit)\W</regex>
   <regex fields="word" weight="1.0">\W(liberty resources)\W</regex>
   <regex fields="word" weight="1.0">\W(global met coal corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(aston hill oil & gas income fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(aston hill oil \& gas income fund)\W</regex>
   <regex fields="word" weight="1.0">\W(sciti trust)\W</regex>
   <regex fields="word" weight="1.0">\W(eloro resources)\W</regex>
   <regex fields="word" weight="1.0">\W(navarre minerals)\W</regex>
@@ -294,20 +294,20 @@
   <regex fields="word" weight="1.0">\W(transat a.t.)\W</regex>
   <regex fields="word" weight="1.0">\W(celsius coal)\W</regex>
   <regex fields="word" weight="1.0">\W(cnpc intern)\W</regex>
-  <regex fields="word" weight="1.0">\W(canadian utilities & telecom income fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(canadian utilities \& telecom income fund)\W</regex>
   <regex fields="word" weight="1.0">\W(zambezi resources)\W</regex>
   <regex fields="word" weight="1.0">\W(puisat industries)\W</regex>
   <regex fields="word" weight="1.0">\W(wentworth energy)\W</regex>
   <regex fields="word" weight="1.0">\W(canada bread company,)\W</regex>
   <regex fields="word" weight="1.0">\W(colorado 2000c limited partnership)\W</regex>
-  <regex fields="word" weight="1.0">\W(fortune oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(fortune oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(qr energy lp)\W</regex>
   <regex fields="word" weight="1.0">\W(cnooc ses)\W</regex>
   <regex fields="word" weight="1.0">\W(kurmangazy petroleum)\W</regex>
   <regex fields="word" weight="1.0">\W(amerisur)\W</regex>
   <regex fields="word" weight="1.0">\W(canadian imperial venture corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(detector exploration)\W</regex>
-  <regex fields="word" weight="1.0">\W(horizons s&p/tsx 60 equal weight index etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(horizons s\&p/tsx 60 equal weight index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(blf real esae investment trust)\W</regex>
   <regex fields="word" weight="1.0">\W(uranium equities)\W</regex>
   <regex fields="word" weight="1.0">\W(painted pony petroleum)\W</regex>
@@ -355,7 +355,7 @@
   <regex fields="word" weight="1.0">\W(auriga gold corp)\W</regex>
   <regex fields="word" weight="1.0">\W(micrex development corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(spectra inc)\W</regex>
-  <regex fields="word" weight="1.0">\W(american oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(american oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(magellan minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(blackpearl resources)\W</regex>
   <regex fields="word" weight="1.0">\W(beacon minerals)\W</regex>
@@ -374,7 +374,7 @@
   <regex fields="word" weight="1.0">\W(transaada corp)\W</regex>
   <regex fields="word" weight="1.0">\W(vivione biosciences)\W</regex>
   <regex fields="word" weight="1.0">\W(horizons nymex natural gas etf)\W</regex>
-  <regex fields="word" weight="1.0">\W(zargon oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(zargon oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(great western exploration)\W</regex>
   <regex fields="word" weight="1.0">\W(canickel mining)\W</regex>
   <regex fields="word" weight="1.0">\W(igm financial)\W</regex>
@@ -427,8 +427,8 @@
   <regex fields="word" weight="1.0">\W(emberclear corp)\W</regex>
   <regex fields="word" weight="1.0">\W(eagle sa minerals corp)\W</regex>
   <regex fields="word" weight="1.0">\W(bandanna energy)\W</regex>
-  <regex fields="word" weight="1.0">\W(forbes & manhattan coal corp.)\W</regex>
-  <regex fields="word" weight="1.0">\W(saoast oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(forbes \& manhattan coal corp.)\W</regex>
+  <regex fields="word" weight="1.0">\W(saoast oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(bengal energy)\W</regex>
   <regex fields="word" weight="1.0">\W(gatekeeper systems)\W</regex>
   <regex fields="word" weight="1.0">\W(permian basin royalty trust)\W</regex>
@@ -446,7 +446,7 @@
   <regex fields="word" weight="1.0">\W(zoommed inc)\W</regex>
   <regex fields="word" weight="1.0">\W(lodesa minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(alston energy)\W</regex>
-  <regex fields="word" weight="1.0">\W(c&j energy services)\W</regex>
+  <regex fields="word" weight="1.0">\W(c\&j energy services)\W</regex>
   <regex fields="word" weight="1.0">\W(perelman marsareines)\W</regex>
   <regex fields="word" weight="1.0">\W(ptt exploration and production)\W</regex>
   <regex fields="word" weight="1.0">\W(cervus equipment corp)\W</regex>
@@ -482,7 +482,7 @@
   <regex fields="word" weight="1.0">\W(aldrin resource corp)\W</regex>
   <regex fields="word" weight="1.0">\W(bc exploracion y produccion)\W</regex>
   <regex fields="word" weight="1.0">\W(tullow uganda)\W</regex>
-  <regex fields="word" weight="1.0">\W(longreach oil & gas ventures)\W</regex>
+  <regex fields="word" weight="1.0">\W(longreach oil \& gas ventures)\W</regex>
   <regex fields="word" weight="1.0">\W(euroil)\W</regex>
   <regex fields="word" weight="1.0">\W(cliffmont resources)\W</regex>
   <regex fields="word" weight="1.0">\W(african petroleum corp)\W</regex>
@@ -522,7 +522,7 @@
   <regex fields="word" weight="1.0">\W(british gas trinidad  and tobago)\W</regex>
   <regex fields="word" weight="1.0">\W(primary energy recycling corp)\W</regex>
   <regex fields="word" weight="1.0">\W(petronas carigali wgk)\W</regex>
-  <regex fields="word" weight="1.0">\W(canadian energy services & technology corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(canadian energy services \& technology corp)\W</regex>
   <regex fields="word" weight="1.0">\W(northern sa resources)\W</regex>
   <regex fields="word" weight="1.0">\W(silvercorp metals)\W</regex>
   <regex fields="word" weight="1.0">\W(zyl limited)\W</regex>
@@ -569,7 +569,7 @@
   <regex fields="word" weight="1.0">\W(horizonsative cdn bond etf)\W</regex>
   <regex fields="word" weight="1.0">\W(dgr global)\W</regex>
   <regex fields="word" weight="1.0">\W(candax energy)\W</regex>
-  <regex fields="word" weight="1.0">\W(energy & technology corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(energy \& technology corp)\W</regex>
   <regex fields="word" weight="1.0">\W(cash store financial services)\W</regex>
   <regex fields="word" weight="1.0">\W(keyera corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(timbercreek global real esae fund)\W</regex>
@@ -586,14 +586,14 @@
   <regex fields="word" weight="1.0">\W(australian drilling associates pty limited sucursal colombia)\W</regex>
   <regex fields="word" weight="1.0">\W(ngc corp capital trust i)\W</regex>
   <regex fields="word" weight="1.0">\W(megal capital corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(dana petroleum (e&p))\W</regex>
+  <regex fields="word" weight="1.0">\W(dana petroleum (e\&p))\W</regex>
   <regex fields="word" weight="1.0">\W(houston american energy corp)\W</regex>
   <regex fields="word" weight="1.0">\W(copper strike)\W</regex>
   <regex fields="word" weight="1.0">\W(coasa contacts)\W</regex>
   <regex fields="word" weight="1.0">\W(canadream corp)\W</regex>
   <regex fields="word" weight="1.0">\W(amanta resources)\W</regex>
   <regex fields="word" weight="1.0">\W(energy equity epic sengkang pty)\W</regex>
-  <regex fields="word" weight="1.0">\W(remington oil & gas corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(remington oil \& gas corp)\W</regex>
   <regex fields="word" weight="1.0">\W(progress energy)\W</regex>
   <regex fields="word" weight="1.0">\W(first  asset canadian reit income fund)\W</regex>
   <regex fields="word" weight="1.0">\W(agility health,)\W</regex>
@@ -627,7 +627,7 @@
   <regex fields="word" weight="1.0">\W(yorbeau resources)\W</regex>
   <regex fields="word" weight="1.0">\W(nce acquisition)\W</regex>
   <regex fields="word" weight="1.0">\W(smith international)\W</regex>
-  <regex fields="word" weight="1.0">\W(baseline oil & gas corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(baseline oil \& gas corp)\W</regex>
   <regex fields="word" weight="1.0">\W(nido petroleum)\W</regex>
   <regex fields="word" weight="1.0">\W(zenith minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(tundra resources)\W</regex>
@@ -639,7 +639,7 @@
   <regex fields="word" weight="1.0">\W(marret high yield strategies fund)\W</regex>
   <regex fields="word" weight="1.0">\W(imetame)\W</regex>
   <regex fields="word" weight="1.0">\W(milner consolidated silver mines)\W</regex>
-  <regex fields="word" weight="1.0">\W(aurora oil & gas corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(aurora oil \& gas corp)\W</regex>
   <regex fields="word" weight="1.0">\W(cardinal energy)\W</regex>
   <regex fields="word" weight="1.0">\W(reva resources corp)\W</regex>
   <regex fields="word" weight="1.0">\W(prophecy coal corp.)\W</regex>
@@ -648,14 +648,14 @@
   <regex fields="word" weight="1.0">\W(pantheon ventures)\W</regex>
   <regex fields="word" weight="1.0">\W(artis real esae investment trust)\W</regex>
   <regex fields="word" weight="1.0">\W(kaminak gold corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(chariot oil & gas investments (morocco))\W</regex>
+  <regex fields="word" weight="1.0">\W(chariot oil \& gas investments (morocco))\W</regex>
   <regex fields="word" weight="1.0">\W(algae farm (usa))\W</regex>
   <regex fields="word" weight="1.0">\W(brownstone energy)\W</regex>
   <regex fields="word" weight="1.0">\W(tullow kudu / pancontinental)\W</regex>
   <regex fields="word" weight="1.0">\W(anglogold asati)\W</regex>
   <regex fields="word" weight="1.0">\W(endeavour international corp)\W</regex>
   <regex fields="word" weight="1.0">\W(rona inc)\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p/tsx capped materials index fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p/tsx capped materials index fund)\W</regex>
   <regex fields="word" weight="1.0">\W(capral limited)\W</regex>
   <regex fields="word" weight="1.0">\W(occidental)\W</regex>
   <regex fields="word" weight="1.0">\W(braziron limited)\W</regex>
@@ -703,7 +703,7 @@
   <regex fields="word" weight="1.0">\W(malbex resources)\W</regex>
   <regex fields="word" weight="1.0">\W(3d oil t49p pty.)\W</regex>
   <regex fields="word" weight="1.0">\W(eco tek group)\W</regex>
-  <regex fields="word" weight="1.0">\W(horizons betapro s&p/tsx 60 bear plus etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(horizons betapro s\&p/tsx 60 bear plus etf)\W</regex>
   <regex fields="word" weight="1.0">\W(richco investors)\W</regex>
   <regex fields="word" weight="1.0">\W(loon energy corp)\W</regex>
   <regex fields="word" weight="1.0">\W(foxtrot)\W</regex>
@@ -786,7 +786,7 @@
   <regex fields="word" weight="1.0">\W(black gold ventures)\W</regex>
   <regex fields="word" weight="1.0">\W(empire industries)\W</regex>
   <regex fields="word" weight="1.0">\W(southwest royalties institutional income fund xi a lp)\W</regex>
-  <regex fields="word" weight="1.0">\W(reliance exploration & production dmcc)\W</regex>
+  <regex fields="word" weight="1.0">\W(reliance exploration \& production dmcc)\W</regex>
   <regex fields="word" weight="1.0">\W(voyager petroleum)\W</regex>
   <regex fields="word" weight="1.0">\W(eyelogic systems)\W</regex>
   <regex fields="word" weight="1.0">\W(sonoran energy)\W</regex>
@@ -807,7 +807,7 @@
   <regex fields="word" weight="1.0">\W(lx ventures)\W</regex>
   <regex fields="word" weight="1.0">\W(markwest energy finance corp)\W</regex>
   <regex fields="word" weight="1.0">\W(enablence technologies)\W</regex>
-  <regex fields="word" weight="1.0">\W(barola oil & gas co)\W</regex>
+  <regex fields="word" weight="1.0">\W(barola oil \& gas co)\W</regex>
   <regex fields="word" weight="1.0">\W(ocp credit strategy fund)\W</regex>
   <regex fields="word" weight="1.0">\W(lifesat nutrition technologies)\W</regex>
   <regex fields="word" weight="1.0">\W(acme resources)\W</regex>
@@ -822,7 +822,7 @@
   <regex fields="word" weight="1.0">\W(markwest hydrocarbon)\W</regex>
   <regex fields="word" weight="1.0">\W(argus metals corp)\W</regex>
   <regex fields="word" weight="1.0">\W(tembo gold corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(vanguard s&p 500 index etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(vanguard s\&p 500 index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(tetra technologies)\W</regex>
   <regex fields="word" weight="1.0">\W(powersaes ftse rafi us fundamental (cad hedged) index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(gowest gold)\W</regex>
@@ -845,7 +845,7 @@
   <regex fields="word" weight="1.0">\W(tirex resources)\W</regex>
   <regex fields="word" weight="1.0">\W(gulf minerals corp)\W</regex>
   <regex fields="word" weight="1.0">\W(triox limited)\W</regex>
-  <regex fields="word" weight="1.0">\W(oil & gas investment fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(oil \& gas investment fund)\W</regex>
   <regex fields="word" weight="1.0">\W(redline communications group)\W</regex>
   <regex fields="word" weight="1.0">\W(hht investments)\W</regex>
   <regex fields="word" weight="1.0">\W(postrock energy corp)\W</regex>
@@ -872,12 +872,12 @@
   <regex fields="word" weight="1.0">\W(reg technologies)\W</regex>
   <regex fields="word" weight="1.0">\W(australian pacific coal)\W</regex>
   <regex fields="word" weight="1.0">\W(dream unlimited corp.)\W</regex>
-  <regex fields="word" weight="1.0">\W(total e&p australia)\W</regex>
+  <regex fields="word" weight="1.0">\W(total e\&p australia)\W</regex>
   <regex fields="word" weight="1.0">\W(trez capital senior mortgage investment corp)\W</regex>
   <regex fields="word" weight="1.0">\W(hard creek nickel corp)\W</regex>
   <regex fields="word" weight="1.0">\W(san leon energy)\W</regex>
   <regex fields="word" weight="1.0">\W(canadian oilfield solutions corp.)\W</regex>
-  <regex fields="word" weight="1.0">\W(coasa caribbean oils & minerals)\W</regex>
+  <regex fields="word" weight="1.0">\W(coasa caribbean oils \& minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(lukoil oversa colombia limiteda)\W</regex>
   <regex fields="word" weight="1.0">\W(uravan minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(nycal corp)\W</regex>
@@ -914,7 +914,7 @@
   <regex fields="word" weight="1.0">\W(tasaresources limited)\W</regex>
   <regex fields="word" weight="1.0">\W(madison capital corp)\W</regex>
   <regex fields="word" weight="1.0">\W(pronodar limited)\W</regex>
-  <regex fields="word" weight="1.0">\W(pluspetrol e&p)\W</regex>
+  <regex fields="word" weight="1.0">\W(pluspetrol e\&p)\W</regex>
   <regex fields="word" weight="1.0">\W(pt ekuator energi sokang)\W</regex>
   <regex fields="word" weight="1.0">\W(genel energy)\W</regex>
   <regex fields="word" weight="1.0">\W(hodginsactioneers inc)\W</regex>
@@ -922,13 +922,13 @@
   <regex fields="word" weight="1.0">\W(pender growth fund (vcc))\W</regex>
   <regex fields="word" weight="1.0">\W(uil energy)\W</regex>
   <regex fields="word" weight="1.0">\W(mawson west)\W</regex>
-  <regex fields="word" weight="1.0">\W(high yield & mortgage plus trust)\W</regex>
+  <regex fields="word" weight="1.0">\W(high yield \& mortgage plus trust)\W</regex>
   <regex fields="word" weight="1.0">\W(mackenzie master limited partnership)\W</regex>
   <regex fields="word" weight="1.0">\W(sarmi papua asaoil)\W</regex>
   <regex fields="word" weight="1.0">\W(canyon creek food company)\W</regex>
   <regex fields="word" weight="1.0">\W(becker milk company limited (the))\W</regex>
   <regex fields="word" weight="1.0">\W(repsol exploracion colombia)\W</regex>
-  <regex fields="word" weight="1.0">\W(antry lisa l & steve a)\W</regex>
+  <regex fields="word" weight="1.0">\W(antry lisa l \& steve a)\W</regex>
   <regex fields="word" weight="1.0">\W(valener inc)\W</regex>
   <regex fields="word" weight="1.0">\W(eastcoal inc)\W</regex>
   <regex fields="word" weight="1.0">\W(trinity valley energy corp.)\W</regex>
@@ -941,7 +941,7 @@
   <regex fields="word" weight="1.0">\W(red crescent resources)\W</regex>
   <regex fields="word" weight="1.0">\W(noxso corp)\W</regex>
   <regex fields="word" weight="1.0">\W(gdf suez bonaparte pty)\W</regex>
-  <regex fields="word" weight="1.0">\W(magnum gas & power)\W</regex>
+  <regex fields="word" weight="1.0">\W(magnum gas \& power)\W</regex>
   <regex fields="word" weight="1.0">\W(stem 7 capital)\W</regex>
   <regex fields="word" weight="1.0">\W(black gold kumawa)\W</regex>
   <regex fields="word" weight="1.0">\W(isaes 1-10 year laddered government bond index fund)\W</regex>
@@ -950,7 +950,7 @@
   <regex fields="word" weight="1.0">\W(megasa development corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(global dividend growers income fund)\W</regex>
   <regex fields="word" weight="1.0">\W(aguaytia energy del peru s.r.l.)\W</regex>
-  <regex fields="word" weight="1.0">\W(global advantaged telecom & utilities income fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(global advantaged telecom \& utilities income fund)\W</regex>
   <regex fields="word" weight="1.0">\W(china keli electric company)\W</regex>
   <regex fields="word" weight="1.0">\W(alphamin resources corp)\W</regex>
   <regex fields="word" weight="1.0">\W(black panther mining corp)\W</regex>
@@ -965,7 +965,7 @@
   <regex fields="word" weight="1.0">\W(advantage disposal solutions)\W</regex>
   <regex fields="word" weight="1.0">\W(tahoe resources)\W</regex>
   <regex fields="word" weight="1.0">\W(valgold resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(maersk oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(maersk oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(canso select opportunities fund)\W</regex>
   <regex fields="word" weight="1.0">\W(abzu gold)\W</regex>
   <regex fields="word" weight="1.0">\W(macquarie global infrastructure income fund)\W</regex>
@@ -993,7 +993,7 @@
   <regex fields="word" weight="1.0">\W(prime dividend corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(btb real esae investment trust)\W</regex>
   <regex fields="word" weight="1.0">\W(pioneer energy services corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(spc e&p lipstream pte)\W</regex>
+  <regex fields="word" weight="1.0">\W(spc e\&p lipstream pte)\W</regex>
   <regex fields="word" weight="1.0">\W(chesswood group)\W</regex>
   <regex fields="word" weight="1.0">\W(pennzoil quaker sae co)\W</regex>
   <regex fields="word" weight="1.0">\W(conocophillipsastralia funding co)\W</regex>
@@ -1004,10 +1004,10 @@
   <regex fields="word" weight="1.0">\W(antero resources)\W</regex>
   <regex fields="word" weight="1.0">\W(spitfire resources)\W</regex>
   <regex fields="word" weight="1.0">\W(american international holdings corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(bmo s&p/tsx equal weight industrials index etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(bmo s\&p/tsx equal weight industrials index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(gujarat sae petroleum corp)\W</regex>
   <regex fields="word" weight="1.0">\W(natural gas services group)\W</regex>
-  <regex fields="word" weight="1.0">\W(australian oil & gas corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(australian oil \& gas corp)\W</regex>
   <regex fields="word" weight="1.0">\W(element financial corp)\W</regex>
   <regex fields="word" weight="1.0">\W(galway gold)\W</regex>
   <regex fields="word" weight="1.0">\W(columbia yukon explorations)\W</regex>
@@ -1029,7 +1029,7 @@
   <regex fields="word" weight="1.0">\W(kenna resources corp)\W</regex>
   <regex fields="word" weight="1.0">\W(high liner foods)\W</regex>
   <regex fields="word" weight="1.0">\W(occidental de colombia)\W</regex>
-  <regex fields="word" weight="1.0">\W(eco (atlantic) oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(eco (atlantic) oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(exclamation investments corp)\W</regex>
   <regex fields="word" weight="1.0">\W(prometic life sciences)\W</regex>
   <regex fields="word" weight="1.0">\W(agave silver corp.)\W</regex>
@@ -1054,7 +1054,7 @@
   <regex fields="word" weight="1.0">\W(chevron australia (epp44) pty)\W</regex>
   <regex fields="word" weight="1.0">\W(nsgp (ensign))\W</regex>
   <regex fields="word" weight="1.0">\W(somoil)\W</regex>
-  <regex fields="word" weight="1.0">\W(eagle ford oil & gas corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(eagle ford oil \& gas corp)\W</regex>
   <regex fields="word" weight="1.0">\W(saputo inc)\W</regex>
   <regex fields="word" weight="1.0">\W(accord financial corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(carrus capital corp)\W</regex>
@@ -1076,7 +1076,7 @@
   <regex fields="word" weight="1.0">\W(occidenta)\W</regex>
   <regex fields="word" weight="1.0">\W(hammond manufacturing company)\W</regex>
   <regex fields="word" weight="1.0">\W(dove energy)\W</regex>
-  <regex fields="word" weight="1.0">\W(proto resources & investments)\W</regex>
+  <regex fields="word" weight="1.0">\W(proto resources \& investments)\W</regex>
   <regex fields="word" weight="1.0">\W(tres-or resources)\W</regex>
   <regex fields="word" weight="1.0">\W(mag silver corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(sayona mining)\W</regex>
@@ -1086,7 +1086,7 @@
   <regex fields="word" weight="1.0">\W(oxford resources)\W</regex>
   <regex fields="word" weight="1.0">\W(midlands minerals corp)\W</regex>
   <regex fields="word" weight="1.0">\W(porvidence resources corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(paraguay gas & energy)\W</regex>
+  <regex fields="word" weight="1.0">\W(paraguay gas \& energy)\W</regex>
   <regex fields="word" weight="1.0">\W(imris inc)\W</regex>
   <regex fields="word" weight="1.0">\W(vior inc (societe dexploration miniere))\W</regex>
   <regex fields="word" weight="1.0">\W(westridge resources)\W</regex>
@@ -1103,7 +1103,7 @@
   <regex fields="word" weight="1.0">\W(esstra industries)\W</regex>
   <regex fields="word" weight="1.0">\W(planet gas)\W</regex>
   <regex fields="word" weight="1.0">\W(satsolie)\W</regex>
-  <regex fields="word" weight="1.0">\W(hrt o&g)\W</regex>
+  <regex fields="word" weight="1.0">\W(hrt o\&g)\W</regex>
   <regex fields="word" weight="1.0">\W(saield resources)\W</regex>
   <regex fields="word" weight="1.0">\W(compressco partners lp)\W</regex>
   <regex fields="word" weight="1.0">\W(prima colombia hardwood)\W</regex>
@@ -1169,7 +1169,7 @@
   <regex fields="word" weight="1.0">\W(altius minerals corp)\W</regex>
   <regex fields="word" weight="1.0">\W(stealth minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(sunora foods)\W</regex>
-  <regex fields="word" weight="1.0">\W(orient petroleum & energy)\W</regex>
+  <regex fields="word" weight="1.0">\W(orient petroleum \& energy)\W</regex>
   <regex fields="word" weight="1.0">\W(kombat copper)\W</regex>
   <regex fields="word" weight="1.0">\W(covalon technologies)\W</regex>
   <regex fields="word" weight="1.0">\W(samon technologies corp)\W</regex>
@@ -1212,7 +1212,7 @@
   <regex fields="word" weight="1.0">\W(royale energy)\W</regex>
   <regex fields="word" weight="1.0">\W(horizons betapro msci emerging markets bear plus etf)\W</regex>
   <regex fields="word" weight="1.0">\W(well logging limiteda)\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p 500 index fund (cad-hedged))\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p 500 index fund (cad-hedged))\W</regex>
   <regex fields="word" weight="1.0">\W(ardiden limited)\W</regex>
   <regex fields="word" weight="1.0">\W(multiplex services)\W</regex>
   <regex fields="word" weight="1.0">\W(pakisa petroleum)\W</regex>
@@ -1224,7 +1224,7 @@
   <regex fields="word" weight="1.0">\W(swift energy co)\W</regex>
   <regex fields="word" weight="1.0">\W(pearl oil sebkuku)\W</regex>
   <regex fields="word" weight="1.0">\W(vanguard ftse canada all cap index etf)\W</regex>
-  <regex fields="word" weight="1.0">\W(horizons s&p/tsx capped financials index etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(horizons s\&p/tsx capped financials index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(centrica resources (armada))\W</regex>
   <regex fields="word" weight="1.0">\W(sintana energy)\W</regex>
   <regex fields="word" weight="1.0">\W(greensa agricultural corp)\W</regex>
@@ -1232,7 +1232,7 @@
   <regex fields="word" weight="1.0">\W(kensington court ventures)\W</regex>
   <regex fields="word" weight="1.0">\W(88 capital corp)\W</regex>
   <regex fields="word" weight="1.0">\W(whistler blackcomb holdings)\W</regex>
-  <regex fields="word" weight="1.0">\W(hardy exploration & production (india))\W</regex>
+  <regex fields="word" weight="1.0">\W(hardy exploration \& production (india))\W</regex>
   <regex fields="word" weight="1.0">\W(first asset yield opportunity trust)\W</regex>
   <regex fields="word" weight="1.0">\W(adf group)\W</regex>
   <regex fields="word" weight="1.0">\W(moche energy sac.)\W</regex>
@@ -1263,18 +1263,18 @@
   <regex fields="word" weight="1.0">\W(goodrich petroleum corp)\W</regex>
   <regex fields="word" weight="1.0">\W(manado gold corp)\W</regex>
   <regex fields="word" weight="1.0">\W(burnstone ventures)\W</regex>
-  <regex fields="word" weight="1.0">\W(stetson oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(stetson oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(strait minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(primewest energy trust)\W</regex>
   <regex fields="word" weight="1.0">\W(belmont resources)\W</regex>
   <regex fields="word" weight="1.0">\W(builders capital mortgage corp.)\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p us dividend growers index fund (cad-hedged) etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p us dividend growers index fund (cad-hedged) etf)\W</regex>
   <regex fields="word" weight="1.0">\W(bearclaw capital corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(astorius resources)\W</regex>
   <regex fields="word" weight="1.0">\W(alpha exploration)\W</regex>
   <regex fields="word" weight="1.0">\W(akita drilling)\W</regex>
   <regex fields="word" weight="1.0">\W(petro andina  (trinidad) limited  [acquisition of saes by  parex resources  (trinidad))\W</regex>
-  <regex fields="word" weight="1.0">\W(bmo s&p/tsx capped composite index etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(bmo s\&p/tsx capped composite index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(txco resources)\W</regex>
   <regex fields="word" weight="1.0">\W(agritec systems,)\W</regex>
   <regex fields="word" weight="1.0">\W(turquoise hill resources)\W</regex>
@@ -1338,7 +1338,7 @@
   <regex fields="word" weight="1.0">\W(murphy australia nt/p80 oil pty)\W</regex>
   <regex fields="word" weight="1.0">\W(minaean international corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(invenio resources corp.)\W</regex>
-  <regex fields="word" weight="1.0">\W(powersaes s&p/tsx composite high beta index etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(powersaes s\&p/tsx composite high beta index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(dds wireless international)\W</regex>
   <regex fields="word" weight="1.0">\W(zeta resources)\W</regex>
   <regex fields="word" weight="1.0">\W(brookfield residential properties)\W</regex>
@@ -1347,7 +1347,7 @@
   <regex fields="word" weight="1.0">\W(horizons betapro comex silver bull plus etf)\W</regex>
   <regex fields="word" weight="1.0">\W(tech leaders income fund)\W</regex>
   <regex fields="word" weight="1.0">\W(petcon borneo)\W</regex>
-  <regex fields="word" weight="1.0">\W(horizons betapro s&p/tsx global gold bull plus etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(horizons betapro s\&p/tsx global gold bull plus etf)\W</regex>
   <regex fields="word" weight="1.0">\W(brookwater ventures)\W</regex>
   <regex fields="word" weight="1.0">\W(golden band resources)\W</regex>
   <regex fields="word" weight="1.0">\W(ct developers)\W</regex>
@@ -1371,7 +1371,7 @@
   <regex fields="word" weight="1.0">\W(alta mesa holdings lp)\W</regex>
   <regex fields="word" weight="1.0">\W(sat technologies)\W</regex>
   <regex fields="word" weight="1.0">\W(pitchblack resoruces)\W</regex>
-  <regex fields="word" weight="1.0">\W(australia new agribusiness & chemical group)\W</regex>
+  <regex fields="word" weight="1.0">\W(australia new agribusiness \& chemical group)\W</regex>
   <regex fields="word" weight="1.0">\W(continental resources)\W</regex>
   <regex fields="word" weight="1.0">\W(bulletin resources)\W</regex>
   <regex fields="word" weight="1.0">\W(comet ridge)\W</regex>
@@ -1379,7 +1379,7 @@
   <regex fields="word" weight="1.0">\W(sprott physical platinum and palladium trust)\W</regex>
   <regex fields="word" weight="1.0">\W(pacific casae minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(fort st james nickel corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(texcal mahato e&p)\W</regex>
+  <regex fields="word" weight="1.0">\W(texcal mahato e\&p)\W</regex>
   <regex fields="word" weight="1.0">\W(belair energy corp)\W</regex>
   <regex fields="word" weight="1.0">\W(rocketinfo inc)\W</regex>
   <regex fields="word" weight="1.0">\W(ensign energy services)\W</regex>
@@ -1398,7 +1398,7 @@
   <regex fields="word" weight="1.0">\W(berry petroleum co)\W</regex>
   <regex fields="word" weight="1.0">\W(first asset morningsa us momentum index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(portola resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(british gas explo. & prod.india)\W</regex>
+  <regex fields="word" weight="1.0">\W(british gas explo. \& prod.india)\W</regex>
   <regex fields="word" weight="1.0">\W(eumeralla resources)\W</regex>
   <regex fields="word" weight="1.0">\W(ok energy)\W</regex>
   <regex fields="word" weight="1.0">\W(global diversified investment grade income trust ii)\W</regex>
@@ -1438,7 +1438,7 @@
   <regex fields="word" weight="1.0">\W(varco ip)\W</regex>
   <regex fields="word" weight="1.0">\W(trident resources corp)\W</regex>
   <regex fields="word" weight="1.0">\W(cinco resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(consolidated oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(consolidated oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(geodrill limited)\W</regex>
   <regex fields="word" weight="1.0">\W(goldstream minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(lorne park capital partners)\W</regex>
@@ -1451,7 +1451,7 @@
   <regex fields="word" weight="1.0">\W(lyondell chemical technology lp)\W</regex>
   <regex fields="word" weight="1.0">\W(caspian energy international)\W</regex>
   <regex fields="word" weight="1.0">\W(aston hill advantage vip income fund)\W</regex>
-  <regex fields="word" weight="1.0">\W(torc oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(torc oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(stonewall resources)\W</regex>
   <regex fields="word" weight="1.0">\W(sun motor international)\W</regex>
   <regex fields="word" weight="1.0">\W(isaes japan fundamental index fund (cad-hedged) etf)\W</regex>
@@ -1511,7 +1511,7 @@
   <regex fields="word" weight="1.0">\W(metalcorp limited)\W</regex>
   <regex fields="word" weight="1.0">\W(barclays bank plc fixed income notes, series i-10)\W</regex>
   <regex fields="word" weight="1.0">\W(storagevault canada)\W</regex>
-  <regex fields="word" weight="1.0">\W(american patriot oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(american patriot oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(silk road energy)\W</regex>
   <regex fields="word" weight="1.0">\W(canyon resources)\W</regex>
   <regex fields="word" weight="1.0">\W(petrominerales peru)\W</regex>
@@ -1621,7 +1621,7 @@
   <regex fields="word" weight="1.0">\W(red rock capital corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(richmont mines)\W</regex>
   <regex fields="word" weight="1.0">\W(uni-select inc)\W</regex>
-  <regex fields="word" weight="1.0">\W(horizons betapro s&p 500 inverse etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(horizons betapro s\&p 500 inverse etf)\W</regex>
   <regex fields="word" weight="1.0">\W(colorado 2000d limited partnership)\W</regex>
   <regex fields="word" weight="1.0">\W(blina minerals nl)\W</regex>
   <regex fields="word" weight="1.0">\W(western refining)\W</regex>
@@ -1646,7 +1646,7 @@
   <regex fields="word" weight="1.0">\W(endeavour mining corp)\W</regex>
   <regex fields="word" weight="1.0">\W(nv gold corp)\W</regex>
   <regex fields="word" weight="1.0">\W(crazy horse resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(reef oil & gas drilling & income fund lp)\W</regex>
+  <regex fields="word" weight="1.0">\W(reef oil \& gas drilling \& income fund lp)\W</regex>
   <regex fields="word" weight="1.0">\W(focus ventures)\W</regex>
   <regex fields="word" weight="1.0">\W(bohemia s.a)\W</regex>
   <regex fields="word" weight="1.0">\W(storm cat energy corp)\W</regex>
@@ -1656,7 +1656,7 @@
   <regex fields="word" weight="1.0">\W(propernyn bv)\W</regex>
   <regex fields="word" weight="1.0">\W(equal energy)\W</regex>
   <regex fields="word" weight="1.0">\W(australian oil company)\W</regex>
-  <regex fields="word" weight="1.0">\W(exxonmobil e&p indonesamandar)\W</regex>
+  <regex fields="word" weight="1.0">\W(exxonmobil e\&p indonesamandar)\W</regex>
   <regex fields="word" weight="1.0">\W(pjx resources)\W</regex>
   <regex fields="word" weight="1.0">\W(niocan inc)\W</regex>
   <regex fields="word" weight="1.0">\W(premium exploration)\W</regex>
@@ -1675,13 +1675,13 @@
   <regex fields="word" weight="1.0">\W(subsa7 sa)\W</regex>
   <regex fields="word" weight="1.0">\W(anadarko)\W</regex>
   <regex fields="word" weight="1.0">\W(eldorado gold corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(stream oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(stream oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(pacific asachina energy)\W</regex>
   <regex fields="word" weight="1.0">\W(gold oil peru sac.)\W</regex>
-  <regex fields="word" weight="1.0">\W(p&h mining equipment)\W</regex>
+  <regex fields="word" weight="1.0">\W(p\&h mining equipment)\W</regex>
   <regex fields="word" weight="1.0">\W(bravura ventures corp)\W</regex>
   <regex fields="word" weight="1.0">\W(petrobras global finance)\W</regex>
-  <regex fields="word" weight="1.0">\W(superior oil & gas co)\W</regex>
+  <regex fields="word" weight="1.0">\W(superior oil \& gas co)\W</regex>
   <regex fields="word" weight="1.0">\W(marion energy)\W</regex>
   <regex fields="word" weight="1.0">\W(one world investments)\W</regex>
   <regex fields="word" weight="1.0">\W(antares mining)\W</regex>
@@ -1702,7 +1702,7 @@
   <regex fields="word" weight="1.0">\W(first point minerals corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(pt chevron pacific indonesia)\W</regex>
   <regex fields="word" weight="1.0">\W(krisenergy kutei)\W</regex>
-  <regex fields="word" weight="1.0">\W(flaherty & crumrine investment grade fixed income fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(flaherty \& crumrine investment grade fixed income fund)\W</regex>
   <regex fields="word" weight="1.0">\W(repsol international capital)\W</regex>
   <regex fields="word" weight="1.0">\W(bp capital marketsaerica)\W</regex>
   <regex fields="word" weight="1.0">\W(isign media solutions)\W</regex>
@@ -1733,7 +1733,7 @@
   <regex fields="word" weight="1.0">\W(orion acquisition)\W</regex>
   <regex fields="word" weight="1.0">\W(pt three golden energy west tungkal)\W</regex>
   <regex fields="word" weight="1.0">\W(canetic resources trust)\W</regex>
-  <regex fields="word" weight="1.0">\W(southwest oil & gas income fund x a lp)\W</regex>
+  <regex fields="word" weight="1.0">\W(southwest oil \& gas income fund x a lp)\W</regex>
   <regex fields="word" weight="1.0">\W(paget minerals corp)\W</regex>
   <regex fields="word" weight="1.0">\W(adventure gold)\W</regex>
   <regex fields="word" weight="1.0">\W(teras resources)\W</regex>
@@ -1784,8 +1784,8 @@
   <regex fields="word" weight="1.0">\W(zenn motor company)\W</regex>
   <regex fields="word" weight="1.0">\W(mds energy public 2014 a lp)\W</regex>
   <regex fields="word" weight="1.0">\W(el nino ventures)\W</regex>
-  <regex fields="word" weight="1.0">\W(dynamic oil & gas)\W</regex>
-  <regex fields="word" weight="1.0">\W(maverick oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(dynamic oil \& gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(maverick oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(black gold east bula)\W</regex>
   <regex fields="word" weight="1.0">\W(extrispex)\W</regex>
   <regex fields="word" weight="1.0">\W(lake resources n.l.)\W</regex>
@@ -1872,7 +1872,7 @@
   <regex fields="word" weight="1.0">\W(roc oil (wa) pty)\W</regex>
   <regex fields="word" weight="1.0">\W(coeur mining,)\W</regex>
   <regex fields="word" weight="1.0">\W(pegasus metals)\W</regex>
-  <regex fields="word" weight="1.0">\W(infinity oil & gas co)\W</regex>
+  <regex fields="word" weight="1.0">\W(infinity oil \& gas co)\W</regex>
   <regex fields="word" weight="1.0">\W(redsa gold corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(inca minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(asabio-chem group corp.)\W</regex>
@@ -1891,11 +1891,11 @@
   <regex fields="word" weight="1.0">\W(crown point energy)\W</regex>
   <regex fields="word" weight="1.0">\W(sk innovation co.)\W</regex>
   <regex fields="word" weight="1.0">\W(pdc 2003 drilling program i)\W</regex>
-  <regex fields="word" weight="1.0">\W(atp oil & gas corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(atp oil \& gas corp)\W</regex>
   <regex fields="word" weight="1.0">\W(redhawk resources)\W</regex>
   <regex fields="word" weight="1.0">\W(first asset canadian convertible bond etf)\W</regex>
   <regex fields="word" weight="1.0">\W(hood henry j)\W</regex>
-  <regex fields="word" weight="1.0">\W(belden & blake corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(belden \& blake corp)\W</regex>
   <regex fields="word" weight="1.0">\W(comstock resources)\W</regex>
   <regex fields="word" weight="1.0">\W(gulf exploration consultants)\W</regex>
   <regex fields="word" weight="1.0">\W(sww energy)\W</regex>
@@ -1936,18 +1936,18 @@
   <regex fields="word" weight="1.0">\W(taranis resources)\W</regex>
   <regex fields="word" weight="1.0">\W(chevron liberia)\W</regex>
   <regex fields="word" weight="1.0">\W(mcw energy group)\W</regex>
-  <regex fields="word" weight="1.0">\W(horizons betapro s&p/tsx capped financials bear plus etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(horizons betapro s\&p/tsx capped financials bear plus etf)\W</regex>
   <regex fields="word" weight="1.0">\W(indigo exploration)\W</regex>
   <regex fields="word" weight="1.0">\W(primeline energy holdings)\W</regex>
   <regex fields="word" weight="1.0">\W(kazmunayteniz)\W</regex>
   <regex fields="word" weight="1.0">\W(bp west aru ii)\W</regex>
   <regex fields="word" weight="1.0">\W(venezuelan national petroleum co)\W</regex>
-  <regex fields="word" weight="1.0">\W(cygnus oil & gas corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(cygnus oil \& gas corp)\W</regex>
   <regex fields="word" weight="1.0">\W(odyssey energy)\W</regex>
   <regex fields="word" weight="1.0">\W(quanta resources)\W</regex>
   <regex fields="word" weight="1.0">\W(melcor developments)\W</regex>
   <regex fields="word" weight="1.0">\W(5n plus)\W</regex>
-  <regex fields="word" weight="1.0">\W(algonquin power & utilities corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(algonquin power \& utilities corp)\W</regex>
   <regex fields="word" weight="1.0">\W(new guinea gold corp)\W</regex>
   <regex fields="word" weight="1.0">\W(terra firma capital corp)\W</regex>
   <regex fields="word" weight="1.0">\W(paragon offshore)\W</regex>
@@ -2000,7 +2000,7 @@
   <regex fields="word" weight="1.0">\W(united hydrocarbon chad)\W</regex>
   <regex fields="word" weight="1.0">\W(chemtrade logistics income fund)\W</regex>
   <regex fields="word" weight="1.0">\W(isaes canadian financial monthly income fund etf)\W</regex>
-  <regex fields="word" weight="1.0">\W(black ridge oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(black ridge oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(ypg financing)\W</regex>
   <regex fields="word" weight="1.0">\W(holloman energy corp)\W</regex>
   <regex fields="word" weight="1.0">\W(general mining corp)\W</regex>
@@ -2009,7 +2009,7 @@
   <regex fields="word" weight="1.0">\W(horizon oil)\W</regex>
   <regex fields="word" weight="1.0">\W(montecz s.a)\W</regex>
   <regex fields="word" weight="1.0">\W(american natural energy corp.)\W</regex>
-  <regex fields="word" weight="1.0">\W(pacific & western bank of canada)\W</regex>
+  <regex fields="word" weight="1.0">\W(pacific \& western bank of canada)\W</regex>
   <regex fields="word" weight="1.0">\W(fsi energy group)\W</regex>
   <regex fields="word" weight="1.0">\W(altair gold)\W</regex>
   <regex fields="word" weight="1.0">\W(geonovus minerals corp)\W</regex>
@@ -2028,7 +2028,7 @@
   <regex fields="word" weight="1.0">\W(latin resources)\W</regex>
   <regex fields="word" weight="1.0">\W(duluth metals)\W</regex>
   <regex fields="word" weight="1.0">\W(suparna gold corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(titan oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(titan oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(ubs global allocation trust)\W</regex>
   <regex fields="word" weight="1.0">\W(parkland fuel corp)\W</regex>
   <regex fields="word" weight="1.0">\W(triangle petroleum corp)\W</regex>
@@ -2105,7 +2105,7 @@
   <regex fields="word" weight="1.0">\W(overland resources)\W</regex>
   <regex fields="word" weight="1.0">\W(nexus energy wa377p pty)\W</regex>
   <regex fields="word" weight="1.0">\W(jsc nc kazmunaygaz kmg kasaan)\W</regex>
-  <regex fields="word" weight="1.0">\W(stratex oil & gas holdings)\W</regex>
+  <regex fields="word" weight="1.0">\W(stratex oil \& gas holdings)\W</regex>
   <regex fields="word" weight="1.0">\W(bundu gas)\W</regex>
   <regex fields="word" weight="1.0">\W(conoco philips)\W</regex>
   <regex fields="word" weight="1.0">\W(emerald resources nl)\W</regex>
@@ -2133,7 +2133,7 @@
   <regex fields="word" weight="1.0">\W(opawica explorations)\W</regex>
   <regex fields="word" weight="1.0">\W(rio grande mining corp)\W</regex>
   <regex fields="word" weight="1.0">\W(avsa aviation group)\W</regex>
-  <regex fields="word" weight="1.0">\W(horizons betapro s&p 500 vix short-term futures etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(horizons betapro s\&p 500 vix short-term futures etf)\W</regex>
   <regex fields="word" weight="1.0">\W(white tiger mining corp)\W</regex>
   <regex fields="word" weight="1.0">\W(renaisace minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(isaes premium money market fund etf)\W</regex>
@@ -2201,7 +2201,7 @@
   <regex fields="word" weight="1.0">\W(addax pcl)\W</regex>
   <regex fields="word" weight="1.0">\W(continental gold)\W</regex>
   <regex fields="word" weight="1.0">\W(eca marcellus trust i)\W</regex>
-  <regex fields="word" weight="1.0">\W(mooncor oil & gas corp.)\W</regex>
+  <regex fields="word" weight="1.0">\W(mooncor oil \& gas corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(petrolin)\W</regex>
   <regex fields="word" weight="1.0">\W(salmon river resources)\W</regex>
   <regex fields="word" weight="1.0">\W(yield advantage income trust)\W</regex>
@@ -2245,7 +2245,7 @@
   <regex fields="word" weight="1.0">\W(reef global energy iv lp)\W</regex>
   <regex fields="word" weight="1.0">\W(hyduke energy services)\W</regex>
   <regex fields="word" weight="1.0">\W(vanguard energy corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(exxonmobil e&p indonesagunting)\W</regex>
+  <regex fields="word" weight="1.0">\W(exxonmobil e\&p indonesagunting)\W</regex>
   <regex fields="word" weight="1.0">\W(franchise bancorp)\W</regex>
   <regex fields="word" weight="1.0">\W(z energy)\W</regex>
   <regex fields="word" weight="1.0">\W(murphy oil / omv / cowan)\W</regex>
@@ -2257,7 +2257,7 @@
   <regex fields="word" weight="1.0">\W(petroci holding)\W</regex>
   <regex fields="word" weight="1.0">\W(gold mountain)\W</regex>
   <regex fields="word" weight="1.0">\W(kazmunaygas)\W</regex>
-  <regex fields="word" weight="1.0">\W(avino silver & gold mines)\W</regex>
+  <regex fields="word" weight="1.0">\W(avino silver \& gold mines)\W</regex>
   <regex fields="word" weight="1.0">\W(bp developmentsastralia pty.)\W</regex>
   <regex fields="word" weight="1.0">\W(ashburton ventures)\W</regex>
   <regex fields="word" weight="1.0">\W(biostem u.s. corp)\W</regex>
@@ -2318,7 +2318,7 @@
   <regex fields="word" weight="1.0">\W(annona energy)\W</regex>
   <regex fields="word" weight="1.0">\W(mercury air group)\W</regex>
   <regex fields="word" weight="1.0">\W(epicure charcoal)\W</regex>
-  <regex fields="word" weight="1.0">\W(sino australia oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(sino australia oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(lovitt resources)\W</regex>
   <regex fields="word" weight="1.0">\W(bri-chem corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(morneau sheppel)\W</regex>
@@ -2340,7 +2340,7 @@
   <regex fields="word" weight="1.0">\W(duketon mining)\W</regex>
   <regex fields="word" weight="1.0">\W(high north resources)\W</regex>
   <regex fields="word" weight="1.0">\W(big cat energy corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(co & pa 1999d limited partnership)\W</regex>
+  <regex fields="word" weight="1.0">\W(co \& pa 1999d limited partnership)\W</regex>
   <regex fields="word" weight="1.0">\W(sonde resources corp)\W</regex>
   <regex fields="word" weight="1.0">\W(santos limited)\W</regex>
   <regex fields="word" weight="1.0">\W(shell canada)\W</regex>
@@ -2405,14 +2405,14 @@
   <regex fields="word" weight="1.0">\W(pason systems)\W</regex>
   <regex fields="word" weight="1.0">\W(nuinsco resources)\W</regex>
   <regex fields="word" weight="1.0">\W(central resources corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(resources & energy group)\W</regex>
+  <regex fields="word" weight="1.0">\W(resources \& energy group)\W</regex>
   <regex fields="word" weight="1.0">\W(transglobe)\W</regex>
   <regex fields="word" weight="1.0">\W(tawana resources nl)\W</regex>
   <regex fields="word" weight="1.0">\W(viking exploration)\W</regex>
   <regex fields="word" weight="1.0">\W(sipa resources)\W</regex>
   <regex fields="word" weight="1.0">\W(crew energy)\W</regex>
   <regex fields="word" weight="1.0">\W(keg royalties income fund (the))\W</regex>
-  <regex fields="word" weight="1.0">\W(canton oil & gas co)\W</regex>
+  <regex fields="word" weight="1.0">\W(canton oil \& gas co)\W</regex>
   <regex fields="word" weight="1.0">\W(orinoco gold)\W</regex>
   <regex fields="word" weight="1.0">\W(pt madhiri panca usaha)\W</regex>
   <regex fields="word" weight="1.0">\W(kerr breene m)\W</regex>
@@ -2429,7 +2429,7 @@
   <regex fields="word" weight="1.0">\W(pt kalimantan kutau energy)\W</regex>
   <regex fields="word" weight="1.0">\W(kilo goldmines)\W</regex>
   <regex fields="word" weight="1.0">\W(gas2grid limited)\W</regex>
-  <regex fields="word" weight="1.0">\W(advantage oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(advantage oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(algae.tec limited)\W</regex>
   <regex fields="word" weight="1.0">\W(orrex resources)\W</regex>
   <regex fields="word" weight="1.0">\W(geomet inc)\W</regex>
@@ -2452,14 +2452,14 @@
   <regex fields="word" weight="1.0">\W(western troy capital resources)\W</regex>
   <regex fields="word" weight="1.0">\W(macquarie infrastructure co trust)\W</regex>
   <regex fields="word" weight="1.0">\W(richelieu hardware)\W</regex>
-  <regex fields="word" weight="1.0">\W(bfs entertainment & multimedia)\W</regex>
+  <regex fields="word" weight="1.0">\W(bfs entertainment \& multimedia)\W</regex>
   <regex fields="word" weight="1.0">\W(kermode resources)\W</regex>
   <regex fields="word" weight="1.0">\W(rutter inc)\W</regex>
   <regex fields="word" weight="1.0">\W(st barbara)\W</regex>
   <regex fields="word" weight="1.0">\W(us natural gas corp)\W</regex>
   <regex fields="word" weight="1.0">\W(conocophillips holding co)\W</regex>
   <regex fields="word" weight="1.0">\W(euromax resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(u.s. silver & gold)\W</regex>
+  <regex fields="word" weight="1.0">\W(u.s. silver \& gold)\W</regex>
   <regex fields="word" weight="1.0">\W(bravada gold corp)\W</regex>
   <regex fields="word" weight="1.0">\W(mongolian resource corp)\W</regex>
   <regex fields="word" weight="1.0">\W(birchcliff energy)\W</regex>
@@ -2476,15 +2476,15 @@
   <regex fields="word" weight="1.0">\W(asa mineral resources)\W</regex>
   <regex fields="word" weight="1.0">\W(saeholder gold corp)\W</regex>
   <regex fields="word" weight="1.0">\W(capital dgmc)\W</regex>
-  <regex fields="word" weight="1.0">\W(south american iron & steel corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(perkins oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(south american iron \& steel corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(perkins oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(ct real esae investment trust)\W</regex>
   <regex fields="word" weight="1.0">\W(natunola agritech)\W</regex>
   <regex fields="word" weight="1.0">\W(danier leather)\W</regex>
   <regex fields="word" weight="1.0">\W(archer exploration)\W</regex>
   <regex fields="word" weight="1.0">\W(ogx petroleo e gas limiteda)\W</regex>
   <regex fields="word" weight="1.0">\W(nuevo energy co)\W</regex>
-  <regex fields="word" weight="1.0">\W(enhanced oil & gas recovery)\W</regex>
+  <regex fields="word" weight="1.0">\W(enhanced oil \& gas recovery)\W</regex>
   <regex fields="word" weight="1.0">\W(conocophillipsaborip vi)\W</regex>
   <regex fields="word" weight="1.0">\W(apache julimar pty)\W</regex>
   <regex fields="word" weight="1.0">\W(desert gold ventures)\W</regex>
@@ -2494,8 +2494,8 @@
   <regex fields="word" weight="1.0">\W(corus entertainment)\W</regex>
   <regex fields="word" weight="1.0">\W(adex mining)\W</regex>
   <regex fields="word" weight="1.0">\W(richtersveld mining)\W</regex>
-  <regex fields="word" weight="1.0">\W(zion oil & gas)\W</regex>
-  <regex fields="word" weight="1.0">\W(ll&e royalty trust)\W</regex>
+  <regex fields="word" weight="1.0">\W(zion oil \& gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(ll\&e royalty trust)\W</regex>
   <regex fields="word" weight="1.0">\W(pdc 2002 d limited partnership)\W</regex>
   <regex fields="word" weight="1.0">\W(kalnorth gold mines)\W</regex>
   <regex fields="word" weight="1.0">\W(southwest royalties inc income fund v)\W</regex>
@@ -2504,7 +2504,7 @@
   <regex fields="word" weight="1.0">\W(pan orient energy corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(bounty mining)\W</regex>
   <regex fields="word" weight="1.0">\W(oil sands sector fund)\W</regex>
-  <regex fields="word" weight="1.0">\W(china energy & carbon black holdings)\W</regex>
+  <regex fields="word" weight="1.0">\W(china energy \& carbon black holdings)\W</regex>
   <regex fields="word" weight="1.0">\W(liquefied natural gas)\W</regex>
   <regex fields="word" weight="1.0">\W(nq exploration)\W</regex>
   <regex fields="word" weight="1.0">\W(omni-lite industries canada)\W</regex>
@@ -2514,7 +2514,7 @@
   <regex fields="word" weight="1.0">\W(teranga gold corp)\W</regex>
   <regex fields="word" weight="1.0">\W(northern tier energy)\W</regex>
   <regex fields="word" weight="1.0">\W(montana exploration corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(horizons betapro s&p/tsx capped energy bear plus etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(horizons betapro s\&p/tsx capped energy bear plus etf)\W</regex>
   <regex fields="word" weight="1.0">\W(kam and ronson media group)\W</regex>
   <regex fields="word" weight="1.0">\W(steel excel)\W</regex>
   <regex fields="word" weight="1.0">\W(ironclad mining)\W</regex>
@@ -2540,7 +2540,7 @@
   <regex fields="word" weight="1.0">\W(estrella international energy services)\W</regex>
   <regex fields="word" weight="1.0">\W(cnooc finance (2013))\W</regex>
   <regex fields="word" weight="1.0">\W(plains resources international)\W</regex>
-  <regex fields="word" weight="1.0">\W(sabina gold & silver corp.)\W</regex>
+  <regex fields="word" weight="1.0">\W(sabina gold \& silver corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(hazelwood resources)\W</regex>
   <regex fields="word" weight="1.0">\W(patient home monitoring corp)\W</regex>
   <regex fields="word" weight="1.0">\W(independence resources)\W</regex>
@@ -2563,7 +2563,7 @@
   <regex fields="word" weight="1.0">\W(bg exploration and production)\W</regex>
   <regex fields="word" weight="1.0">\W(geodex minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(newton energy corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(odebrecht e&p gmbh (oe&p))\W</regex>
+  <regex fields="word" weight="1.0">\W(odebrecht e\&p gmbh (oe\&p))\W</regex>
   <regex fields="word" weight="1.0">\W(tecpetrol colombia sas)\W</regex>
   <regex fields="word" weight="1.0">\W(passport energy)\W</regex>
   <regex fields="word" weight="1.0">\W(silvermet inc)\W</regex>
@@ -2583,10 +2583,10 @@
   <regex fields="word" weight="1.0">\W(nuverra environmental solutions)\W</regex>
   <regex fields="word" weight="1.0">\W(citic seram energy)\W</regex>
   <regex fields="word" weight="1.0">\W(caribou king resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(talisa colombia oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(talisa colombia oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(airiq inc)\W</regex>
   <regex fields="word" weight="1.0">\W(santonia energy)\W</regex>
-  <regex fields="word" weight="1.0">\W(total e&p brasil)\W</regex>
+  <regex fields="word" weight="1.0">\W(total e\&p brasil)\W</regex>
   <regex fields="word" weight="1.0">\W(fracmaster limited)\W</regex>
   <regex fields="word" weight="1.0">\W(heritage oil corp)\W</regex>
   <regex fields="word" weight="1.0">\W(prontoforms corp)\W</regex>
@@ -2601,7 +2601,7 @@
   <regex fields="word" weight="1.0">\W(azimut exploration)\W</regex>
   <regex fields="word" weight="1.0">\W(flyht aerosae solutions)\W</regex>
   <regex fields="word" weight="1.0">\W(desert eagle resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(total e&p (trinidad))\W</regex>
+  <regex fields="word" weight="1.0">\W(total e\&p (trinidad))\W</regex>
   <regex fields="word" weight="1.0">\W(golden patriot corp)\W</regex>
   <regex fields="word" weight="1.0">\W(eog resources trinidad u(b) block unlimited)\W</regex>
   <regex fields="word" weight="1.0">\W(ridgewood energy s fund)\W</regex>
@@ -2651,13 +2651,13 @@
   <regex fields="word" weight="1.0">\W(gladiator resources)\W</regex>
   <regex fields="word" weight="1.0">\W(bce inc)\W</regex>
   <regex fields="word" weight="1.0">\W(oceanside capital corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(intrepid technology & resource)\W</regex>
+  <regex fields="word" weight="1.0">\W(intrepid technology \& resource)\W</regex>
   <regex fields="word" weight="1.0">\W(maranco belize)\W</regex>
   <regex fields="word" weight="1.0">\W(adavale resources)\W</regex>
   <regex fields="word" weight="1.0">\W(atlasaerica series 25 2004 (a) lp)\W</regex>
   <regex fields="word" weight="1.0">\W(pt tiara bumi petroleum)\W</regex>
   <regex fields="word" weight="1.0">\W(champion bear resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(horizons betapro s&p/tsx 60 bull plus etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(horizons betapro s\&p/tsx 60 bull plus etf)\W</regex>
   <regex fields="word" weight="1.0">\W(tellus resources)\W</regex>
   <regex fields="word" weight="1.0">\W(trio gold corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(oakridge energy)\W</regex>
@@ -2668,13 +2668,13 @@
   <regex fields="word" weight="1.0">\W(carbon energy corp)\W</regex>
   <regex fields="word" weight="1.0">\W(north arrow minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(tamasaoil and gas)\W</regex>
-  <regex fields="word" weight="1.0">\W(baroyeca gold & silver)\W</regex>
+  <regex fields="word" weight="1.0">\W(baroyeca gold \& silver)\W</regex>
   <regex fields="word" weight="1.0">\W(endeavour silver corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(job pertamina-golden spike energy indonesia)\W</regex>
   <regex fields="word" weight="1.0">\W(alderon iron ore corp.)\W</regex>
-  <regex fields="word" weight="1.0">\W(strategic oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(strategic oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(antibe therapeutics)\W</regex>
-  <regex fields="word" weight="1.0">\W(cheetah oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(cheetah oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(mitra energy indonesabone)\W</regex>
   <regex fields="word" weight="1.0">\W(purpose total return bond fund)\W</regex>
   <regex fields="word" weight="1.0">\W(petrofrontier corp)\W</regex>
@@ -2689,7 +2689,7 @@
   <regex fields="word" weight="1.0">\W(ecuador gold and copper corp)\W</regex>
   <regex fields="word" weight="1.0">\W(firebird resources)\W</regex>
   <regex fields="word" weight="1.0">\W(clean seed capital group)\W</regex>
-  <regex fields="word" weight="1.0">\W(centrica (horne & wren))\W</regex>
+  <regex fields="word" weight="1.0">\W(centrica (horne \& wren))\W</regex>
   <regex fields="word" weight="1.0">\W(hsbc bank canada)\W</regex>
   <regex fields="word" weight="1.0">\W(pgs geophysical as)\W</regex>
   <regex fields="word" weight="1.0">\W(penfold capital acquisition iv corp)\W</regex>
@@ -2700,7 +2700,7 @@
   <regex fields="word" weight="1.0">\W(iconic minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(nhc (etat))\W</regex>
   <regex fields="word" weight="1.0">\W(petra energia)\W</regex>
-  <regex fields="word" weight="1.0">\W(pt medco e&p merangin)\W</regex>
+  <regex fields="word" weight="1.0">\W(pt medco e\&p merangin)\W</regex>
   <regex fields="word" weight="1.0">\W(apollo consolidated)\W</regex>
   <regex fields="word" weight="1.0">\W(pacific potash corp)\W</regex>
   <regex fields="word" weight="1.0">\W(accent resources nl)\W</regex>
@@ -2716,7 +2716,7 @@
   <regex fields="word" weight="1.0">\W(geodyne institutional pension energy income limited part p 6)\W</regex>
   <regex fields="word" weight="1.0">\W(actinogen limited)\W</regex>
   <regex fields="word" weight="1.0">\W(pinnacle gas resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(bpz exploracion & produccion s.r.l.)\W</regex>
+  <regex fields="word" weight="1.0">\W(bpz exploracion \& produccion s.r.l.)\W</regex>
   <regex fields="word" weight="1.0">\W(west mountain capital corp)\W</regex>
   <regex fields="word" weight="1.0">\W(pan andean colombia)\W</regex>
   <regex fields="word" weight="1.0">\W(foyson resources)\W</regex>
@@ -2738,7 +2738,7 @@
   <regex fields="word" weight="1.0">\W(jacka resources)\W</regex>
   <regex fields="word" weight="1.0">\W(atlas partnership)\W</regex>
   <regex fields="word" weight="1.0">\W(rex minerals)\W</regex>
-  <regex fields="word" weight="1.0">\W(patina oil & gas corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(patina oil \& gas corp)\W</regex>
   <regex fields="word" weight="1.0">\W(dcp midstream)\W</regex>
   <regex fields="word" weight="1.0">\W(cauldron energy)\W</regex>
   <regex fields="word" weight="1.0">\W(wavefront technology solutions)\W</regex>
@@ -2746,8 +2746,8 @@
   <regex fields="word" weight="1.0">\W(equator resources)\W</regex>
   <regex fields="word" weight="1.0">\W(rimfire pacific mining nl)\W</regex>
   <regex fields="word" weight="1.0">\W(gb energy)\W</regex>
-  <regex fields="word" weight="1.0">\W(matrix composites & engineering)\W</regex>
-  <regex fields="word" weight="1.0">\W(peak oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(matrix composites \& engineering)\W</regex>
+  <regex fields="word" weight="1.0">\W(peak oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(diamondback energy)\W</regex>
   <regex fields="word" weight="1.0">\W(sterling drilling fund 1983 2)\W</regex>
   <regex fields="word" weight="1.0">\W(canadian banc capital securities trust)\W</regex>
@@ -2757,9 +2757,9 @@
   <regex fields="word" weight="1.0">\W(zamia metals)\W</regex>
   <regex fields="word" weight="1.0">\W(enhanced oil resources)\W</regex>
   <regex fields="word" weight="1.0">\W(pdvsa finance)\W</regex>
-  <regex fields="word" weight="1.0">\W(contango oil & gas co)\W</regex>
+  <regex fields="word" weight="1.0">\W(contango oil \& gas co)\W</regex>
   <regex fields="word" weight="1.0">\W(krucible metals)\W</regex>
-  <regex fields="word" weight="1.0">\W(bmo s&p/tsx equal weight global gold index etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(bmo s\&p/tsx equal weight global gold index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(sanchez energy corp)\W</regex>
   <regex fields="word" weight="1.0">\W(ypf colombia sas)\W</regex>
   <regex fields="word" weight="1.0">\W(american vanadium corp)\W</regex>
@@ -2774,7 +2774,7 @@
   <regex fields="word" weight="1.0">\W(petro canada)\W</regex>
   <regex fields="word" weight="1.0">\W(aurion resources)\W</regex>
   <regex fields="word" weight="1.0">\W(avanti mining)\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p/tsx canadian preferred sae index fund etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p/tsx canadian preferred sae index fund etf)\W</regex>
   <regex fields="word" weight="1.0">\W(timberline resources corp)\W</regex>
   <regex fields="word" weight="1.0">\W(inpex ichthys pty)\W</regex>
   <regex fields="word" weight="1.0">\W(quantum energy)\W</regex>
@@ -2828,7 +2828,7 @@
   <regex fields="word" weight="1.0">\W(grande west transportation group)\W</regex>
   <regex fields="word" weight="1.0">\W(industrialex manufacturing corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(karsten energy corp.)\W</regex>
-  <regex fields="word" weight="1.0">\W(job pertamina-medco e&p tomori sulawesi)\W</regex>
+  <regex fields="word" weight="1.0">\W(job pertamina-medco e\&p tomori sulawesi)\W</regex>
   <regex fields="word" weight="1.0">\W(blackstone ventures)\W</regex>
   <regex fields="word" weight="1.0">\W(etap,perenco)\W</regex>
   <regex fields="word" weight="1.0">\W(south american ferro metals)\W</regex>
@@ -2872,7 +2872,7 @@
   <regex fields="word" weight="1.0">\W(southern pacific resource corp)\W</regex>
   <regex fields="word" weight="1.0">\W(kerr-mcgee tt offshore petroleum)\W</regex>
   <regex fields="word" weight="1.0">\W(minera irl)\W</regex>
-  <regex fields="word" weight="1.0">\W(nws o&g pty)\W</regex>
+  <regex fields="word" weight="1.0">\W(nws o\&g pty)\W</regex>
   <regex fields="word" weight="1.0">\W(evans systems)\W</regex>
   <regex fields="word" weight="1.0">\W(chevron australia (wa-444-p) pty)\W</regex>
   <regex fields="word" weight="1.0">\W(wolfpack capital corp.)\W</regex>
@@ -2947,7 +2947,7 @@
   <regex fields="word" weight="1.0">\W(focus minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(nevado resources corp)\W</regex>
   <regex fields="word" weight="1.0">\W(white bear resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(tekoil & gas corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(tekoil \& gas corp)\W</regex>
   <regex fields="word" weight="1.0">\W(rts oil holdings)\W</regex>
   <regex fields="word" weight="1.0">\W(talisa sadang)\W</regex>
   <regex fields="word" weight="1.0">\W(ci resources)\W</regex>
@@ -2958,7 +2958,7 @@
   <regex fields="word" weight="1.0">\W(metaliko resources)\W</regex>
   <regex fields="word" weight="1.0">\W(enbridge inc)\W</regex>
   <regex fields="word" weight="1.0">\W(gulf industrials)\W</regex>
-  <regex fields="word" weight="1.0">\W(skylon growth & income trust)\W</regex>
+  <regex fields="word" weight="1.0">\W(skylon growth \& income trust)\W</regex>
   <regex fields="word" weight="1.0">\W(pvr gas processing)\W</regex>
   <regex fields="word" weight="1.0">\W(ivrnet inc)\W</regex>
   <regex fields="word" weight="1.0">\W(fronsac real esae investment trust)\W</regex>
@@ -2974,7 +2974,7 @@
   <regex fields="word" weight="1.0">\W(mewbourne energy partners 03 a lp)\W</regex>
   <regex fields="word" weight="1.0">\W(connacher oil and gas)\W</regex>
   <regex fields="word" weight="1.0">\W(great lakesaquisition corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(petrol oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(petrol oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(etrion corp)\W</regex>
   <regex fields="word" weight="1.0">\W(solomon resources)\W</regex>
   <regex fields="word" weight="1.0">\W(exchange income corp)\W</regex>
@@ -2983,7 +2983,7 @@
   <regex fields="word" weight="1.0">\W(great canadian gaming corp)\W</regex>
   <regex fields="word" weight="1.0">\W(gemosa canada)\W</regex>
   <regex fields="word" weight="1.0">\W(alon usa partners lp)\W</regex>
-  <regex fields="word" weight="1.0">\W(neg oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(neg oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(gold sadard ventures corp)\W</regex>
   <regex fields="word" weight="1.0">\W(bank of montreal)\W</regex>
   <regex fields="word" weight="1.0">\W(caza gold corp)\W</regex>
@@ -2998,7 +2998,7 @@
   <regex fields="word" weight="1.0">\W(symax lift (holding) co.)\W</regex>
   <regex fields="word" weight="1.0">\W(halmont properties corp)\W</regex>
   <regex fields="word" weight="1.0">\W(discovery-corp enterprises)\W</regex>
-  <regex fields="word" weight="1.0">\W(bloom income & growth canadian fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(bloom income \& growth canadian fund)\W</regex>
   <regex fields="word" weight="1.0">\W(tgc industries)\W</regex>
   <regex fields="word" weight="1.0">\W(consorcio optima range)\W</regex>
   <regex fields="word" weight="1.0">\W(stonehenge metals)\W</regex>
@@ -3046,7 +3046,7 @@
   <regex fields="word" weight="1.0">\W(alix resources corp)\W</regex>
   <regex fields="word" weight="1.0">\W(sucursal del peru)\W</regex>
   <regex fields="word" weight="1.0">\W(aurgent gold corp.)\W</regex>
-  <regex fields="word" weight="1.0">\W(samson oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(samson oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(wesa energy corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(exxonmobil brasil)\W</regex>
   <regex fields="word" weight="1.0">\W(waratah resources)\W</regex>
@@ -3055,7 +3055,7 @@
   <regex fields="word" weight="1.0">\W(lion petroleum)\W</regex>
   <regex fields="word" weight="1.0">\W(ring energy)\W</regex>
   <regex fields="word" weight="1.0">\W(anaconda mining)\W</regex>
-  <regex fields="word" weight="1.0">\W(neptune technologies & bioressources)\W</regex>
+  <regex fields="word" weight="1.0">\W(neptune technologies \& bioressources)\W</regex>
   <regex fields="word" weight="1.0">\W(citadel income fund)\W</regex>
   <regex fields="word" weight="1.0">\W(wsp holdings)\W</regex>
   <regex fields="word" weight="1.0">\W(abitibi royalties)\W</regex>
@@ -3083,7 +3083,7 @@
   <regex fields="word" weight="1.0">\W(syngas limited)\W</regex>
   <regex fields="word" weight="1.0">\W(grey wolf international)\W</regex>
   <regex fields="word" weight="1.0">\W(hannans reward)\W</regex>
-  <regex fields="word" weight="1.0">\W(helmerich & payne)\W</regex>
+  <regex fields="word" weight="1.0">\W(helmerich \& payne)\W</regex>
   <regex fields="word" weight="1.0">\W(chevron australia (wa-456-p) pty)\W</regex>
   <regex fields="word" weight="1.0">\W(nc kazmunaigas jsc)\W</regex>
   <regex fields="word" weight="1.0">\W(red tiger mining)\W</regex>
@@ -3119,7 +3119,7 @@
   <regex fields="word" weight="1.0">\W(potash west nl)\W</regex>
   <regex fields="word" weight="1.0">\W(north american energy partners)\W</regex>
   <regex fields="word" weight="1.0">\W(apache northwest pty)\W</regex>
-  <regex fields="word" weight="1.0">\W(globe metals & mining)\W</regex>
+  <regex fields="word" weight="1.0">\W(globe metals \& mining)\W</regex>
   <regex fields="word" weight="1.0">\W(concordia healthcare corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(ibex technologies)\W</regex>
   <regex fields="word" weight="1.0">\W(pan pacific petroleum nl)\W</regex>
@@ -3154,7 +3154,7 @@
   <regex fields="word" weight="1.0">\W(dir industrial properties)\W</regex>
   <regex fields="word" weight="1.0">\W(preferred sae investment trust)\W</regex>
   <regex fields="word" weight="1.0">\W(madison minerals)\W</regex>
-  <regex fields="word" weight="1.0">\W(strata oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(strata oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(mont dor tungkal)\W</regex>
   <regex fields="word" weight="1.0">\W(knight energy corp)\W</regex>
   <regex fields="word" weight="1.0">\W(linamar corp)\W</regex>
@@ -3174,7 +3174,7 @@
   <regex fields="word" weight="1.0">\W(mitel networks corp)\W</regex>
   <regex fields="word" weight="1.0">\W(arco chemical technology)\W</regex>
   <regex fields="word" weight="1.0">\W(challedon services)\W</regex>
-  <regex fields="word" weight="1.0">\W(southwest oil & gas income fund x c lp)\W</regex>
+  <regex fields="word" weight="1.0">\W(southwest oil \& gas income fund x c lp)\W</regex>
   <regex fields="word" weight="1.0">\W(northern sun mining corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(petrominerales colombia limited sucursal colombia)\W</regex>
   <regex fields="word" weight="1.0">\W(canyon copper corp)\W</regex>
@@ -3203,12 +3203,12 @@
   <regex fields="word" weight="1.0">\W(am gold)\W</regex>
   <regex fields="word" weight="1.0">\W(rogers communications)\W</regex>
   <regex fields="word" weight="1.0">\W(magnum hunter resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(bmo s&p/tsx equal weight oil & gas index etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(bmo s\&p/tsx equal weight oil \& gas index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(tigray resources)\W</regex>
   <regex fields="word" weight="1.0">\W(black sa petroleum)\W</regex>
   <regex fields="word" weight="1.0">\W(samore coal)\W</regex>
   <regex fields="word" weight="1.0">\W(swift resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(glickenhaus & co)\W</regex>
+  <regex fields="word" weight="1.0">\W(glickenhaus \& co)\W</regex>
   <regex fields="word" weight="1.0">\W(pro-pac packaging)\W</regex>
   <regex fields="word" weight="1.0">\W(salamander energy west bangkanai)\W</regex>
   <regex fields="word" weight="1.0">\W(petroselat limited)\W</regex>
@@ -3223,7 +3223,7 @@
   <regex fields="word" weight="1.0">\W(rockridge capital corp)\W</regex>
   <regex fields="word" weight="1.0">\W(cosigo resources)\W</regex>
   <regex fields="word" weight="1.0">\W(argentex mining corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(ndx growth & income fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(ndx growth \& income fund)\W</regex>
   <regex fields="word" weight="1.0">\W(viridis energy)\W</regex>
   <regex fields="word" weight="1.0">\W(powersaes ftse rafi canadian fundamental index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(jasper mining corp)\W</regex>
@@ -3241,7 +3241,7 @@
   <regex fields="word" weight="1.0">\W(360 vox corp)\W</regex>
   <regex fields="word" weight="1.0">\W(colorado 2002a limited partnership)\W</regex>
   <regex fields="word" weight="1.0">\W(chesapeake oilfield services)\W</regex>
-  <regex fields="word" weight="1.0">\W(palliser oil & gas corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(palliser oil \& gas corp)\W</regex>
   <regex fields="word" weight="1.0">\W(vector resources)\W</regex>
   <regex fields="word" weight="1.0">\W(traka resources)\W</regex>
   <regex fields="word" weight="1.0">\W(occidental petroleum corp)\W</regex>
@@ -3258,19 +3258,19 @@
   <regex fields="word" weight="1.0">\W(castillo copper)\W</regex>
   <regex fields="word" weight="1.0">\W(picton mahoney tactical income fund)\W</regex>
   <regex fields="word" weight="1.0">\W(exall energy corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(striker oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(striker oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(dourado resources)\W</regex>
   <regex fields="word" weight="1.0">\W(portage biotech)\W</regex>
   <regex fields="word" weight="1.0">\W(cadillac mining corp)\W</regex>
   <regex fields="word" weight="1.0">\W(nkwe platinum)\W</regex>
-  <regex fields="word" weight="1.0">\W(hiko bell mining & oil co)\W</regex>
+  <regex fields="word" weight="1.0">\W(hiko bell mining \& oil co)\W</regex>
   <regex fields="word" weight="1.0">\W(cardinal resources)\W</regex>
   <regex fields="word" weight="1.0">\W(isaes j.p. morgan usd emerging markets bond index fund (cad-hedged))\W</regex>
   <regex fields="word" weight="1.0">\W(abenteuer resources corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(great bear resources)\W</regex>
   <regex fields="word" weight="1.0">\W(goldcorp inc)\W</regex>
   <regex fields="word" weight="1.0">\W(icahn enterprises lp)\W</regex>
-  <regex fields="word" weight="1.0">\W(index oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(index oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(hupecol operating)\W</regex>
   <regex fields="word" weight="1.0">\W(xtv networks)\W</regex>
   <regex fields="word" weight="1.0">\W(blue river resources)\W</regex>
@@ -3300,7 +3300,7 @@
   <regex fields="word" weight="1.0">\W(stillwater mining company)\W</regex>
   <regex fields="word" weight="1.0">\W(enduro royalty trust)\W</regex>
   <regex fields="word" weight="1.0">\W(lion energy)\W</regex>
-  <regex fields="word" weight="1.0">\W(pt medco e&p indonesia)\W</regex>
+  <regex fields="word" weight="1.0">\W(pt medco e\&p indonesia)\W</regex>
   <regex fields="word" weight="1.0">\W(heron resources)\W</regex>
   <regex fields="word" weight="1.0">\W(atlas resource partners lp)\W</regex>
   <regex fields="word" weight="1.0">\W(saa oil and gas (t))\W</regex>
@@ -3317,7 +3317,7 @@
   <regex fields="word" weight="1.0">\W(eurasa minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(exxon capital corp)\W</regex>
   <regex fields="word" weight="1.0">\W(king george financial corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(bellhaven copper & gold)\W</regex>
+  <regex fields="word" weight="1.0">\W(bellhaven copper \& gold)\W</regex>
   <regex fields="word" weight="1.0">\W(argonaut exploration)\W</regex>
   <regex fields="word" weight="1.0">\W(chartwell retirement residences real esae investment trust)\W</regex>
   <regex fields="word" weight="1.0">\W(evrim resources corp)\W</regex>
@@ -3328,7 +3328,7 @@
   <regex fields="word" weight="1.0">\W(bmo long corporate bond index etf)\W</regex>
   <regex fields="word" weight="1.0">\W( maurel et prom)\W</regex>
   <regex fields="word" weight="1.0">\W(redbank copper)\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p/tsx capped financials index fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p/tsx capped financials index fund)\W</regex>
   <regex fields="word" weight="1.0">\W(manulife financial corp)\W</regex>
   <regex fields="word" weight="1.0">\W(lundin sareba)\W</regex>
   <regex fields="word" weight="1.0">\W(gs caltex)\W</regex>
@@ -3390,8 +3390,8 @@
   <regex fields="word" weight="1.0">\W(mesa energy)\W</regex>
   <regex fields="word" weight="1.0">\W(energem)\W</regex>
   <regex fields="word" weight="1.0">\W(conocophillips (browse basin) pty)\W</regex>
-  <regex fields="word" weight="1.0">\W(plains exploration & production co)\W</regex>
-  <regex fields="word" weight="1.0">\W(powersaes s&p 500 low volatility (cad hedged) index etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(plains exploration \& production co)\W</regex>
+  <regex fields="word" weight="1.0">\W(powersaes s\&p 500 low volatility (cad hedged) index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(montajes jm)\W</regex>
   <regex fields="word" weight="1.0">\W(liontown resources)\W</regex>
   <regex fields="word" weight="1.0">\W(pttep international)\W</regex>
@@ -3432,7 +3432,7 @@
   <regex fields="word" weight="1.0">\W(bass strait oil company)\W</regex>
   <regex fields="word" weight="1.0">\W(petrochina international bangko)\W</regex>
   <regex fields="word" weight="1.0">\W(enghouse systems)\W</regex>
-  <regex fields="word" weight="1.0">\W(chelsaoil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(chelsaoil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(open text corp)\W</regex>
   <regex fields="word" weight="1.0">\W(ur-energy inc)\W</regex>
   <regex fields="word" weight="1.0">\W(indochine mining)\W</regex>
@@ -3443,10 +3443,10 @@
   <regex fields="word" weight="1.0">\W(summit resources)\W</regex>
   <regex fields="word" weight="1.0">\W(can-60 income corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(southwest royalties institutional income fund vii b l p)\W</regex>
-  <regex fields="word" weight="1.0">\W(steen river oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(steen river oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(lion petroleum seram)\W</regex>
   <regex fields="word" weight="1.0">\W(north coast energy inc / de)\W</regex>
-  <regex fields="word" weight="1.0">\W(pt medco e&p bengara)\W</regex>
+  <regex fields="word" weight="1.0">\W(pt medco e\&p bengara)\W</regex>
   <regex fields="word" weight="1.0">\W(welichem biotech)\W</regex>
   <regex fields="word" weight="1.0">\W(chesapeake acquisition)\W</regex>
   <regex fields="word" weight="1.0">\W(golden sun capital)\W</regex>
@@ -3476,12 +3476,12 @@
   <regex fields="word" weight="1.0">\W(petropar sa)\W</regex>
   <regex fields="word" weight="1.0">\W(macusani yellowcake)\W</regex>
   <regex fields="word" weight="1.0">\W(bloom select income fund)\W</regex>
-  <regex fields="word" weight="1.0">\W(alta natural herbs & supplements)\W</regex>
+  <regex fields="word" weight="1.0">\W(alta natural herbs \& supplements)\W</regex>
   <regex fields="word" weight="1.0">\W(bmo mid provincial bond index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(cassius ventures)\W</regex>
   <regex fields="word" weight="1.0">\W(sa enerhy sentosa sebatik)\W</regex>
   <regex fields="word" weight="1.0">\W(flinders mines)\W</regex>
-  <regex fields="word" weight="1.0">\W(aurora oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(aurora oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(freestone resources)\W</regex>
   <regex fields="word" weight="1.0">\W(casablanca mining)\W</regex>
   <regex fields="word" weight="1.0">\W(sensio technologies)\W</regex>
@@ -3496,7 +3496,7 @@
   <regex fields="word" weight="1.0">\W(salamander energy bangkanai pte)\W</regex>
   <regex fields="word" weight="1.0">\W(big sky petroleum corp)\W</regex>
   <regex fields="word" weight="1.0">\W(dominion diamond corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(powersaes s&p/tsx composite low volatility index etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(powersaes s\&p/tsx composite low volatility index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(antrim resources)\W</regex>
   <regex fields="word" weight="1.0">\W(americas bullion royalty corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(transalta renewables)\W</regex>
@@ -3506,7 +3506,7 @@
   <regex fields="word" weight="1.0">\W(baylin technologies)\W</regex>
   <regex fields="word" weight="1.0">\W(sultan minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(kula gold)\W</regex>
-  <regex fields="word" weight="1.0">\W(pancontinental oil & gas nl)\W</regex>
+  <regex fields="word" weight="1.0">\W(pancontinental oil \& gas nl)\W</regex>
   <regex fields="word" weight="1.0">\W(musgrave minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(compliance energy corp)\W</regex>
   <regex fields="word" weight="1.0">\W(goldstrike resources)\W</regex>
@@ -3606,7 +3606,7 @@
   <regex fields="word" weight="1.0">\W(sgx resources)\W</regex>
   <regex fields="word" weight="1.0">\W(beach energy)\W</regex>
   <regex fields="word" weight="1.0">\W(dynasty resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(kodiak oil & gas corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(kodiak oil \& gas corp)\W</regex>
   <regex fields="word" weight="1.0">\W(atlasaerica public #15 2006 (b) lp)\W</regex>
   <regex fields="word" weight="1.0">\W(lingo media corp)\W</regex>
   <regex fields="word" weight="1.0">\W(rebgold corp)\W</regex>
@@ -3625,12 +3625,12 @@
   <regex fields="word" weight="1.0">\W(argent minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(gran tierra energy)\W</regex>
   <regex fields="word" weight="1.0">\W(emperor range group)\W</regex>
-  <regex fields="word" weight="1.0">\W(horizons s&p/tsx capped energy index etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(horizons s\&p/tsx capped energy index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(honey badger exploration)\W</regex>
   <regex fields="word" weight="1.0">\W(goldeneye resources corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(berkwood resources)\W</regex>
   <regex fields="word" weight="1.0">\W(goldeye explorations)\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p 500 index etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p 500 index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(stonegate agricom)\W</regex>
   <regex fields="word" weight="1.0">\W(marmota energy)\W</regex>
   <regex fields="word" weight="1.0">\W(pt pandawa prima lesai)\W</regex>
@@ -3657,7 +3657,7 @@
   <regex fields="word" weight="1.0">\W(cordy oilfield services)\W</regex>
   <regex fields="word" weight="1.0">\W(leopold investments)\W</regex>
   <regex fields="word" weight="1.0">\W(horizons betapro comex gold bullion bull plus etf)\W</regex>
-  <regex fields="word" weight="1.0">\W(baraka energy & resources)\W</regex>
+  <regex fields="word" weight="1.0">\W(baraka energy \& resources)\W</regex>
   <regex fields="word" weight="1.0">\W(way ventures)\W</regex>
   <regex fields="word" weight="1.0">\W(blackgold international holdings)\W</regex>
   <regex fields="word" weight="1.0">\W(remington energy group corp)\W</regex>
@@ -3717,7 +3717,7 @@
   <regex fields="word" weight="1.0">\W(weatherford international limited/switzerland)\W</regex>
   <regex fields="word" weight="1.0">\W(impact africa)\W</regex>
   <regex fields="word" weight="1.0">\W(jayden resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(pt medco e&p rimau)\W</regex>
+  <regex fields="word" weight="1.0">\W(pt medco e\&p rimau)\W</regex>
   <regex fields="word" weight="1.0">\W(franco-nevada corp)\W</regex>
   <regex fields="word" weight="1.0">\W(mafula energy)\W</regex>
   <regex fields="word" weight="1.0">\W(transatlantic petroleum)\W</regex>
@@ -3736,7 +3736,7 @@
   <regex fields="word" weight="1.0">\W(falcon gold corp)\W</regex>
   <regex fields="word" weight="1.0">\W(regis resources)\W</regex>
   <regex fields="word" weight="1.0">\W(lariat energy)\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p/tsx capped energy index fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p/tsx capped energy index fund)\W</regex>
   <regex fields="word" weight="1.0">\W(ipb west pty)\W</regex>
   <regex fields="word" weight="1.0">\W(consolidated tin mines)\W</regex>
   <regex fields="word" weight="1.0">\W(silver spruce resources)\W</regex>
@@ -3758,7 +3758,7 @@
   <regex fields="word" weight="1.0">\W(malabar coal)\W</regex>
   <regex fields="word" weight="1.0">\W(cymat technologies)\W</regex>
   <regex fields="word" weight="1.0">\W(w h energy services)\W</regex>
-  <regex fields="word" weight="1.0">\W(pacific oil&gas kisaran)\W</regex>
+  <regex fields="word" weight="1.0">\W(pacific oil\&gas kisaran)\W</regex>
   <regex fields="word" weight="1.0">\W(noble holding international)\W</regex>
   <regex fields="word" weight="1.0">\W(sata commercial services)\W</regex>
   <regex fields="word" weight="1.0">\W(gulfterra energy partners l p)\W</regex>
@@ -3767,15 +3767,15 @@
   <regex fields="word" weight="1.0">\W(chariot brasil)\W</regex>
   <regex fields="word" weight="1.0">\W(merus labs international)\W</regex>
   <regex fields="word" weight="1.0">\W(labrador iron ore royalty corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(stewart & stevenson)\W</regex>
+  <regex fields="word" weight="1.0">\W(stewart \& stevenson)\W</regex>
   <regex fields="word" weight="1.0">\W(tanzanian royalty exploration corp)\W</regex>
   <regex fields="word" weight="1.0">\W(peak positioning technologies)\W</regex>
-  <regex fields="word" weight="1.0">\W(new zealand oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(new zealand oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(ocean energy)\W</regex>
-  <regex fields="word" weight="1.0">\W(deep well oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(deep well oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(brookfield soundvest split trust)\W</regex>
   <regex fields="word" weight="1.0">\W(mill city gold corp.)\W</regex>
-  <regex fields="word" weight="1.0">\W(vanguard s&p 500 index etf (cad-hedged))\W</regex>
+  <regex fields="word" weight="1.0">\W(vanguard s\&p 500 index etf (cad-hedged))\W</regex>
   <regex fields="word" weight="1.0">\W(dixon steven c)\W</regex>
   <regex fields="word" weight="1.0">\W(diversified alpha fund ii)\W</regex>
   <regex fields="word" weight="1.0">\W(new dimension resources)\W</regex>
@@ -3784,12 +3784,12 @@
   <regex fields="word" weight="1.0">\W(aston bay holdings)\W</regex>
   <regex fields="word" weight="1.0">\W(singapore petroleum)\W</regex>
   <regex fields="word" weight="1.0">\W(chevron west papua iii)\W</regex>
-  <regex fields="word" weight="1.0">\W(vineyard oil & gas co)\W</regex>
+  <regex fields="word" weight="1.0">\W(vineyard oil \& gas co)\W</regex>
   <regex fields="word" weight="1.0">\W(mont dor salawati)\W</regex>
   <regex fields="word" weight="1.0">\W(newstrike resources)\W</regex>
   <regex fields="word" weight="1.0">\W(montan capital corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(1115650 alberta)\W</regex>
-  <regex fields="word" weight="1.0">\W(sas oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(sas oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(mountain province diamonds)\W</regex>
   <regex fields="word" weight="1.0">\W(alloy resources)\W</regex>
   <regex fields="word" weight="1.0">\W(kairiki energy)\W</regex>
@@ -3858,7 +3858,7 @@
   <regex fields="word" weight="1.0">\W(partex)\W</regex>
   <regex fields="word" weight="1.0">\W(exoma energy)\W</regex>
   <regex fields="word" weight="1.0">\W(vena resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(custom resarant & hospitality group)\W</regex>
+  <regex fields="word" weight="1.0">\W(custom resarant \& hospitality group)\W</regex>
   <regex fields="word" weight="1.0">\W(rice midstream partners lp)\W</regex>
   <regex fields="word" weight="1.0">\W(bonaparte resources)\W</regex>
   <regex fields="word" weight="1.0">\W(deer horn metals)\W</regex>
@@ -3876,7 +3876,7 @@
   <regex fields="word" weight="1.0">\W(pershimco resources)\W</regex>
   <regex fields="word" weight="1.0">\W(sterling resources)\W</regex>
   <regex fields="word" weight="1.0">\W(isaes oil sands index fund etf)\W</regex>
-  <regex fields="word" weight="1.0">\W(boots & coots)\W</regex>
+  <regex fields="word" weight="1.0">\W(boots \& coots)\W</regex>
   <regex fields="word" weight="1.0">\W(mag well)\W</regex>
   <regex fields="word" weight="1.0">\W(harvest minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(goldspike exploration)\W</regex>
@@ -3982,7 +3982,7 @@
   <regex fields="word" weight="1.0">\W(canoe mining ventures corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(azabache energy inc sucursal colombia)\W</regex>
   <regex fields="word" weight="1.0">\W(bp exploration (morocco))\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p/tsx capped composite index fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p/tsx capped composite index fund)\W</regex>
   <regex fields="word" weight="1.0">\W(avanti energy)\W</regex>
   <regex fields="word" weight="1.0">\W(veraz petroleum peru sac.)\W</regex>
   <regex fields="word" weight="1.0">\W(papyrusastralia limited)\W</regex>
@@ -4018,7 +4018,7 @@
   <regex fields="word" weight="1.0">\W(atsatomation tooling systems)\W</regex>
   <regex fields="word" weight="1.0">\W(antero resources finance corp)\W</regex>
   <regex fields="word" weight="1.0">\W(endevco inc)\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p/tsx north american preferred stock index fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p/tsx north american preferred stock index fund)\W</regex>
   <regex fields="word" weight="1.0">\W(american cumo mining corp)\W</regex>
   <regex fields="word" weight="1.0">\W(orvana minerals corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(icarbon corp)\W</regex>
@@ -4043,7 +4043,7 @@
   <regex fields="word" weight="1.0">\W(sunward resources)\W</regex>
   <regex fields="word" weight="1.0">\W(pan andean resources plc (peru))\W</regex>
   <regex fields="word" weight="1.0">\W(gasa exploration)\W</regex>
-  <regex fields="word" weight="1.0">\W(shell transport & trading co)\W</regex>
+  <regex fields="word" weight="1.0">\W(shell transport \& trading co)\W</regex>
   <regex fields="word" weight="1.0">\W(antilles oil and gas nl)\W</regex>
   <regex fields="word" weight="1.0">\W(lateral capital corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(discovery resources)\W</regex>
@@ -4058,10 +4058,10 @@
   <regex fields="word" weight="1.0">\W(salamander energy bontang pte)\W</regex>
   <regex fields="word" weight="1.0">\W(pt easco east sepanjang)\W</regex>
   <regex fields="word" weight="1.0">\W(quicksilver resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(pemex gas & basic petrochemicals)\W</regex>
+  <regex fields="word" weight="1.0">\W(pemex gas \& basic petrochemicals)\W</regex>
   <regex fields="word" weight="1.0">\W(circle sa energy corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(total e&p indonesamentawai)\W</regex>
-  <regex fields="word" weight="1.0">\W(shell land & energy co)\W</regex>
+  <regex fields="word" weight="1.0">\W(total e\&p indonesamentawai)\W</regex>
+  <regex fields="word" weight="1.0">\W(shell land \& energy co)\W</regex>
   <regex fields="word" weight="1.0">\W(boost capital corp)\W</regex>
   <regex fields="word" weight="1.0">\W(remo resources)\W</regex>
   <regex fields="word" weight="1.0">\W(shell development (australia) proprietary)\W</regex>
@@ -4090,7 +4090,7 @@
   <regex fields="word" weight="1.0">\W(medallion california properties co)\W</regex>
   <regex fields="word" weight="1.0">\W(silver sadard resources)\W</regex>
   <regex fields="word" weight="1.0">\W(matrix asset management)\W</regex>
-  <regex fields="word" weight="1.0">\W(horizons s&p/tsx 60 index etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(horizons s\&p/tsx 60 index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(saay energy services)\W</regex>
   <regex fields="word" weight="1.0">\W(texaco inc)\W</regex>
   <regex fields="word" weight="1.0">\W(com dev international)\W</regex>
@@ -4115,7 +4115,7 @@
   <regex fields="word" weight="1.0">\W(alacer gold corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(dxstorm.com inc)\W</regex>
   <regex fields="word" weight="1.0">\W(black springs capital corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(glencore exploration & production (morocco))\W</regex>
+  <regex fields="word" weight="1.0">\W(glencore exploration \& production (morocco))\W</regex>
   <regex fields="word" weight="1.0">\W(robex resources)\W</regex>
   <regex fields="word" weight="1.0">\W(union drilling)\W</regex>
   <regex fields="word" weight="1.0">\W(brookfield asset management)\W</regex>
@@ -4156,7 +4156,7 @@
   <regex fields="word" weight="1.0">\W(equus mining)\W</regex>
   <regex fields="word" weight="1.0">\W(pancontinental uranium corp)\W</regex>
   <regex fields="word" weight="1.0">\W(volta mining)\W</regex>
-  <regex fields="word" weight="1.0">\W(life & banc split corp.)\W</regex>
+  <regex fields="word" weight="1.0">\W(life \& banc split corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(metalex ventures)\W</regex>
   <regex fields="word" weight="1.0">\W(taruga gold)\W</regex>
   <regex fields="word" weight="1.0">\W(longview oil corp.)\W</regex>
@@ -4167,7 +4167,7 @@
   <regex fields="word" weight="1.0">\W(rockwell diamonds)\W</regex>
   <regex fields="word" weight="1.0">\W(route1 inc)\W</regex>
   <regex fields="word" weight="1.0">\W(westjet airlines)\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p/tsx venture index fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p/tsx venture index fund)\W</regex>
   <regex fields="word" weight="1.0">\W(eureka resources,)\W</regex>
   <regex fields="word" weight="1.0">\W(talisa energy)\W</regex>
   <regex fields="word" weight="1.0">\W(entree gold)\W</regex>
@@ -4223,7 +4223,7 @@
   <regex fields="word" weight="1.0">\W(burcon nutrascience corp)\W</regex>
   <regex fields="word" weight="1.0">\W(montezuma mining company)\W</regex>
   <regex fields="word" weight="1.0">\W(petroleum company  of trinidad and tobago )\W</regex>
-  <regex fields="word" weight="1.0">\W(rhino oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(rhino oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(comet resources)\W</regex>
   <regex fields="word" weight="1.0">\W(healthlease properties real esae investment trust)\W</regex>
   <regex fields="word" weight="1.0">\W(low volatility u.s. equity income fund)\W</regex>
@@ -4256,7 +4256,7 @@
   <regex fields="word" weight="1.0">\W(chevron makasar)\W</regex>
   <regex fields="word" weight="1.0">\W(de grey mining)\W</regex>
   <regex fields="word" weight="1.0">\W(aumento capital iv corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(sandstorm metals & energy)\W</regex>
+  <regex fields="word" weight="1.0">\W(sandstorm metals \& energy)\W</regex>
   <regex fields="word" weight="1.0">\W(russel metals)\W</regex>
   <regex fields="word" weight="1.0">\W(amg bioenergy resources holdings)\W</regex>
   <regex fields="word" weight="1.0">\W(oman oil)\W</regex>
@@ -4278,7 +4278,7 @@
   <regex fields="word" weight="1.0">\W(northisle copper and gold)\W</regex>
   <regex fields="word" weight="1.0">\W(insight management corp)\W</regex>
   <regex fields="word" weight="1.0">\W(western pacific resources corp.)\W</regex>
-  <regex fields="word" weight="1.0">\W(solitario exploration & royalty corp.)\W</regex>
+  <regex fields="word" weight="1.0">\W(solitario exploration \& royalty corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(brookfield renewable power preferred equity)\W</regex>
   <regex fields="word" weight="1.0">\W(counterpath corp)\W</regex>
   <regex fields="word" weight="1.0">\W(loncor resources)\W</regex>
@@ -4312,10 +4312,10 @@
   <regex fields="word" weight="1.0">\W(chc realty capital corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(unity mining)\W</regex>
   <regex fields="word" weight="1.0">\W(isaes msci emerging markets imi index etf)\W</regex>
-  <regex fields="word" weight="1.0">\W(tullow (unit operator) kosmos (technical operator) anadarko corp petro sa (formerly sabre oil) gnpc interest (carried & additional))\W</regex>
+  <regex fields="word" weight="1.0">\W(tullow (unit operator) kosmos (technical operator) anadarko corp petro sa (formerly sabre oil) gnpc interest (carried \& additional))\W</regex>
   <regex fields="word" weight="1.0">\W(highbank resources)\W</regex>
   <regex fields="word" weight="1.0">\W(international frontier resources corp.)\W</regex>
-  <regex fields="word" weight="1.0">\W(a&w revenue royalties income fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(a\&w revenue royalties income fund)\W</regex>
   <regex fields="word" weight="1.0">\W(pt harpindo mitra kharisma)\W</regex>
   <regex fields="word" weight="1.0">\W(pt insani bina perkasa)\W</regex>
   <regex fields="word" weight="1.0">\W(apache permits pty)\W</regex>
@@ -4334,7 +4334,7 @@
   <regex fields="word" weight="1.0">\W(isaes silver bullion etf)\W</regex>
   <regex fields="word" weight="1.0">\W(aurora minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(globotek holdings)\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p global water index fund etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p global water index fund etf)\W</regex>
   <regex fields="word" weight="1.0">\W(central west gold nl)\W</regex>
   <regex fields="word" weight="1.0">\W(gulfsands petroleum)\W</regex>
   <regex fields="word" weight="1.0">\W(copernican world financial infrastructure trust)\W</regex>
@@ -4353,7 +4353,7 @@
   <regex fields="word" weight="1.0">\W(pivot technology solutions)\W</regex>
   <regex fields="word" weight="1.0">\W(aguia resources)\W</regex>
   <regex fields="word" weight="1.0">\W(microplanet technology corp.)\W</regex>
-  <regex fields="word" weight="1.0">\W(universal property development & acquisition corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(universal property development \& acquisition corp)\W</regex>
   <regex fields="word" weight="1.0">\W(vanadiumcorp resource)\W</regex>
   <regex fields="word" weight="1.0">\W(fancamp exploration)\W</regex>
   <regex fields="word" weight="1.0">\W(key petroleum)\W</regex>
@@ -4431,7 +4431,7 @@
   <regex fields="word" weight="1.0">\W(rbc target 2017 corporate bond index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(long harbour exploration corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(sadard production wells corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(peyto exploration & development corp.)\W</regex>
+  <regex fields="word" weight="1.0">\W(peyto exploration \& development corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(kayuko universal)\W</regex>
   <regex fields="word" weight="1.0">\W(firebird energy)\W</regex>
   <regex fields="word" weight="1.0">\W(mercury capital ii)\W</regex>
@@ -4461,7 +4461,7 @@
   <regex fields="word" weight="1.0">\W(atlantic caspian resources)\W</regex>
   <regex fields="word" weight="1.0">\W(atlasaerica inc)\W</regex>
   <regex fields="word" weight="1.0">\W(viper gold)\W</regex>
-  <regex fields="word" weight="1.0">\W(bmo s&p 500 hedged to cad index etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(bmo s\&p 500 hedged to cad index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(cepsa ep)\W</regex>
   <regex fields="word" weight="1.0">\W(sovereign metals)\W</regex>
   <regex fields="word" weight="1.0">\W(belvedere resources)\W</regex>
@@ -4483,7 +4483,7 @@
   <regex fields="word" weight="1.0">\W(raven rock strategic income fund)\W</regex>
   <regex fields="word" weight="1.0">\W(alberta sa development corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(dempsey minerals)\W</regex>
-  <regex fields="word" weight="1.0">\W(richfield oil & gas co)\W</regex>
+  <regex fields="word" weight="1.0">\W(richfield oil \& gas co)\W</regex>
   <regex fields="word" weight="1.0">\W(sandfire resources nl)\W</regex>
   <regex fields="word" weight="1.0">\W(harish chandra(india) limited (hcil))\W</regex>
   <regex fields="word" weight="1.0">\W(bp plc)\W</regex>
@@ -4499,7 +4499,7 @@
   <regex fields="word" weight="1.0">\W(limited duration investment grade preferred securities fund)\W</regex>
   <regex fields="word" weight="1.0">\W(novik inc)\W</regex>
   <regex fields="word" weight="1.0">\W(klondex mines)\W</regex>
-  <regex fields="word" weight="1.0">\W(texas jack oil & gas corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(texas jack oil \& gas corp)\W</regex>
   <regex fields="word" weight="1.0">\W(amex resources)\W</regex>
   <regex fields="word" weight="1.0">\W(vanguard ftse canadian capped reit index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(interoil corp)\W</regex>
@@ -4517,7 +4517,7 @@
   <regex fields="word" weight="1.0">\W(canam coal corp)\W</regex>
   <regex fields="word" weight="1.0">\W(astrix networks)\W</regex>
   <regex fields="word" weight="1.0">\W(lithium americas corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(empire oil & gas nl)\W</regex>
+  <regex fields="word" weight="1.0">\W(empire oil \& gas nl)\W</regex>
   <regex fields="word" weight="1.0">\W(pluspetrol norte)\W</regex>
   <regex fields="word" weight="1.0">\W(brazalta brasil)\W</regex>
   <regex fields="word" weight="1.0">\W(bombardier inc)\W</regex>
@@ -4532,7 +4532,7 @@
   <regex fields="word" weight="1.0">\W(bmo equal weight us banks hedged to cad index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(marauder resources east coast)\W</regex>
   <regex fields="word" weight="1.0">\W(mira iii acquisition corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(icon oil & gas fund a lp)\W</regex>
+  <regex fields="word" weight="1.0">\W(icon oil \& gas fund a lp)\W</regex>
   <regex fields="word" weight="1.0">\W(st. elias mines)\W</regex>
   <regex fields="word" weight="1.0">\W(spe petroleum)\W</regex>
   <regex fields="word" weight="1.0">\W(helix energy solutions group)\W</regex>
@@ -4562,7 +4562,7 @@
   <regex fields="word" weight="1.0">\W(ico therapeutics)\W</regex>
   <regex fields="word" weight="1.0">\W(unique broadband systems,)\W</regex>
   <regex fields="word" weight="1.0">\W(wi-lan inc)\W</regex>
-  <regex fields="word" weight="1.0">\W(total e&p uganda)\W</regex>
+  <regex fields="word" weight="1.0">\W(total e\&p uganda)\W</regex>
   <regex fields="word" weight="1.0">\W(majescor resources)\W</regex>
   <regex fields="word" weight="1.0">\W(nuva pharmaceuticals)\W</regex>
   <regex fields="word" weight="1.0">\W(latrobe magnesium)\W</regex>
@@ -4576,11 +4576,11 @@
   <regex fields="word" weight="1.0">\W(mezzotin minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(x-terra resources corp)\W</regex>
   <regex fields="word" weight="1.0">\W(afren / petrodel)\W</regex>
-  <regex fields="word" weight="1.0">\W(atrisco oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(atrisco oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(finder no 13 pty)\W</regex>
   <regex fields="word" weight="1.0">\W(trevali mining corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(pemex exploration & production)\W</regex>
-  <regex fields="word" weight="1.0">\W(reef oil & gas income & development fund iii lp)\W</regex>
+  <regex fields="word" weight="1.0">\W(pemex exploration \& production)\W</regex>
+  <regex fields="word" weight="1.0">\W(reef oil \& gas income \& development fund iii lp)\W</regex>
   <regex fields="word" weight="1.0">\W(contango energy co)\W</regex>
   <regex fields="word" weight="1.0">\W(inovalis real esae investment trust)\W</regex>
   <regex fields="word" weight="1.0">\W(first asset morningsa us dividend target 50 index etf)\W</regex>
@@ -4641,7 +4641,7 @@
   <regex fields="word" weight="1.0">\W(first asset morningsa us value index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(wiser oil co)\W</regex>
   <regex fields="word" weight="1.0">\W(ardonblue ventures)\W</regex>
-  <regex fields="word" weight="1.0">\W(molopo e&p)\W</regex>
+  <regex fields="word" weight="1.0">\W(molopo e\&p)\W</regex>
   <regex fields="word" weight="1.0">\W(geopark cuerva sucursal colombia)\W</regex>
   <regex fields="word" weight="1.0">\W(bpz resources)\W</regex>
   <regex fields="word" weight="1.0">\W(mood media corp)\W</regex>
@@ -4678,13 +4678,13 @@
   <regex fields="word" weight="1.0">\W(chesapeake gold corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(ci financial corp)\W</regex>
   <regex fields="word" weight="1.0">\W(first asset morningsa canada momentum index etf)\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p/tsx capped information technology index fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p/tsx capped information technology index fund)\W</regex>
   <regex fields="word" weight="1.0">\W(pure multi-family reit lp)\W</regex>
   <regex fields="word" weight="1.0">\W(predictive discovery)\W</regex>
   <regex fields="word" weight="1.0">\W(adamera minerals corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(miller energy resources)\W</regex>
   <regex fields="word" weight="1.0">\W(middlefield income plus ii corp.)\W</regex>
-  <regex fields="word" weight="1.0">\W(southwest oil & gas income fund ix a lp)\W</regex>
+  <regex fields="word" weight="1.0">\W(southwest oil \& gas income fund ix a lp)\W</regex>
   <regex fields="word" weight="1.0">\W(focused capital ii corp)\W</regex>
   <regex fields="word" weight="1.0">\W(silver wheaton corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(pasir petroleum resources)\W</regex>
@@ -4712,7 +4712,7 @@
   <regex fields="word" weight="1.0">\W(royal energy resources)\W</regex>
   <regex fields="word" weight="1.0">\W(beadell resources)\W</regex>
   <regex fields="word" weight="1.0">\W(drake resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p/tsx global base metals index fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p/tsx global base metals index fund)\W</regex>
   <regex fields="word" weight="1.0">\W(noram ventures)\W</regex>
   <regex fields="word" weight="1.0">\W(winmar resources)\W</regex>
   <regex fields="word" weight="1.0">\W(estrella gold corp)\W</regex>
@@ -4721,19 +4721,19 @@
   <regex fields="word" weight="1.0">\W(codrington resource corp)\W</regex>
   <regex fields="word" weight="1.0">\W(isaes msci all country world minimum volatility index fund)\W</regex>
   <regex fields="word" weight="1.0">\W(pele mountain resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(total e&p indonesatelen)\W</regex>
+  <regex fields="word" weight="1.0">\W(total e\&p indonesatelen)\W</regex>
   <regex fields="word" weight="1.0">\W(transocean inc)\W</regex>
   <regex fields="word" weight="1.0">\W(treasury metals)\W</regex>
   <regex fields="word" weight="1.0">\W(aura minerals)\W</regex>
-  <regex fields="word" weight="1.0">\W(buckeye oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(buckeye oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(di energy)\W</regex>
   <regex fields="word" weight="1.0">\W(ranaz corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(osage exploration & development)\W</regex>
+  <regex fields="word" weight="1.0">\W(osage exploration \& development)\W</regex>
   <regex fields="word" weight="1.0">\W(solid gold resources corp)\W</regex>
   <regex fields="word" weight="1.0">\W(cineplex inc)\W</regex>
   <regex fields="word" weight="1.0">\W(atlasaerica series 27 2006 lp)\W</regex>
   <regex fields="word" weight="1.0">\W(kazgermunay)\W</regex>
-  <regex fields="word" weight="1.0">\W(erazo valencia & cia s en c)\W</regex>
+  <regex fields="word" weight="1.0">\W(erazo valencia \& cia s en c)\W</regex>
   <regex fields="word" weight="1.0">\W(alarmforce industries)\W</regex>
   <regex fields="word" weight="1.0">\W(gdf suez brasil)\W</regex>
   <regex fields="word" weight="1.0">\W(nex metals exploration)\W</regex>
@@ -4741,7 +4741,7 @@
   <regex fields="word" weight="1.0">\W(tyhee gold corp)\W</regex>
   <regex fields="word" weight="1.0">\W(vicwest inc)\W</regex>
   <regex fields="word" weight="1.0">\W(liquid nutrition group)\W</regex>
-  <regex fields="word" weight="1.0">\W(safer e&p operation co.)\W</regex>
+  <regex fields="word" weight="1.0">\W(safer e\&p operation co.)\W</regex>
   <regex fields="word" weight="1.0">\W(mariner energy)\W</regex>
   <regex fields="word" weight="1.0">\W(citgo petroleum corp)\W</regex>
   <regex fields="word" weight="1.0">\W(blackbird energy)\W</regex>
@@ -4773,7 +4773,7 @@
   <regex fields="word" weight="1.0">\W(sm energy co)\W</regex>
   <regex fields="word" weight="1.0">\W(rockies region 2006 limited partnership)\W</regex>
   <regex fields="word" weight="1.0">\W(mainstream minerals corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(lundin south sokang bv & salamander energy south sokang)\W</regex>
+  <regex fields="word" weight="1.0">\W(lundin south sokang bv \& salamander energy south sokang)\W</regex>
   <regex fields="word" weight="1.0">\W(hnz group)\W</regex>
   <regex fields="word" weight="1.0">\W(niko resources (block 4b caribbean))\W</regex>
   <regex fields="word" weight="1.0">\W(z-gold exploration)\W</regex>
@@ -4836,14 +4836,14 @@
   <regex fields="word" weight="1.0">\W(nomad ventures)\W</regex>
   <regex fields="word" weight="1.0">\W(canadian advantaged convertibles fund)\W</regex>
   <regex fields="word" weight="1.0">\W(clx energy)\W</regex>
-  <regex fields="word" weight="1.0">\W(h&r real esae investment trust)\W</regex>
+  <regex fields="word" weight="1.0">\W(h\&r real esae investment trust)\W</regex>
   <regex fields="word" weight="1.0">\W(ginsms inc)\W</regex>
   <regex fields="word" weight="1.0">\W(job pertamina-emo gebang)\W</regex>
-  <regex fields="word" weight="1.0">\W(horizons s&p 500 index etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(horizons s\&p 500 index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(candente copper corp)\W</regex>
   <regex fields="word" weight="1.0">\W(simex technologies)\W</regex>
   <regex fields="word" weight="1.0">\W(majetu limited)\W</regex>
-  <regex fields="word" weight="1.0">\W(bounty oil & gas nl)\W</regex>
+  <regex fields="word" weight="1.0">\W(bounty oil \& gas nl)\W</regex>
   <regex fields="word" weight="1.0">\W(zincore metals)\W</regex>
   <regex fields="word" weight="1.0">\W(terra nova energy)\W</regex>
   <regex fields="word" weight="1.0">\W(petromasila)\W</regex>
@@ -4890,14 +4890,14 @@
   <regex fields="word" weight="1.0">\W(niagara ventures corp)\W</regex>
   <regex fields="word" weight="1.0">\W(triax diversified high-yield trust)\W</regex>
   <regex fields="word" weight="1.0">\W(deep down)\W</regex>
-  <regex fields="word" weight="1.0">\W(initial oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(initial oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(kelt exploration)\W</regex>
   <regex fields="word" weight="1.0">\W(petrobras international finance co)\W</regex>
   <regex fields="word" weight="1.0">\W(cognigen networks)\W</regex>
   <regex fields="word" weight="1.0">\W(eott energy finance corp)\W</regex>
   <regex fields="word" weight="1.0">\W(murphy oil)\W</regex>
-  <regex fields="word" weight="1.0">\W(horizons betapro s&p 500 vix short-term futures bull plus etf)\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p/tsx equity income index fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(horizons betapro s\&p 500 vix short-term futures bull plus etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p/tsx equity income index fund)\W</regex>
   <regex fields="word" weight="1.0">\W(neovasc inc)\W</regex>
   <regex fields="word" weight="1.0">\W(tucumann)\W</regex>
   <regex fields="word" weight="1.0">\W(santos browse pty)\W</regex>
@@ -4963,9 +4963,9 @@
   <regex fields="word" weight="1.0">\W(xiana mining)\W</regex>
   <regex fields="word" weight="1.0">\W(transerv energy)\W</regex>
   <regex fields="word" weight="1.0">\W(spirit exploration)\W</regex>
-  <regex fields="word" weight="1.0">\W(united hunter oil & gas corp.)\W</regex>
+  <regex fields="word" weight="1.0">\W(united hunter oil \& gas corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(fitzroy river corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(avalon oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(avalon oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(geodyne energy income limited partnership iii g)\W</regex>
   <regex fields="word" weight="1.0">\W(dynegy inc)\W</regex>
   <regex fields="word" weight="1.0">\W(geodyne energy income limited partnership iii e)\W</regex>
@@ -4978,7 +4978,7 @@
   <regex fields="word" weight="1.0">\W(patch international)\W</regex>
   <regex fields="word" weight="1.0">\W(frontier energy corp)\W</regex>
   <regex fields="word" weight="1.0">\W(international road dynamics)\W</regex>
-  <regex fields="word" weight="1.0">\W(horizons betapro s&p/tsx global base metals bear plus etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(horizons betapro s\&p/tsx global base metals bear plus etf)\W</regex>
   <regex fields="word" weight="1.0">\W(emera inc)\W</regex>
   <regex fields="word" weight="1.0">\W(quadro resources)\W</regex>
   <regex fields="word" weight="1.0">\W(petroleos sudamericanos)\W</regex>
@@ -4989,7 +4989,7 @@
   <regex fields="word" weight="1.0">\W(chevron corp)\W</regex>
   <regex fields="word" weight="1.0">\W(watusi capital corp)\W</regex>
   <regex fields="word" weight="1.0">\W(nordex explosives)\W</regex>
-  <regex fields="word" weight="1.0">\W(bmo s&p/tsx equal weight global base metals hedged to cad index etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(bmo s\&p/tsx equal weight global base metals hedged to cad index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(rio novo gold)\W</regex>
   <regex fields="word" weight="1.0">\W(pemex project funding master trust)\W</regex>
   <regex fields="word" weight="1.0">\W(anadarko liberia company)\W</regex>
@@ -5024,8 +5024,8 @@
   <regex fields="word" weight="1.0">\W(uc resources)\W</regex>
   <regex fields="word" weight="1.0">\W(whitehaven coal)\W</regex>
   <regex fields="word" weight="1.0">\W(aurvisagold corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(southwest oil & gas income fund x b lp)\W</regex>
-  <regex fields="word" weight="1.0">\W(total e&p maroc)\W</regex>
+  <regex fields="word" weight="1.0">\W(southwest oil \& gas income fund x b lp)\W</regex>
+  <regex fields="word" weight="1.0">\W(total e\&p maroc)\W</regex>
   <regex fields="word" weight="1.0">\W(appulse corp)\W</regex>
   <regex fields="word" weight="1.0">\W(siberian energy group)\W</regex>
   <regex fields="word" weight="1.0">\W(valence industries)\W</regex>
@@ -5096,10 +5096,10 @@
   <regex fields="word" weight="1.0">\W(finder no 7 pty)\W</regex>
   <regex fields="word" weight="1.0">\W(e-energy ventures)\W</regex>
   <regex fields="word" weight="1.0">\W(reef global energy ventures)\W</regex>
-  <regex fields="word" weight="1.0">\W(dynasty metals & mining)\W</regex>
+  <regex fields="word" weight="1.0">\W(dynasty metals \& mining)\W</regex>
   <regex fields="word" weight="1.0">\W(tengasco inc)\W</regex>
   <regex fields="word" weight="1.0">\W(western sadard energy corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(delta oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(delta oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(warren resources)\W</regex>
   <regex fields="word" weight="1.0">\W(petromanas energy)\W</regex>
   <regex fields="word" weight="1.0">\W(vanguard ftse developed ex north america index etf)\W</regex>
@@ -5139,7 +5139,7 @@
   <regex fields="word" weight="1.0">\W(metallum resources)\W</regex>
   <regex fields="word" weight="1.0">\W(ravensource fund)\W</regex>
   <regex fields="word" weight="1.0">\W(inv metals)\W</regex>
-  <regex fields="word" weight="1.0">\W(sonangol p&p)\W</regex>
+  <regex fields="word" weight="1.0">\W(sonangol p\&p)\W</regex>
   <regex fields="word" weight="1.0">\W(powersaes ultra dlux long term government bond index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(bauxite resources)\W</regex>
   <regex fields="word" weight="1.0">\W(native american energy group)\W</regex>
@@ -5178,7 +5178,7 @@
   <regex fields="word" weight="1.0">\W(eagleford energy)\W</regex>
   <regex fields="word" weight="1.0">\W(arianne phosphate)\W</regex>
   <regex fields="word" weight="1.0">\W(triangle energy (global))\W</regex>
-  <regex fields="word" weight="1.0">\W(ely gold & minerals)\W</regex>
+  <regex fields="word" weight="1.0">\W(ely gold \& minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(kerr mcgee rocky mountain corp)\W</regex>
   <regex fields="word" weight="1.0">\W(jaxon minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(kiantone pipeline corp)\W</regex>
@@ -5193,7 +5193,7 @@
   <regex fields="word" weight="1.0">\W(calyx bio-ventures)\W</regex>
   <regex fields="word" weight="1.0">\W(rockford oil corp)\W</regex>
   <regex fields="word" weight="1.0">\W(frontier pipeline)\W</regex>
-  <regex fields="word" weight="1.0">\W(horizons betapro s&p 500 bear plus etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(horizons betapro s\&p 500 bear plus etf)\W</regex>
   <regex fields="word" weight="1.0">\W(compass gold corp)\W</regex>
   <regex fields="word" weight="1.0">\W(realm resources)\W</regex>
   <regex fields="word" weight="1.0">\W(sabine production partners lp)\W</regex>
@@ -5206,7 +5206,7 @@
   <regex fields="word" weight="1.0">\W(western plains petroleum)\W</regex>
   <regex fields="word" weight="1.0">\W(pvr marcellus gas gathering)\W</regex>
   <regex fields="word" weight="1.0">\W(niko resources  (ncma3 caribbean) )\W</regex>
-  <regex fields="word" weight="1.0">\W(caza oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(caza oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(isaes msci emerging markets minimum volatility index fund)\W</regex>
   <regex fields="word" weight="1.0">\W(hyperion exploration corp)\W</regex>
   <regex fields="word" weight="1.0">\W(cairn india)\W</regex>
@@ -5234,7 +5234,7 @@
   <regex fields="word" weight="1.0">\W(compton petroleum corp)\W</regex>
   <regex fields="word" weight="1.0">\W(bell aliant)\W</regex>
   <regex fields="word" weight="1.0">\W(geologix explorations)\W</regex>
-  <regex fields="word" weight="1.0">\W(pt medco e&p malaka)\W</regex>
+  <regex fields="word" weight="1.0">\W(pt medco e\&p malaka)\W</regex>
   <regex fields="word" weight="1.0">\W(augusaresource corp)\W</regex>
   <regex fields="word" weight="1.0">\W(strike energy)\W</regex>
   <regex fields="word" weight="1.0">\W(target energy)\W</regex>
@@ -5255,7 +5255,7 @@
   <regex fields="word" weight="1.0">\W(golden virtue resources)\W</regex>
   <regex fields="word" weight="1.0">\W(open gold corp)\W</regex>
   <regex fields="word" weight="1.0">\W(rock city energy corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(cabot oil & gas corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(cabot oil \& gas corp)\W</regex>
   <regex fields="word" weight="1.0">\W(cameco corp)\W</regex>
   <regex fields="word" weight="1.0">\W(burlington resources peru limited,talisa peru)\W</regex>
   <regex fields="word" weight="1.0">\W(wise oakwood ventures)\W</regex>
@@ -5269,18 +5269,18 @@
   <regex fields="word" weight="1.0">\W(petrogal brasil)\W</regex>
   <regex fields="word" weight="1.0">\W(ensco plc)\W</regex>
   <regex fields="word" weight="1.0">\W(monster uranium corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(bonanza oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(bonanza oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(pacifico minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(markwest energy partners l p)\W</regex>
   <regex fields="word" weight="1.0">\W(us oil sands)\W</regex>
   <regex fields="word" weight="1.0">\W(geo technology la ca)\W</regex>
   <regex fields="word" weight="1.0">\W(mbac fertilizer corp)\W</regex>
   <regex fields="word" weight="1.0">\W(quest oil corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p global industrials index fund (cad-hedged))\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p global industrials index fund (cad-hedged))\W</regex>
   <regex fields="word" weight="1.0">\W(conocophillips co)\W</regex>
   <regex fields="word" weight="1.0">\W(diatreme resources)\W</regex>
   <regex fields="word" weight="1.0">\W(fortune natural resources corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(u & d coal)\W</regex>
+  <regex fields="word" weight="1.0">\W(u \& d coal)\W</regex>
   <regex fields="word" weight="1.0">\W(gazit-globe limited)\W</regex>
   <regex fields="word" weight="1.0">\W(sodeps)\W</regex>
   <regex fields="word" weight="1.0">\W(intigold mines)\W</regex>
@@ -5290,7 +5290,7 @@
   <regex fields="word" weight="1.0">\W(avrupa minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(laurion mineral exploration)\W</regex>
   <regex fields="word" weight="1.0">\W(horizonsative floating rate preferred sae etf)\W</regex>
-  <regex fields="word" weight="1.0">\W(epl oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(epl oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(goldbank mining corp)\W</regex>
   <regex fields="word" weight="1.0">\W(firestone energy)\W</regex>
   <regex fields="word" weight="1.0">\W(estrella resources)\W</regex>
@@ -5370,7 +5370,7 @@
   <regex fields="word" weight="1.0">\W(cross timbers royalty trust)\W</regex>
   <regex fields="word" weight="1.0">\W(hemisphere energy corp)\W</regex>
   <regex fields="word" weight="1.0">\W(archon minerals)\W</regex>
-  <regex fields="word" weight="1.0">\W(unit drilling & exploration co)\W</regex>
+  <regex fields="word" weight="1.0">\W(unit drilling \& exploration co)\W</regex>
   <regex fields="word" weight="1.0">\W(avigilon corp)\W</regex>
   <regex fields="word" weight="1.0">\W(isaes canadian fundamental index fund etf)\W</regex>
   <regex fields="word" weight="1.0">\W(nevsun resources)\W</regex>
@@ -5383,7 +5383,7 @@
   <regex fields="word" weight="1.0">\W(monax mining)\W</regex>
   <regex fields="word" weight="1.0">\W(newcastle energy corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(transition therapeutics)\W</regex>
-  <regex fields="word" weight="1.0">\W(bloom u.s.  income & growth fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(bloom u.s.  income \& growth fund)\W</regex>
   <regex fields="word" weight="1.0">\W(canarc resource corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(winalta inc)\W</regex>
   <regex fields="word" weight="1.0">\W(excellon resources)\W</regex>
@@ -5394,17 +5394,17 @@
   <regex fields="word" weight="1.0">\W(atlas resources public #18 2009 (c) lp)\W</regex>
   <regex fields="word" weight="1.0">\W(cabral resources)\W</regex>
   <regex fields="word" weight="1.0">\W(pttep international limited (pttepi))\W</regex>
-  <regex fields="word" weight="1.0">\W(bmo s&p/tsx laddered preferred sae index etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(bmo s\&p/tsx laddered preferred sae index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(trinity energy resources)\W</regex>
   <regex fields="word" weight="1.0">\W(regalis petroleum)\W</regex>
   <regex fields="word" weight="1.0">\W(home capital group)\W</regex>
-  <regex fields="word" weight="1.0">\W(signature exploration & production corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(signature exploration \& production corp)\W</regex>
   <regex fields="word" weight="1.0">\W(parex resources colombia limited sucursal)\W</regex>
   <regex fields="word" weight="1.0">\W(mineral deposits)\W</regex>
   <regex fields="word" weight="1.0">\W(ouro preto)\W</regex>
   <regex fields="word" weight="1.0">\W(new nadina explorations)\W</regex>
   <regex fields="word" weight="1.0">\W(zhambay limited)\W</regex>
-  <regex fields="word" weight="1.0">\W(lekoil e&p)\W</regex>
+  <regex fields="word" weight="1.0">\W(lekoil e\&p)\W</regex>
   <regex fields="word" weight="1.0">\W(bmo msci eafe hedged to cad index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(san antonio ventures)\W</regex>
   <regex fields="word" weight="1.0">\W(global partners lp)\W</regex>
@@ -5475,7 +5475,7 @@
   <regex fields="word" weight="1.0">\W(apache offshore investment partnership)\W</regex>
   <regex fields="word" weight="1.0">\W(empire energy group)\W</regex>
   <regex fields="word" weight="1.0">\W(nobel real esae investment trust)\W</regex>
-  <regex fields="word" weight="1.0">\W(plains e&p co)\W</regex>
+  <regex fields="word" weight="1.0">\W(plains e\&p co)\W</regex>
   <regex fields="word" weight="1.0">\W(pacific ore)\W</regex>
   <regex fields="word" weight="1.0">\W(offshore group investment)\W</regex>
   <regex fields="word" weight="1.0">\W(omega commercial finance corp)\W</regex>
@@ -5487,7 +5487,7 @@
   <regex fields="word" weight="1.0">\W(far east energy corp)\W</regex>
   <regex fields="word" weight="1.0">\W(enterprise uranium)\W</regex>
   <regex fields="word" weight="1.0">\W(union temporal ecopetrol exxon mobil)\W</regex>
-  <regex fields="word" weight="1.0">\W(icon oil & gas fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(icon oil \& gas fund)\W</regex>
   <regex fields="word" weight="1.0">\W(baytex energy usa)\W</regex>
   <regex fields="word" weight="1.0">\W(agriminco corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(luna gold corp.)\W</regex>
@@ -5505,7 +5505,7 @@
   <regex fields="word" weight="1.0">\W(novacopper inc)\W</regex>
   <regex fields="word" weight="1.0">\W(isaes conservative core portfolio builder fund)\W</regex>
   <regex fields="word" weight="1.0">\W(glori energy)\W</regex>
-  <regex fields="word" weight="1.0">\W(horizons betapro s&p 500 vix short-term futures inverse etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(horizons betapro s\&p 500 vix short-term futures inverse etf)\W</regex>
   <regex fields="word" weight="1.0">\W(turnberry resources)\W</regex>
   <regex fields="word" weight="1.0">\W(clemex technologies)\W</regex>
   <regex fields="word" weight="1.0">\W(dacian gold)\W</regex>
@@ -5517,10 +5517,10 @@
   <regex fields="word" weight="1.0">\W(crocodile gold corp)\W</regex>
   <regex fields="word" weight="1.0">\W(bsm technologies)\W</regex>
   <regex fields="word" weight="1.0">\W(total energy services)\W</regex>
-  <regex fields="word" weight="1.0">\W(aztec oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(aztec oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(quartet resources)\W</regex>
   <regex fields="word" weight="1.0">\W(altan nevada minerals)\W</regex>
-  <regex fields="word" weight="1.0">\W(hawkeye gold & diamond)\W</regex>
+  <regex fields="word" weight="1.0">\W(hawkeye gold \& diamond)\W</regex>
   <regex fields="word" weight="1.0">\W(dynacert inc)\W</regex>
   <regex fields="word" weight="1.0">\W(cgg americas)\W</regex>
   <regex fields="word" weight="1.0">\W(matsa resources)\W</regex>
@@ -5539,7 +5539,7 @@
   <regex fields="word" weight="1.0">\W(jubilant)\W</regex>
   <regex fields="word" weight="1.0">\W(niko resources west sageri)\W</regex>
   <regex fields="word" weight="1.0">\W(u.s. geothermal)\W</regex>
-  <regex fields="word" weight="1.0">\W(sino gas & energy holdings)\W</regex>
+  <regex fields="word" weight="1.0">\W(sino gas \& energy holdings)\W</regex>
   <regex fields="word" weight="1.0">\W(union temporal pluspetrol knoc)\W</regex>
   <regex fields="word" weight="1.0">\W(bmo mid federal bond index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(noble iron)\W</regex>
@@ -5567,7 +5567,7 @@
   <regex fields="word" weight="1.0">\W(canalasauranium limited)\W</regex>
   <regex fields="word" weight="1.0">\W(lawson gold)\W</regex>
   <regex fields="word" weight="1.0">\W(pretium resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(sterling oil & gas co)\W</regex>
+  <regex fields="word" weight="1.0">\W(sterling oil \& gas co)\W</regex>
   <regex fields="word" weight="1.0">\W(chaoyang petroleum (trinidad))\W</regex>
   <regex fields="word" weight="1.0">\W(brookfield canada office properties)\W</regex>
   <regex fields="word" weight="1.0">\W(csm systems corp.)\W</regex>
@@ -5575,7 +5575,7 @@
   <regex fields="word" weight="1.0">\W(yellow rock resources)\W</regex>
   <regex fields="word" weight="1.0">\W(canadian mining company)\W</regex>
   <regex fields="word" weight="1.0">\W(freehold royalties)\W</regex>
-  <regex fields="word" weight="1.0">\W(brenham oil & gas corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(brenham oil \& gas corp)\W</regex>
   <regex fields="word" weight="1.0">\W(pt northern yamano technology oil resources east pamai)\W</regex>
   <regex fields="word" weight="1.0">\W(murphy australia oil pty)\W</regex>
   <regex fields="word" weight="1.0">\W(miranda gold corp.)\W</regex>
@@ -5622,7 +5622,7 @@
   <regex fields="word" weight="1.0">\W(real energy corp)\W</regex>
   <regex fields="word" weight="1.0">\W(total (fr))\W</regex>
   <regex fields="word" weight="1.0">\W(chimata gold corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(total e&p indonesawest papua)\W</regex>
+  <regex fields="word" weight="1.0">\W(total e\&p indonesawest papua)\W</regex>
   <regex fields="word" weight="1.0">\W(moneda latam growth fund)\W</regex>
   <regex fields="word" weight="1.0">\W(nexen inc)\W</regex>
   <regex fields="word" weight="1.0">\W(pttep brasil)\W</regex>
@@ -5686,7 +5686,7 @@
   <regex fields="word" weight="1.0">\W(australian zircon nl)\W</regex>
   <regex fields="word" weight="1.0">\W(enbridge energy management l l c)\W</regex>
   <regex fields="word" weight="1.0">\W(canadian orebodies)\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p latin america 40 index fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p latin america 40 index fund)\W</regex>
   <regex fields="word" weight="1.0">\W(varco lp)\W</regex>
   <regex fields="word" weight="1.0">\W(conifex timber)\W</regex>
   <regex fields="word" weight="1.0">\W(new carolin gold corp)\W</regex>
@@ -5694,10 +5694,10 @@
   <regex fields="word" weight="1.0">\W(noble drilling corp)\W</regex>
   <regex fields="word" weight="1.0">\W(abraxas energy partners lp)\W</regex>
   <regex fields="word" weight="1.0">\W(labrador technologies)\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p/tsx capped utilities index fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p/tsx capped utilities index fund)\W</regex>
   <regex fields="word" weight="1.0">\W(aumento capital ii corp)\W</regex>
   <regex fields="word" weight="1.0">\W(om holdings)\W</regex>
-  <regex fields="word" weight="1.0">\W(diamond energy t&t)\W</regex>
+  <regex fields="word" weight="1.0">\W(diamond energy t\&t)\W</regex>
   <regex fields="word" weight="1.0">\W(ci master limited partnership)\W</regex>
   <regex fields="word" weight="1.0">\W(heroux-devtek inc)\W</regex>
   <regex fields="word" weight="1.0">\W(transition metals corp)\W</regex>
@@ -5715,10 +5715,10 @@
   <regex fields="word" weight="1.0">\W(first national financial corp)\W</regex>
   <regex fields="word" weight="1.0">\W(gsv inc)\W</regex>
   <regex fields="word" weight="1.0">\W(prolong international corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(southwest oil & gas income fund vii a l p)\W</regex>
+  <regex fields="word" weight="1.0">\W(southwest oil \& gas income fund vii a l p)\W</regex>
   <regex fields="word" weight="1.0">\W(3tec energy corp)\W</regex>
   <regex fields="word" weight="1.0">\W(hydrocarb namibia energy corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(washington h soul pattinson & company)\W</regex>
+  <regex fields="word" weight="1.0">\W(washington h soul pattinson \& company)\W</regex>
   <regex fields="word" weight="1.0">\W(ranhil jambi inc pte)\W</regex>
   <regex fields="word" weight="1.0">\W(santacruz silver mining)\W</regex>
   <regex fields="word" weight="1.0">\W(lukarco)\W</regex>
@@ -5772,7 +5772,7 @@
   <regex fields="word" weight="1.0">\W(giant resources)\W</regex>
   <regex fields="word" weight="1.0">\W(urbanimmersive technologies)\W</regex>
   <regex fields="word" weight="1.0">\W(blum peter h)\W</regex>
-  <regex fields="word" weight="1.0">\W(whiting oil & gas corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(whiting oil \& gas corp)\W</regex>
   <regex fields="word" weight="1.0">\W(yellow media)\W</regex>
   <regex fields="word" weight="1.0">\W(new age algoa)\W</regex>
   <regex fields="word" weight="1.0">\W(just energy group)\W</regex>
@@ -5802,7 +5802,7 @@
   <regex fields="word" weight="1.0">\W(helix resources)\W</regex>
   <regex fields="word" weight="1.0">\W(golden bridge mining corp)\W</regex>
   <regex fields="word" weight="1.0">\W(lithex resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(inpex browse e&p pty)\W</regex>
+  <regex fields="word" weight="1.0">\W(inpex browse e\&p pty)\W</regex>
   <regex fields="word" weight="1.0">\W(nextraction energy corp)\W</regex>
   <regex fields="word" weight="1.0">\W(rpc inc)\W</regex>
   <regex fields="word" weight="1.0">\W(oklo resources)\W</regex>
@@ -5815,7 +5815,7 @@
   <regex fields="word" weight="1.0">\W(pdc 2003 drilling program)\W</regex>
   <regex fields="word" weight="1.0">\W(canadian utilities)\W</regex>
   <regex fields="word" weight="1.0">\W(stellar africagold)\W</regex>
-  <regex fields="word" weight="1.0">\W(turner valley oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(turner valley oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(san juan basin royalty trust)\W</regex>
   <regex fields="word" weight="1.0">\W(auryn resources)\W</regex>
   <regex fields="word" weight="1.0">\W(taipan resources)\W</regex>
@@ -5831,7 +5831,7 @@
   <regex fields="word" weight="1.0">\W(allied hotel properties)\W</regex>
   <regex fields="word" weight="1.0">\W(green field energy services)\W</regex>
   <regex fields="word" weight="1.0">\W(technical ventures rx corp.)\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p/tsx salcap index fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p/tsx salcap index fund)\W</regex>
   <regex fields="word" weight="1.0">\W(vanoil)\W</regex>
   <regex fields="word" weight="1.0">\W(sedex mining corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(golden minerals company)\W</regex>
@@ -5841,7 +5841,7 @@
   <regex fields="word" weight="1.0">\W(colorpak limited)\W</regex>
   <regex fields="word" weight="1.0">\W(manas resources)\W</regex>
   <regex fields="word" weight="1.0">\W(coziron resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(falcon oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(falcon oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(dawson gold corp)\W</regex>
   <regex fields="word" weight="1.0">\W(pecten)\W</regex>
   <regex fields="word" weight="1.0">\W(hess indonesasemai v)\W</regex>
@@ -5854,13 +5854,13 @@
   <regex fields="word" weight="1.0">\W(mineral commodities)\W</regex>
   <regex fields="word" weight="1.0">\W(macdonald mines exploration)\W</regex>
   <regex fields="word" weight="1.0">\W(qmc quantum minerals corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(c&d production)\W</regex>
+  <regex fields="word" weight="1.0">\W(c\&d production)\W</regex>
   <regex fields="word" weight="1.0">\W(alliance mining corp)\W</regex>
   <regex fields="word" weight="1.0">\W(oceanic iron ore corp)\W</regex>
   <regex fields="word" weight="1.0">\W(aegean metals group)\W</regex>
   <regex fields="word" weight="1.0">\W(inlet resources)\W</regex>
   <regex fields="word" weight="1.0">\W(petrokazakhsa inc)\W</regex>
-  <regex fields="word" weight="1.0">\W(vermilion oil & gasastralia pty)\W</regex>
+  <regex fields="word" weight="1.0">\W(vermilion oil \& gasastralia pty)\W</regex>
   <regex fields="word" weight="1.0">\W(reliance 5)\W</regex>
   <regex fields="word" weight="1.0">\W(xylitol canada)\W</regex>
   <regex fields="word" weight="1.0">\W(newgen technologies)\W</regex>
@@ -5908,7 +5908,7 @@
   <regex fields="word" weight="1.0">\W(australian reit income fund)\W</regex>
   <regex fields="word" weight="1.0">\W(gear energy)\W</regex>
   <regex fields="word" weight="1.0">\W(damon capital corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p global consumer discretionary index fund (cad-hedged))\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p global consumer discretionary index fund (cad-hedged))\W</regex>
   <regex fields="word" weight="1.0">\W(isis lab corp)\W</regex>
   <regex fields="word" weight="1.0">\W(intermin resources)\W</regex>
   <regex fields="word" weight="1.0">\W(chesapeake operating)\W</regex>
@@ -5919,7 +5919,7 @@
   <regex fields="word" weight="1.0">\W(brasoil manati)\W</regex>
   <regex fields="word" weight="1.0">\W(murgor resources)\W</regex>
   <regex fields="word" weight="1.0">\W(cerro grande mining corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(pacific & western credit corp.)\W</regex>
+  <regex fields="word" weight="1.0">\W(pacific \& western credit corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(e-l financial corp)\W</regex>
   <regex fields="word" weight="1.0">\W(questerre energy corp)\W</regex>
   <regex fields="word" weight="1.0">\W(isaes growth core portfolio builder fund)\W</regex>
@@ -5966,7 +5966,7 @@
   <regex fields="word" weight="1.0">\W(solvisagold corp)\W</regex>
   <regex fields="word" weight="1.0">\W(plazacorp retail properties)\W</regex>
   <regex fields="word" weight="1.0">\W(waymar resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(nazaki oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(nazaki oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(rokmaster resources corp)\W</regex>
   <regex fields="word" weight="1.0">\W(serept)\W</regex>
   <regex fields="word" weight="1.0">\W(reservoir minerals)\W</regex>
@@ -5982,17 +5982,17 @@
   <regex fields="word" weight="1.0">\W(pdc 2003 d lp)\W</regex>
   <regex fields="word" weight="1.0">\W(atlantic power corp)\W</regex>
   <regex fields="word" weight="1.0">\W(majestic gold corp.)\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p/tsx capped consumer sales index fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p/tsx capped consumer sales index fund)\W</regex>
   <regex fields="word" weight="1.0">\W(canacol energy colombia)\W</regex>
   <regex fields="word" weight="1.0">\W(new frontier energy)\W</regex>
   <regex fields="word" weight="1.0">\W(aston hill vip income fund)\W</regex>
-  <regex fields="word" weight="1.0">\W(canadian oil recovery & remediation enterprises)\W</regex>
+  <regex fields="word" weight="1.0">\W(canadian oil recovery \& remediation enterprises)\W</regex>
   <regex fields="word" weight="1.0">\W(pt odira energy karang agung)\W</regex>
   <regex fields="word" weight="1.0">\W(gitennes exploration)\W</regex>
   <regex fields="word" weight="1.0">\W(repsol angola 22)\W</regex>
   <regex fields="word" weight="1.0">\W(equator exploration)\W</regex>
   <regex fields="word" weight="1.0">\W(petrojava north kangean)\W</regex>
-  <regex fields="word" weight="1.0">\W(powersaes s&p 500 high beta (cad hedged) index etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(powersaes s\&p 500 high beta (cad hedged) index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(kane biotech)\W</regex>
   <regex fields="word" weight="1.0">\W(gothic energy)\W</regex>
   <regex fields="word" weight="1.0">\W(horizons morningsa hedge fund index etf)\W</regex>
@@ -6000,7 +6000,7 @@
   <regex fields="word" weight="1.0">\W(savoy energy corp)\W</regex>
   <regex fields="word" weight="1.0">\W(lorus therapeutics)\W</regex>
   <regex fields="word" weight="1.0">\W(renoworks software)\W</regex>
-  <regex fields="word" weight="1.0">\W(milagro oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(milagro oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(molopo energy)\W</regex>
   <regex fields="word" weight="1.0">\W(josephine mining corp)\W</regex>
   <regex fields="word" weight="1.0">\W(nevada iron)\W</regex>
@@ -6030,7 +6030,7 @@
   <regex fields="word" weight="1.0">\W(magnetic resources nl)\W</regex>
   <regex fields="word" weight="1.0">\W(glg life tech corp)\W</regex>
   <regex fields="word" weight="1.0">\W(pt sumatera persada energy)\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p global healthcare index fund (cad-hedged))\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p global healthcare index fund (cad-hedged))\W</regex>
   <regex fields="word" weight="1.0">\W(orteng)\W</regex>
   <regex fields="word" weight="1.0">\W(lupaka gold corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(allis chalmers energy)\W</regex>
@@ -6044,7 +6044,7 @@
   <regex fields="word" weight="1.0">\W(precision drilling co lp)\W</regex>
   <regex fields="word" weight="1.0">\W(desmond investments)\W</regex>
   <regex fields="word" weight="1.0">\W(falco pacific resource group)\W</regex>
-  <regex fields="word" weight="1.0">\W(bmo s&p 500 index etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(bmo s\&p 500 index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(sonoro energy)\W</regex>
   <regex fields="word" weight="1.0">\W(ocean rig 1 as)\W</regex>
   <regex fields="word" weight="1.0">\W(argent energy trust)\W</regex>
@@ -6094,12 +6094,12 @@
   <regex fields="word" weight="1.0">\W(southfield energy corp)\W</regex>
   <regex fields="word" weight="1.0">\W(capco energy)\W</regex>
   <regex fields="word" weight="1.0">\W(spirit bear capital corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(pioneer oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(pioneer oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(polar sa mining corp)\W</regex>
   <regex fields="word" weight="1.0">\W(inland resources)\W</regex>
   <regex fields="word" weight="1.0">\W(cgx energy)\W</regex>
   <regex fields="word" weight="1.0">\W(meta petroleum corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(mitsuie&p)\W</regex>
+  <regex fields="word" weight="1.0">\W(mitsuie\&p)\W</regex>
   <regex fields="word" weight="1.0">\W(woodside browse pty.)\W</regex>
   <regex fields="word" weight="1.0">\W(pni digital media)\W</regex>
   <regex fields="word" weight="1.0">\W(baikal forest corp)\W</regex>
@@ -6139,7 +6139,7 @@
   <regex fields="word" weight="1.0">\W(silver sa energy)\W</regex>
   <regex fields="word" weight="1.0">\W(dome gold mines)\W</regex>
   <regex fields="word" weight="1.0">\W(saturn minerals)\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes equal weight banc & lifeco fund etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes equal weight banc \& lifeco fund etf)\W</regex>
   <regex fields="word" weight="1.0">\W(evergreen resources)\W</regex>
   <regex fields="word" weight="1.0">\W(caldwell partners international inc (the))\W</regex>
   <regex fields="word" weight="1.0">\W(white rock minerals)\W</regex>
@@ -6151,7 +6151,7 @@
   <regex fields="word" weight="1.0">\W(firestrike resources)\W</regex>
   <regex fields="word" weight="1.0">\W(pt pertamina hulu energi west madura offshore)\W</regex>
   <regex fields="word" weight="1.0">\W(fab-form industries)\W</regex>
-  <regex fields="word" weight="1.0">\W(cougar oil & gas canada)\W</regex>
+  <regex fields="word" weight="1.0">\W(cougar oil \& gas canada)\W</regex>
   <regex fields="word" weight="1.0">\W(golden harp resources)\W</regex>
   <regex fields="word" weight="1.0">\W(gran tierra energy peru srl)\W</regex>
   <regex fields="word" weight="1.0">\W(local telecom systems)\W</regex>
@@ -6195,7 +6195,7 @@
   <regex fields="word" weight="1.0">\W(cooper energy merangin iii)\W</regex>
   <regex fields="word" weight="1.0">\W(china gold international resources corp)\W</regex>
   <regex fields="word" weight="1.0">\W(petrel energy)\W</regex>
-  <regex fields="word" weight="1.0">\W(maurel & prom namibia)\W</regex>
+  <regex fields="word" weight="1.0">\W(maurel \& prom namibia)\W</regex>
   <regex fields="word" weight="1.0">\W(matnic resources)\W</regex>
   <regex fields="word" weight="1.0">\W(warrior energy services corp)\W</regex>
   <regex fields="word" weight="1.0">\W(questor technology)\W</regex>
@@ -6221,7 +6221,7 @@
   <regex fields="word" weight="1.0">\W(zeus resources)\W</regex>
   <regex fields="word" weight="1.0">\W(oil indian)\W</regex>
   <regex fields="word" weight="1.0">\W(wangton capital corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p/tsx global gold index fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p/tsx global gold index fund)\W</regex>
   <regex fields="word" weight="1.0">\W(plymouth realty capital corp)\W</regex>
   <regex fields="word" weight="1.0">\W(flow energy pty)\W</regex>
   <regex fields="word" weight="1.0">\W(sennen potash corp)\W</regex>
@@ -6254,7 +6254,7 @@
   <regex fields="word" weight="1.0">\W(taglikeme corp)\W</regex>
   <regex fields="word" weight="1.0">\W(nt energy africa)\W</regex>
   <regex fields="word" weight="1.0">\W(eagle geophysical)\W</regex>
-  <regex fields="word" weight="1.0">\W(energy & exploration partners)\W</regex>
+  <regex fields="word" weight="1.0">\W(energy \& exploration partners)\W</regex>
   <regex fields="word" weight="1.0">\W(british controlled oilfields)\W</regex>
   <regex fields="word" weight="1.0">\W(southgobi resources)\W</regex>
   <regex fields="word" weight="1.0">\W(horizon petroleum)\W</regex>
@@ -6269,16 +6269,16 @@
   <regex fields="word" weight="1.0">\W(dividend 15 split corp. ii)\W</regex>
   <regex fields="word" weight="1.0">\W(tearlab corp)\W</regex>
   <regex fields="word" weight="1.0">\W(maverick drilling and exploration)\W</regex>
-  <regex fields="word" weight="1.0">\W(vale oil & gas peru sac.)\W</regex>
+  <regex fields="word" weight="1.0">\W(vale oil \& gas peru sac.)\W</regex>
   <regex fields="word" weight="1.0">\W(coral gold resources)\W</regex>
   <regex fields="word" weight="1.0">\W(orora limited)\W</regex>
-  <regex fields="word" weight="1.0">\W(horizons betapro s&p 500 bull plus etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(horizons betapro s\&p 500 bull plus etf)\W</regex>
   <regex fields="word" weight="1.0">\W(cartier resources)\W</regex>
   <regex fields="word" weight="1.0">\W(perenco)\W</regex>
   <regex fields="word" weight="1.0">\W(symbility solutions)\W</regex>
   <regex fields="word" weight="1.0">\W(guiarat sae petroleum corp.)\W</regex>
-  <regex fields="word" weight="1.0">\W(ironhorse oil & gas)\W</regex>
-  <regex fields="word" weight="1.0">\W(china petroleum & chemical corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(ironhorse oil \& gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(china petroleum \& chemical corp)\W</regex>
   <regex fields="word" weight="1.0">\W(sniper resources)\W</regex>
   <regex fields="word" weight="1.0">\W(chesapeake louisaa lp)\W</regex>
   <regex fields="word" weight="1.0">\W(challenger energy)\W</regex>
@@ -6314,7 +6314,7 @@
   <regex fields="word" weight="1.0">\W(niocorp developments)\W</regex>
   <regex fields="word" weight="1.0">\W(bcd resources nl)\W</regex>
   <regex fields="word" weight="1.0">\W(isaes global monthly dividend index etf)\W</regex>
-  <regex fields="word" weight="1.0">\W(cnooc australia e&p pty)\W</regex>
+  <regex fields="word" weight="1.0">\W(cnooc australia e\&p pty)\W</regex>
   <regex fields="word" weight="1.0">\W(brand leaders income fund)\W</regex>
   <regex fields="word" weight="1.0">\W(first capital realty)\W</regex>
   <regex fields="word" weight="1.0">\W(altagas limited)\W</regex>
@@ -6326,7 +6326,7 @@
   <regex fields="word" weight="1.0">\W(nikos explorations)\W</regex>
   <regex fields="word" weight="1.0">\W(midas gold corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(green technology solutions)\W</regex>
-  <regex fields="word" weight="1.0">\W(panhandle oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(panhandle oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(australian renewable fuels)\W</regex>
   <regex fields="word" weight="1.0">\W(goldex resources corp)\W</regex>
   <regex fields="word" weight="1.0">\W(continental precious minerals)\W</regex>
@@ -6348,7 +6348,7 @@
   <regex fields="word" weight="1.0">\W(enservco corp)\W</regex>
   <regex fields="word" weight="1.0">\W(namibia rare earths)\W</regex>
   <regex fields="word" weight="1.0">\W(alimentation couche-tard)\W</regex>
-  <regex fields="word" weight="1.0">\W(abacus mining & exploration corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(abacus mining \& exploration corp)\W</regex>
   <regex fields="word" weight="1.0">\W(ceapro inc)\W</regex>
   <regex fields="word" weight="1.0">\W(tubo fgs)\W</regex>
   <regex fields="word" weight="1.0">\W(chinook energy)\W</regex>
@@ -6385,9 +6385,9 @@
   <regex fields="word" weight="1.0">\W(newalta corp)\W</regex>
   <regex fields="word" weight="1.0">\W(callabonna resources)\W</regex>
   <regex fields="word" weight="1.0">\W(cathedral energy services)\W</regex>
-  <regex fields="word" weight="1.0">\W(gulf & pacific equities corp.)\W</regex>
+  <regex fields="word" weight="1.0">\W(gulf \& pacific equities corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(big 8 split)\W</regex>
-  <regex fields="word" weight="1.0">\W(tidelands oil & gas corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(tidelands oil \& gas corp)\W</regex>
   <regex fields="word" weight="1.0">\W(ditem explorations)\W</regex>
   <regex fields="word" weight="1.0">\W(apache pvg pty)\W</regex>
   <regex fields="word" weight="1.0">\W(susser petroleum partners lp)\W</regex>
@@ -6397,7 +6397,7 @@
   <regex fields="word" weight="1.0">\W(gallo oil)\W</regex>
   <regex fields="word" weight="1.0">\W(medmira inc)\W</regex>
   <regex fields="word" weight="1.0">\W(troymet exploration corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(john d. oil & gas co)\W</regex>
+  <regex fields="word" weight="1.0">\W(john d. oil \& gas co)\W</regex>
   <regex fields="word" weight="1.0">\W(geo petroleum)\W</regex>
   <regex fields="word" weight="1.0">\W(african petroleum)\W</regex>
   <regex fields="word" weight="1.0">\W(ing diversified floating rate senior loan fund)\W</regex>
@@ -6405,14 +6405,14 @@
   <regex fields="word" weight="1.0">\W(range resources corp)\W</regex>
   <regex fields="word" weight="1.0">\W(isaes msci eafe 100% hedged to cad dollars index fund)\W</regex>
   <regex fields="word" weight="1.0">\W(manitex capital)\W</regex>
-  <regex fields="word" weight="1.0">\W(energy & engine technology corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(energy \& engine technology corp)\W</regex>
   <regex fields="word" weight="1.0">\W(iwg technologies)\W</regex>
   <regex fields="word" weight="1.0">\W(bmo dow jones industrial average hedged to cad index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(commerce resources corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(abraxas petroleum corp)\W</regex>
   <regex fields="word" weight="1.0">\W(crown gold corp)\W</regex>
   <regex fields="word" weight="1.0">\W(voyager energy  (trinidad))\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p/tsx completion index fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p/tsx completion index fund)\W</regex>
   <regex fields="word" weight="1.0">\W(general moly)\W</regex>
   <regex fields="word" weight="1.0">\W(meritus minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(central natural resources)\W</regex>
@@ -6421,7 +6421,7 @@
   <regex fields="word" weight="1.0">\W(king isad scheelite)\W</regex>
   <regex fields="word" weight="1.0">\W(harte gold corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(primary gold)\W</regex>
-  <regex fields="word" weight="1.0">\W(diamond esaes wines & spirits)\W</regex>
+  <regex fields="word" weight="1.0">\W(diamond esaes wines \& spirits)\W</regex>
   <regex fields="word" weight="1.0">\W(geo global resources)\W</regex>
   <regex fields="word" weight="1.0">\W(resolute energy partners lp)\W</regex>
   <regex fields="word" weight="1.0">\W(bmo global infrastructure index etf)\W</regex>
@@ -6471,24 +6471,24 @@
   <regex fields="word" weight="1.0">\W(bukti energy bomoruk pte)\W</regex>
   <regex fields="word" weight="1.0">\W(niko resources cendrawasih bay iii)\W</regex>
   <regex fields="word" weight="1.0">\W(sanatana resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(aston hill advantage oil & gas income fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(aston hill advantage oil \& gas income fund)\W</regex>
   <regex fields="word" weight="1.0">\W(hydril co)\W</regex>
   <regex fields="word" weight="1.0">\W(cambridge energy corp)\W</regex>
   <regex fields="word" weight="1.0">\W(sonangol safish)\W</regex>
-  <regex fields="word" weight="1.0">\W(sinopec o&g australia (puffin) pty)\W</regex>
+  <regex fields="word" weight="1.0">\W(sinopec o\&g australia (puffin) pty)\W</regex>
   <regex fields="word" weight="1.0">\W(nimin energy corp)\W</regex>
   <regex fields="word" weight="1.0">\W(photon control)\W</regex>
   <regex fields="word" weight="1.0">\W(northcore resources)\W</regex>
   <regex fields="word" weight="1.0">\W(petrobras internacional sabraspetro)\W</regex>
   <regex fields="word" weight="1.0">\W(venoco acquisition co lp)\W</regex>
-  <regex fields="word" weight="1.0">\W(adams resources & energy)\W</regex>
+  <regex fields="word" weight="1.0">\W(adams resources \& energy)\W</regex>
   <regex fields="word" weight="1.0">\W(liberty petroleum corp)\W</regex>
   <regex fields="word" weight="1.0">\W(in-touch survey systems)\W</regex>
   <regex fields="word" weight="1.0">\W(blaze international)\W</regex>
   <regex fields="word" weight="1.0">\W(vast exploration)\W</regex>
   <regex fields="word" weight="1.0">\W(west african iron ore corp)\W</regex>
   <regex fields="word" weight="1.0">\W(pitkin petroleum peru z-38 s.r.l.)\W</regex>
-  <regex fields="word" weight="1.0">\W(apco oil & gas international)\W</regex>
+  <regex fields="word" weight="1.0">\W(apco oil \& gas international)\W</regex>
   <regex fields="word" weight="1.0">\W(canoro resources)\W</regex>
   <regex fields="word" weight="1.0">\W(sunbird energy)\W</regex>
   <regex fields="word" weight="1.0">\W(cricket resources)\W</regex>
@@ -6505,7 +6505,7 @@
   <regex fields="word" weight="1.0">\W(pt pertamina hulu nergie rokan cpp)\W</regex>
   <regex fields="word" weight="1.0">\W(avalon minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(edwards s eugene)\W</regex>
-  <regex fields="word" weight="1.0">\W(horizons betapro s&p/tsx capped financials bull plus etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(horizons betapro s\&p/tsx capped financials bull plus etf)\W</regex>
   <regex fields="word" weight="1.0">\W(jay polychem (india) limited (jpil))\W</regex>
   <regex fields="word" weight="1.0">\W(havilah resources nl)\W</regex>
   <regex fields="word" weight="1.0">\W(canada lithium corp)\W</regex>
@@ -6536,7 +6536,7 @@
   <regex fields="word" weight="1.0">\W(core laboratories n v)\W</regex>
   <regex fields="word" weight="1.0">\W(canadian world fund)\W</regex>
   <regex fields="word" weight="1.0">\W(pegasi energy resources corp.)\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p/tsx 60 index fund)\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p/tsx 60 index fund)\W</regex>
   <regex fields="word" weight="1.0">\W(01 communique laboratory)\W</regex>
   <regex fields="word" weight="1.0">\W(midsaes petroleum co)\W</regex>
   <regex fields="word" weight="1.0">\W(exalt resources)\W</regex>
@@ -6568,7 +6568,7 @@
   <regex fields="word" weight="1.0">\W(homesae resource corp)\W</regex>
   <regex fields="word" weight="1.0">\W(ecometals limited)\W</regex>
   <regex fields="word" weight="1.0">\W(freegold ventures)\W</regex>
-  <regex fields="word" weight="1.0">\W(terra energy & resource technologies)\W</regex>
+  <regex fields="word" weight="1.0">\W(terra energy \& resource technologies)\W</regex>
   <regex fields="word" weight="1.0">\W(fortune minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(vanguard u.s. total market index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(southern silver exploration corp.)\W</regex>
@@ -6579,14 +6579,14 @@
   <regex fields="word" weight="1.0">\W(cariboo rose resources)\W</regex>
   <regex fields="word" weight="1.0">\W(west african resources)\W</regex>
   <regex fields="word" weight="1.0">\W(sociedad de exploracion y explotacion petrolera)\W</regex>
-  <regex fields="word" weight="1.0">\W(pt sarana pembangunnan riau & kingswood capital)\W</regex>
+  <regex fields="word" weight="1.0">\W(pt sarana pembangunnan riau \& kingswood capital)\W</regex>
   <regex fields="word" weight="1.0">\W(exxonmobil)\W</regex>
   <regex fields="word" weight="1.0">\W(tanga resources)\W</regex>
   <regex fields="word" weight="1.0">\W(chesapeake energy louisaa corp)\W</regex>
   <regex fields="word" weight="1.0">\W(bonavisaenergy corp)\W</regex>
   <regex fields="word" weight="1.0">\W(triton distribution systems)\W</regex>
   <regex fields="word" weight="1.0">\W(royalco resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(exxonmobil e&p surumana)\W</regex>
+  <regex fields="word" weight="1.0">\W(exxonmobil e\&p surumana)\W</regex>
   <regex fields="word" weight="1.0">\W(teppco partners lp)\W</regex>
   <regex fields="word" weight="1.0">\W(luxor industrial corp)\W</regex>
   <regex fields="word" weight="1.0">\W(gateway mining)\W</regex>
@@ -6616,7 +6616,7 @@
   <regex fields="word" weight="1.0">\W(equion energia)\W</regex>
   <regex fields="word" weight="1.0">\W(bhp billiton petroleum international pty)\W</regex>
   <regex fields="word" weight="1.0">\W(nunavik nickel mines)\W</regex>
-  <regex fields="word" weight="1.0">\W(total e&p indonesie)\W</regex>
+  <regex fields="word" weight="1.0">\W(total e\&p indonesie)\W</regex>
   <regex fields="word" weight="1.0">\W(man glg emerging markets income fund)\W</regex>
   <regex fields="word" weight="1.0">\W(labrador iron mines holdings)\W</regex>
   <regex fields="word" weight="1.0">\W(western lithium usa corp)\W</regex>
@@ -6656,7 +6656,7 @@
   <regex fields="word" weight="1.0">\W(horizons enhanced income gold producers etf)\W</regex>
   <regex fields="word" weight="1.0">\W(sarill partners)\W</regex>
   <regex fields="word" weight="1.0">\W(zuri capital corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(spindletop oil & gas co)\W</regex>
+  <regex fields="word" weight="1.0">\W(spindletop oil \& gas co)\W</regex>
   <regex fields="word" weight="1.0">\W(beaumont select corps)\W</regex>
   <regex fields="word" weight="1.0">\W(canadian resources income trust)\W</regex>
   <regex fields="word" weight="1.0">\W(isaes u.s. high dividend equity index fund (cad-hedged))\W</regex>
@@ -6687,7 +6687,7 @@
   <regex fields="word" weight="1.0">\W(cogeco inc)\W</regex>
   <regex fields="word" weight="1.0">\W(mantle mining corp)\W</regex>
   <regex fields="word" weight="1.0">\W(petrolatina energy)\W</regex>
-  <regex fields="word" weight="1.0">\W(sonora gold & silver corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(sonora gold \& silver corp)\W</regex>
   <regex fields="word" weight="1.0">\W(gfk resources)\W</regex>
   <regex fields="word" weight="1.0">\W(adroit resources)\W</regex>
   <regex fields="word" weight="1.0">\W(windimurra vanadium)\W</regex>
@@ -6698,16 +6698,16 @@
   <regex fields="word" weight="1.0">\W(algae biosciences corp)\W</regex>
   <regex fields="word" weight="1.0">\W(colpan oil gas)\W</regex>
   <regex fields="word" weight="1.0">\W(nc kazmunaygas jsc)\W</regex>
-  <regex fields="word" weight="1.0">\W(sumatra copper & gold)\W</regex>
+  <regex fields="word" weight="1.0">\W(sumatra copper \& gold)\W</regex>
   <regex fields="word" weight="1.0">\W(woulfe mining corp)\W</regex>
   <regex fields="word" weight="1.0">\W(el tigre silver corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(indigo books & music)\W</regex>
+  <regex fields="word" weight="1.0">\W(indigo books \& music)\W</regex>
   <regex fields="word" weight="1.0">\W(vintage petroleum)\W</regex>
   <regex fields="word" weight="1.0">\W(on demand heavy duty corp)\W</regex>
   <regex fields="word" weight="1.0">\W(mukuba resources)\W</regex>
   <regex fields="word" weight="1.0">\W(umbono coal ermelo)\W</regex>
   <regex fields="word" weight="1.0">\W(murphy wokam oil company)\W</regex>
-  <regex fields="word" weight="1.0">\W(horizons betapro s&p/tsx global gold bear plus etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(horizons betapro s\&p/tsx global gold bear plus etf)\W</regex>
   <regex fields="word" weight="1.0">\W(terra firma resources)\W</regex>
   <regex fields="word" weight="1.0">\W(redcliffe resources)\W</regex>
   <regex fields="word" weight="1.0">\W(world point terminals lp)\W</regex>
@@ -6722,7 +6722,7 @@
   <regex fields="word" weight="1.0">\W(savia peru)\W</regex>
   <regex fields="word" weight="1.0">\W(medallion resources)\W</regex>
   <regex fields="word" weight="1.0">\W(olivut resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(legend oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(legend oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(geminas)\W</regex>
   <regex fields="word" weight="1.0">\W(amerigo resources)\W</regex>
   <regex fields="word" weight="1.0">\W(mogul energy international)\W</regex>
@@ -6744,16 +6744,16 @@
   <regex fields="word" weight="1.0">\W(windsor energy resources)\W</regex>
   <regex fields="word" weight="1.0">\W(sfr energy)\W</regex>
   <regex fields="word" weight="1.0">\W(boyd group income fund)\W</regex>
-  <regex fields="word" weight="1.0">\W(namcor / tullow kudu / cisco e&p namibia)\W</regex>
-  <regex fields="word" weight="1.0">\W(perenco o&g)\W</regex>
+  <regex fields="word" weight="1.0">\W(namcor / tullow kudu / cisco e\&p namibia)\W</regex>
+  <regex fields="word" weight="1.0">\W(perenco o\&g)\W</regex>
   <regex fields="word" weight="1.0">\W(mgt resources)\W</regex>
   <regex fields="word" weight="1.0">\W(cornerstone capital resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(pt radiant bukit barisan e&p)\W</regex>
+  <regex fields="word" weight="1.0">\W(pt radiant bukit barisan e\&p)\W</regex>
   <regex fields="word" weight="1.0">\W(canfor corp)\W</regex>
   <regex fields="word" weight="1.0">\W(eni east sepinggan)\W</regex>
   <regex fields="word" weight="1.0">\W(coil tubing technology)\W</regex>
   <regex fields="word" weight="1.0">\W(canadian spirit resources)\W</regex>
-  <regex fields="word" weight="1.0">\W(horizons betapro s&p/tsx global base metals bull plus etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(horizons betapro s\&p/tsx global base metals bull plus etf)\W</regex>
   <regex fields="word" weight="1.0">\W(hombre capital)\W</regex>
   <regex fields="word" weight="1.0">\W(lewis energy colombia)\W</regex>
   <regex fields="word" weight="1.0">\W(african energy resources)\W</regex>
@@ -6784,7 +6784,7 @@
   <regex fields="word" weight="1.0">\W(sar inc)\W</regex>
   <regex fields="word" weight="1.0">\W(horizonte minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(sapet development peru)\W</regex>
-  <regex fields="word" weight="1.0">\W(southwest oil & gas income fund viii a l p)\W</regex>
+  <regex fields="word" weight="1.0">\W(southwest oil \& gas income fund viii a l p)\W</regex>
   <regex fields="word" weight="1.0">\W(isaco inc)\W</regex>
   <regex fields="word" weight="1.0">\W(platypus minerals)\W</regex>
   <regex fields="word" weight="1.0">\W(erin resources)\W</regex>
@@ -6808,7 +6808,7 @@
   <regex fields="word" weight="1.0">\W(viq solutions)\W</regex>
   <regex fields="word" weight="1.0">\W(lerner william)\W</regex>
   <regex fields="word" weight="1.0">\W(pertamina hulu energi nunukan company)\W</regex>
-  <regex fields="word" weight="1.0">\W(horizonsative s&p/tsx 60 index covered call etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(horizonsative s\&p/tsx 60 index covered call etf)\W</regex>
   <regex fields="word" weight="1.0">\W(gold ridge exploration corp)\W</regex>
   <regex fields="word" weight="1.0">\W(south texas oil co)\W</regex>
   <regex fields="word" weight="1.0">\W(mississippi marketing)\W</regex>
@@ -6829,7 +6829,7 @@
   <regex fields="word" weight="1.0">\W(colt resources)\W</regex>
   <regex fields="word" weight="1.0">\W(neon energy)\W</regex>
   <regex fields="word" weight="1.0">\W(el paso energy management)\W</regex>
-  <regex fields="word" weight="1.0">\W(mitsui & co)\W</regex>
+  <regex fields="word" weight="1.0">\W(mitsui \& co)\W</regex>
   <regex fields="word" weight="1.0">\W(aquila resources)\W</regex>
   <regex fields="word" weight="1.0">\W(fec resources)\W</regex>
   <regex fields="word" weight="1.0">\W(sunset cove mining)\W</regex>
@@ -6913,9 +6913,9 @@
   <regex fields="word" weight="1.0">\W(matamec explorations)\W</regex>
   <regex fields="word" weight="1.0">\W(ridgewood energy o fund)\W</regex>
   <regex fields="word" weight="1.0">\W(potash ridge corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(falcon oil & gas co)\W</regex>
+  <regex fields="word" weight="1.0">\W(falcon oil \& gas co)\W</regex>
   <regex fields="word" weight="1.0">\W(elevation capital corp.)\W</regex>
-  <regex fields="word" weight="1.0">\W(w&t offshore)\W</regex>
+  <regex fields="word" weight="1.0">\W(w\&t offshore)\W</regex>
   <regex fields="word" weight="1.0">\W(storm resources)\W</regex>
   <regex fields="word" weight="1.0">\W(torrent energy corp)\W</regex>
   <regex fields="word" weight="1.0">\W(kidman resources)\W</regex>
@@ -6937,7 +6937,7 @@
   <regex fields="word" weight="1.0">\W(redtail metals corp)\W</regex>
   <regex fields="word" weight="1.0">\W(troy resources)\W</regex>
   <regex fields="word" weight="1.0">\W(barrick gold corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(total e&p)\W</regex>
+  <regex fields="word" weight="1.0">\W(total e\&p)\W</regex>
   <regex fields="word" weight="1.0">\W(avoca inc)\W</regex>
   <regex fields="word" weight="1.0">\W(platinex inc)\W</regex>
   <regex fields="word" weight="1.0">\W(consolidated global investments)\W</regex>
@@ -6946,7 +6946,7 @@
   <regex fields="word" weight="1.0">\W(exeter resource corp)\W</regex>
   <regex fields="word" weight="1.0">\W(poliedro oil)\W</regex>
   <regex fields="word" weight="1.0">\W(adelaide brighton)\W</regex>
-  <regex fields="word" weight="1.0">\W(frontier oil & refining co)\W</regex>
+  <regex fields="word" weight="1.0">\W(frontier oil \& refining co)\W</regex>
   <regex fields="word" weight="1.0">\W(base resources)\W</regex>
   <regex fields="word" weight="1.0">\W(arsenal energy)\W</regex>
   <regex fields="word" weight="1.0">\W(bell copper corp)\W</regex>
@@ -6975,11 +6975,11 @@
   <regex fields="word" weight="1.0">\W(pgi energy fund i series 2010inc)\W</regex>
   <regex fields="word" weight="1.0">\W(strike resources)\W</regex>
   <regex fields="word" weight="1.0">\W(pacific coast energy co lp)\W</regex>
-  <regex fields="word" weight="1.0">\W(horizons betapro s&p/tsx 60 inverse etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(horizons betapro s\&p/tsx 60 inverse etf)\W</regex>
   <regex fields="word" weight="1.0">\W(general gold corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(oil & natural gas corp.)\W</regex>
+  <regex fields="word" weight="1.0">\W(oil \& natural gas corp.)\W</regex>
   <regex fields="word" weight="1.0">\W(reef global energy ventures ii)\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p/tsx canadian dividend aristocrats income fund etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p/tsx canadian dividend aristocrats income fund etf)\W</regex>
   <regex fields="word" weight="1.0">\W(petroci c-11)\W</regex>
   <regex fields="word" weight="1.0">\W(dot resources)\W</regex>
   <regex fields="word" weight="1.0">\W(caelus energy mangkauhat pte)\W</regex>
@@ -7008,7 +7008,7 @@
   <regex fields="word" weight="1.0">\W(cu inc)\W</regex>
   <regex fields="word" weight="1.0">\W(emerald energy plc sucursal colombia)\W</regex>
   <regex fields="word" weight="1.0">\W(ocean rig 2 as)\W</regex>
-  <regex fields="word" weight="1.0">\W(horizons betapro s&p/tsx capped energy bull plus etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(horizons betapro s\&p/tsx capped energy bull plus etf)\W</regex>
   <regex fields="word" weight="1.0">\W(murphy semai oil co.)\W</regex>
   <regex fields="word" weight="1.0">\W(woodgate energy corp)\W</regex>
   <regex fields="word" weight="1.0">\W(teryl resources corp.)\W</regex>
@@ -7022,14 +7022,14 @@
   <regex fields="word" weight="1.0">\W(rouge resources)\W</regex>
   <regex fields="word" weight="1.0">\W(rosa capital)\W</regex>
   <regex fields="word" weight="1.0">\W(alamos gold)\W</regex>
-  <regex fields="word" weight="1.0">\W(isaes s&p/tsx global mining index fund etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(isaes s\&p/tsx global mining index fund etf)\W</regex>
   <regex fields="word" weight="1.0">\W(grisa assets)\W</regex>
   <regex fields="word" weight="1.0">\W(technol fuel conditioners)\W</regex>
   <regex fields="word" weight="1.0">\W(toromont industries)\W</regex>
   <regex fields="word" weight="1.0">\W(genivar inc)\W</regex>
   <regex fields="word" weight="1.0">\W(royal host)\W</regex>
   <regex fields="word" weight="1.0">\W(rubicon minerals corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(lamu oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(lamu oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(kingsa resources)\W</regex>
   <regex fields="word" weight="1.0">\W(pacific niugini)\W</regex>
   <regex fields="word" weight="1.0">\W(yorkton ventures)\W</regex>
@@ -7046,7 +7046,7 @@
   <regex fields="word" weight="1.0">\W(lone oak acquisition corp)\W</regex>
   <regex fields="word" weight="1.0">\W(gideon capital corp)\W</regex>
   <regex fields="word" weight="1.0">\W(meteoric resources nl)\W</regex>
-  <regex fields="word" weight="1.0">\W(derek oil & gas corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(derek oil \& gas corp)\W</regex>
   <regex fields="word" weight="1.0">\W(leader energy services)\W</regex>
   <regex fields="word" weight="1.0">\W(dejour energy)\W</regex>
   <regex fields="word" weight="1.0">\W(oremex silver)\W</regex>
@@ -7060,7 +7060,7 @@
   <regex fields="word" weight="1.0">\W(hollyfrontier corp)\W</regex>
   <regex fields="word" weight="1.0">\W(chevron australia (epp45) pty)\W</regex>
   <regex fields="word" weight="1.0">\W(conquest petroleum)\W</regex>
-  <regex fields="word" weight="1.0">\W(bmo s&p/tsx equal weight banks index etf)\W</regex>
+  <regex fields="word" weight="1.0">\W(bmo s\&p/tsx equal weight banks index etf)\W</regex>
   <regex fields="word" weight="1.0">\W(red trail energy)\W</regex>
   <regex fields="word" weight="1.0">\W(stornoway diamond corp)\W</regex>
   <regex fields="word" weight="1.0">\W(castle mountain mining company)\W</regex>
@@ -7070,13 +7070,13 @@
   <regex fields="word" weight="1.0">\W(brixton energy corp)\W</regex>
   <regex fields="word" weight="1.0">\W(amrose oil co)\W</regex>
   <regex fields="word" weight="1.0">\W(world fuel services corp)\W</regex>
-  <regex fields="word" weight="1.0">\W(northern oil & gas)\W</regex>
+  <regex fields="word" weight="1.0">\W(northern oil \& gas)\W</regex>
   <regex fields="word" weight="1.0">\W(african gold group,)\W</regex>
   <regex fields="word" weight="1.0">\W(brilliant oil)\W</regex>
   <regex fields="word" weight="1.0">\W(vermilion energy)\W</regex>
   <regex fields="word" weight="1.0">\W(rice energy)\W</regex>
   <regex fields="word" weight="1.0">\W(cepsa peru)\W</regex>
-  <regex fields="word" weight="1.0">\W(maya gold & silver)\W</regex>
+  <regex fields="word" weight="1.0">\W(maya gold \& silver)\W</regex>
   <regex fields="word" weight="1.0">\W(cadan resources corp)\W</regex>
   <regex fields="word" weight="1.0">\W(timbercreek senior mortgage investment corp)\W</regex>
   <regex fields="word" weight="1.0">\W(tangiers petroleum)\W</regex>
@@ -7114,7 +7114,7 @@
   <regex fields="word" weight="1.0">\W(miller exploration co)\W</regex>
   <regex fields="word" weight="1.0">\W(lukoil))\W</regex>
   <regex fields="word" weight="1.0">\W(petro viking energy)\W</regex>
-  <regex fields="word" weight="1.0">\W(united saes oil & gas corp)\W</regex>
+  <regex fields="word" weight="1.0">\W(united saes oil \& gas corp)\W</regex>
   <regex fields="word" weight="1.0">\W(atlas iron)\W</regex>
   <regex fields="word" weight="1.0">\W(gran tierra exchangeco)\W</regex>
   <regex fields="word" weight="1.0">\W(nwm mining corp)\W</regex>
@@ -7141,7 +7141,7 @@
   <regex fields="word" weight="1.0">\W(precious metals bullion trust)\W</regex>
   <regex fields="word" weight="1.0">\W(goldsach limited)\W</regex>
   <regex fields="word" weight="1.0">\W(saoil australia theta)\W</regex>
-  <regex fields="word" weight="1.0">\W(first asset energy & resource fund l.p.)\W</regex>
+  <regex fields="word" weight="1.0">\W(first asset energy \& resource fund l.p.)\W</regex>
   <regex fields="word" weight="1.0">\W(saon energy)\W</regex>
   <regex fields="word" weight="1.0">\W(eaglewood energy)\W</regex>
   <regex fields="word" weight="1.0">\W(big bank big oil split corp.)\W</regex>
