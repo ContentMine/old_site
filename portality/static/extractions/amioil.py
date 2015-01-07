@@ -15,14 +15,16 @@ try:
 except:
     pass
 
+counter = 0
 ranonurls = 0
 amisuccess = 0
 hitscore = 0
 failures = []
 
 for url in urls:
+    counter += 1
     url = url.strip().replace('\n','')
-    print url
+    print counter, url
     # call AMI on the url if it is an htm or xml
     if url.endswith('.htm') or url.endswith('.xml'):
         ranonurls += 1
@@ -60,9 +62,9 @@ for url in urls:
                 doc['id'] = uuid.uuid4().hex
                 doc['file'] = url
                 doc['berlin'] = 'yes'
-                #doc['keywords'] = requests.get('http://cottagelabs.com/parser?blurb="' + doc['pre'] + ' ' + doc['fact'] + ' ' + doc['post'] + '"').json()
+                doc['keywords'] = requests.get('http://cottagelabs.com/parser?blurb="' + doc['pre'] + ' ' + doc['fact'] + ' ' + doc['post'] + '"').json()
                 requests.post(target + str(doc['id']), data=json.dumps(doc))
-                #time.sleep(0.1)
+                time.sleep(0.05)
 
 print ranonurls, amisuccess
 print hitscore
