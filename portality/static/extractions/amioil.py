@@ -3,17 +3,17 @@ from datetime import datetime
 from lxml import etree
 
 urls = open('anadarko','r')
-regexurl = 'http://pads.cottagelabs.com/p/oilregex/export/txt'
+regexurl = 'company_tagger.xml'
 target = 'http://localhost:9200/contentmine/fact/'
 
-try:
+'''try:
     toremove = requests.get(target + '_search?size=1000000&q=berlin.exact:"yes"').json()
     print 'deleting ', toremove['hits']['total']
     for r in toremove['hits']['hits']:
         if 'id' in r['_source'] and r['_source']['id']:
             requests.delete(target + str(r['_source']['id']))
 except:
-    pass
+    pass'''
 
 counter = 0
 ranonurls = 0
