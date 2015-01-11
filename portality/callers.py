@@ -267,7 +267,7 @@ class callers(object):
         
 
         
-    def regex(self, urls=[], regexfile=[], tags=[], getkeywords=True):
+    def regex(self, urls=[], regexfile=[], tags=[], getkeywords=False):
         if not isinstance(urls,list): urls = urls.split(',')
         if not isinstance(tags,list): tags = tags.split(',')
         if not isinstance(regexfile,list): regexfile = regexfile.split(',')
@@ -283,29 +283,33 @@ class callers(object):
                     '-g',
                     regex
                 ]
-                subprocess.Popen(co)
+                p = subprocess.Popen(co, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                out, err = p.communicate()
 
-                # find and read the output file
-                outputfile = '/opt/contentmine/src/site/target/null.xml/results.xml'
+                if err:
+                    return {"errors": err}
+                else:
+                    # find and read the output file
+                    outputfile = '/opt/contentmine/src/site/target/null.xml/results.xml'
 
-                ns = etree.FunctionNamespace("http://www.xml-cml.org/ami")
-                ns.prefix = "zf"
-                tree = etree.parse(outputfile)
-                hits = tree.xpath('//zf:hit')
-                for hit in hits:
-                    doc = {
-                        'tags': tags,
-                    }
-                    doc["pre"] = hit.get("pre")
-                    doc["fact"] = hit.get("word")
-                    doc["post"] = hit.get("post")
-                    doc['source'] = url
-                    if getkeywords:
-                        doc['keywords'] = requests.get('http://cottagelabs.com/parser?blurb="' + doc['pre'] + ' ' + doc['fact'] + ' ' + doc['post'] + '"').json()
-                        time.sleep(0.05)
-                    f = models.Fact()
-                    f.data = doc
-                    f.save()
+                    ns = etree.FunctionNamespace("http://www.xml-cml.org/ami")
+                    ns.prefix = "zf"
+                    tree = etree.parse(outputfile)
+                    hits = tree.xpath('//zf:hit')
+                    for hit in hits:
+                        doc = {
+                            'tags': tags,
+                        }
+                        doc["pre"] = hit.get("pre")
+                        doc["fact"] = hit.get("word")
+                        doc["post"] = hit.get("post")
+                        doc['source'] = url
+                        if getkeywords:
+                            doc['keywords'] = requests.get('http://cottagelabs.com/parser?blurb="' + doc['pre'] + ' ' + doc['fact'] + ' ' + doc['post'] + '"').json()
+                            time.sleep(0.05)
+                        f = models.Fact()
+                        f.data = doc
+                        f.save()
 
         return {"processing": "please check the facts API for results"}
 
