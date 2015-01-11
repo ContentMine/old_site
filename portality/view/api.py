@@ -171,6 +171,39 @@ def species():
         return resp
 
 
+# call the regex visitor
+@blueprint.route('/processor/regex', methods=['GET','POST'])
+@util.jsonp
+def regex():
+    if request.method == 'GET' and 'ident' not in request.values:
+        # show the instructions
+        resp = make_response( json.dumps({
+            "description": "The regex processor. Searches a resource for defined regexes",
+            "type": ["visitor"],
+            "GET": "GETs this instruction page (or, provided at least a urls parameter, emulates the POST)",
+            "POST": "POST your instructions and trigger extractions to the fact index."
+        }) )
+        resp.mimetype = "application/json"
+        return resp
+        
+    else:
+        params = request.json if request.json else request.values
+        try:
+            output = callers().regex(
+                urls=params['urls'], 
+                regexfile=params['regexfile'],
+                tags=params['tags']
+            )
+        except Exception, e:
+            resp = make_response(json.dumps({'errors': [str(e)]}))
+            resp.mimetype = "application/json"
+            return resp, 400
+
+        resp = make_response( json.dumps(output) )
+        resp.mimetype = "application/json"
+        return resp
+
+
 
 # provide access to catalogue of article metadata ------------------------------
 @blueprint.route('/catalogue', methods=['GET','POST'])

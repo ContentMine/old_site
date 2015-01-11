@@ -1,10 +1,12 @@
-import uuid, subprocess, os, shutil, json, requests
+import uuid, subprocess, os, shutil, json, requests, time
 
 from datetime import datetime
 import portality.models as models
 from portality.core import app
 
 from xml.etree import ElementTree as ET
+
+from lxml import etree
 
 
 class callers(object):
@@ -263,3 +265,51 @@ class callers(object):
 
         return results
         
+
+        
+    def regex(self, urls=[], regexfile=[], tags=[], getkeywords=True):
+        if not isinstance(urls,list): urls = urls.split(',')
+        if not isinstance(tags,list): tags = tags.split(',')
+        if not isinstance(regexfile,list): regexfile = regexfile.split(',')
+
+        for url in urls:
+            for regex in regexfile:
+                url = url.strip().replace('\n','')
+                if not regex.startswith('http'): regex = 'portality/ami-regexes/' + regex + '.xml'
+                co = [
+                    'ami-regex',
+                    '-i',
+                    url,
+                    '-g',
+                    regex
+                ]
+                p = subprocess.Popen(co, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                out, err = p.communicate()
+
+                if err:
+                    print err
+                else:
+                    # find and read the output file
+                    outputfile = 'target/null.xml/results.xml'
+
+                    ns = etree.FunctionNamespace("http://www.xml-cml.org/ami")
+                    ns.prefix = "zf"
+                    tree = etree.parse(outputfile)
+                    hits = tree.xpath('//zf:hit')
+                    for hit in hits:
+                        doc = {
+                            'tags': tags,
+                        }
+                        doc["pre"] = hit.get("pre")
+                        doc["fact"] = hit.get("word")
+                        doc["post"] = hit.get("post")
+                        doc['source'] = url
+                        if getkeywords:
+                            doc['keywords'] = requests.get('http://cottagelabs.com/parser?blurb="' + doc['pre'] + ' ' + doc['fact'] + ' ' + doc['post'] + '"').json()
+                            time.sleep(0.05)
+                        f = models.Fact()
+                        f.data = doc
+                        f.save()
+
+        return {"processing": "please check the facts API for results"}
+
