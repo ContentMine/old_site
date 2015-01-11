@@ -286,7 +286,7 @@ class callers(object):
                 subprocess.Popen(co)
 
                 # find and read the output file
-                outputfile = 'target/null.xml/results.xml'
+                outputfile = '/opt/contentmine/src/site/target/null.xml/results.xml'
 
                 ns = etree.FunctionNamespace("http://www.xml-cml.org/ami")
                 ns.prefix = "zf"
