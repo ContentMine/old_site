@@ -287,7 +287,7 @@ class callers(object):
                 out, err = p.communicate()
 
                 if err:
-                    print err
+                    return {"errors": err}
                 else:
                     # find and read the output file
                     outputfile = 'target/null.xml/results.xml'
