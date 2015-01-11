@@ -20,7 +20,11 @@
                 {% if record.parent.title %}
                 <b><i>{{record.parent.title}}</i></b>
                 {% else %}
+                {% if record.source %}
+                <a target="_blank" href="{{record.source}}">{{record.source}}</a>
+                {% else %}
                 <a href="/catalogue/{{record.parent.id}}">{{record.parent.id}}</a>
+                {% endif %}
                 {% endif %}
                 <br>
                 {% if record.parent.author %}Author(s): {{ ", ".join(record.parent.author) }}<br>{% endif %}
