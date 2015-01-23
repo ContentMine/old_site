@@ -11,6 +11,8 @@ from lxml import etree
 
 class callers(object):
 
+    
+    
     def __init__(self,scraperdir=False,storagedir=False,speciesdir=False,speciesoutput=False):
         route = os.path.dirname(os.path.abspath(__file__)).replace('/portality','/')
         if scraperdir:
@@ -44,6 +46,8 @@ class callers(object):
         except:
             return ["check the route to the scrapers folder!"]
 
+        
+        
     def quickscrape(self,scraper=False,urls=[],update=False):
         # TODO: there should be a check to see if this is already in the catalogue
         # and if the files are already extracted
@@ -100,6 +104,7 @@ class callers(object):
                     print f.id
             output.append({"metadata":res,"id":res['id'],"catalogued":"https://contentmine.org/api/catalogue/" + res['id']})
         return output
+            
             
             
     def _process(self,url,scraper):
@@ -312,4 +317,25 @@ class callers(object):
                         f.save()
 
         return {"processing": "please check the facts API for results"}
+
+
+    
+    def norma(self, url, xsl='/opt/contentmine/src/norma/src/main/resources/org/xmlcml/norma/pubstyle/nlm/toHtml.xsl', output='/opt/contentmine/src/norma/target/normatest'):
+        co = [
+            'norma',
+            '-i',
+            url,
+            '-x',
+            xsl,
+            '-o',
+            output
+        ]
+        p = subprocess.Popen(co, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        out, err = p.communicate()
+
+        if err:
+            return {"errors": err}
+        else:
+            return {"output": output }
+
 
