@@ -203,6 +203,40 @@ def regex():
         resp.mimetype = "application/json"
         return resp
 
+    
+
+# call norma
+@blueprint.route('/processor/norma', methods=['GET','POST'])
+@util.jsonp
+def regex():
+    if request.method == 'GET' and 'url' not in request.values:
+        # show the instructions
+        resp = make_response( json.dumps({
+            "description": "The norma processor. Normalises poor xml/html into decent format",
+            "type": ["visitor"],
+            "GET": "GETs this instruction page (or, provided at least a url parameter, emulates the POST)",
+            "POST": "POST your instructions and triggers normalisation of a file."
+        }) )
+        resp.mimetype = "application/json"
+        return resp
+        
+    else:
+        params = request.json if request.json else request.values
+        try:
+            output = callers().norma(
+                url=params['url'], 
+                xsl=params['xsl'],
+                output=params['output']
+            )
+        except Exception, e:
+            resp = make_response(json.dumps({'errors': [str(e)]}))
+            resp.mimetype = "application/json"
+            return resp, 400
+
+        resp = make_response( json.dumps(output) )
+        resp.mimetype = "application/json"
+        return resp
+
 
 
 # provide access to catalogue of article metadata ------------------------------
