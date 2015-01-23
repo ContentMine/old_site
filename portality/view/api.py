@@ -208,7 +208,7 @@ def regex():
 # call norma
 @blueprint.route('/processor/norma', methods=['GET','POST'])
 @util.jsonp
-def regex():
+def norma():
     if request.method == 'GET' and 'url' not in request.values:
         # show the instructions
         resp = make_response( json.dumps({
