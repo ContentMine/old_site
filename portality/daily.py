@@ -48,6 +48,7 @@ def daily(cid,tags=[]):
         slug = url.replace('://','_').replace('/','_').replace(':','')
         b = json.load(open(outputdirectory + '/' + slug + '/bib.json','r'))
         rec = merge(rec,b)
+        if 'id' not in rec: rec['id'] = cid
         requests.post('http://localhost:9200/contentmine/catalogue/' + cid, data=json.dumps(rec))
         for fl in os.listdir(outputdirectory + '/' + slug):
             shutil.copy(os.path.join(outputdirectory + '/' + slug, fl), outputdirectory)
@@ -178,8 +179,8 @@ def getdailies():
     results = requests.post('http://localhost:9200/contentmine/catalogue/_search', data=json.dumps(q))
 
     for result in results.json().get('hits',{}).get('hits',[]):
-        print "processing " + str(result['id'])
-        daily(result['id'])
+        print "processing " + str(result['_id'])
+        daily(result['_id'])
 
         
 getdailies()
