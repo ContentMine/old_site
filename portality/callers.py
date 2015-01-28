@@ -144,31 +144,10 @@ class callers(object):
 
         # find and read the metadata file
         try:
-            b = {}
             slug = url.replace('://','_').replace('/','_').replace(':','')
+            b = json.load(open(outputdirectory + '/' + slug + '/bib.json','r'))
             b["output"] = "http://contentmine.org/static/scraping/" + slug + '/' + ident
             b['slug'] = slug
-            mm = json.load(open(outputdirectory + '/' + slug + '/bib.json','r'))
-            print mm
-            m = {}
-            for item in mm:
-                ky = item.keys()[0]
-                if ky in m.keys():
-                    if not isinstance(m[ky],list): m[ky] = [m[ky]]
-                    m[ky].append(item[ky])
-                else:
-                    m[ky] = item[ky]
-            print m
-            # TODO: process the metadata into bibjson (this should perhaps happen in the scraper proper)
-            #if m.get('title',{}).get('value',False): b['title'] = m['title']['value'][0]
-            #if m.get('doi',{}).get('value',False): b['doi'] = m['doi']['value'][0]
-            #if m.get('description',{}).get('value',False): b['description'] = m['description']['value'][0]
-            #if m.get('author',{}).get('value',False): b['author'] = m['author']['value']
-            #if m.get('abstract',{}).get('value',False): b['abstract'] = m['abstract']['value'][0]
-            #if m.get('fulltext_xml',{}).get('value',False): b['fulltext_xml'] = m['fulltext_xml']['value'][0]
-            #if m.get('fulltext_html',{}).get('value',False): b['fulltext_html'] = m['fulltext_html']['value'][0]
-            #if m.get('fulltext_pdf',{}).get('value',False): b['fulltext_pdf'] = m['fulltext_pdf']['value'][0]
-            b = m
             b["id"] = ident
 
             # TODO: move the extracted content files to proper storage
