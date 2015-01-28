@@ -36,7 +36,7 @@ def daily(cid,tags=[]):
         '/opt/contentmine/src/journal-scrapers/scrapers/plos.json',
         '--url',
         url,
-        '-f',
+        '--outformat',
         'bibjson'
     ]
     p = subprocess.Popen(co, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -46,7 +46,7 @@ def daily(cid,tags=[]):
         return {"errors": err}
     else:
         slug = url.replace('://','_').replace('/','_').replace(':','')
-        b = json.load(open(outputdirectory + '/' + slug + '/results.json','r'))
+        b = json.load(open(outputdirectory + '/' + slug + '/bib.json','r'))
         rec = merge(rec,b)
         requests.post('http://localhost:9200/contentmine/catalogue/' + cid, data=json.dumps(rec))
         for fl in os.listdir(outputdirectory + '/' + slug):

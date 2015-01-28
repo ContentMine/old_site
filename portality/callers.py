@@ -124,7 +124,7 @@ class callers(object):
             qs,
             '--output',
             outputdirectory,
-            '-f',
+            '--outformat',
             'bibjson'
         ]
         if scraper:
@@ -148,7 +148,7 @@ class callers(object):
             slug = url.replace('://','_').replace('/','_').replace(':','')
             b["output"] = "http://contentmine.org/static/scraping/" + slug + '/' + ident
             b['slug'] = slug
-            mm = json.load(open(outputdirectory + '/' + slug + '/results.json','r'))
+            mm = json.load(open(outputdirectory + '/' + slug + '/bib.json','r'))
             print mm
             m = {}
             for item in mm:
