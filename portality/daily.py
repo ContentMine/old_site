@@ -56,8 +56,8 @@ def daily(cid,tags=[]):
 
     # run norma to get a normalised version of the xml file ready for processing
     print "norma"
-    fulltext = outputdirectory + 'fulltext.xml'
-    normal = outputdirectory + 'normalised.html'
+    fulltext = outputdirectory + '/fulltext.xml'
+    normal = outputdirectory + '/normalised.html'
     co = [
         'norma',
         '-i',
@@ -90,8 +90,8 @@ def daily(cid,tags=[]):
     if err:
         print 'ami-species error ', err
         return {"errors": err}
-    shutil.move('target/fulltext.xml/results.xml', outputdirectory + 'species_results.xml')
-    species_results = outputdirectory + 'species_results.xml'
+    shutil.move('target/fulltext.xml/results.xml', outputdirectory + '/species_results.xml')
+    species_results = outputdirectory + '/species_results.xml'
     tree = ET.parse(species_results).getroot()
     elems = tree.find('results')[1:]
     for sub in elems:
@@ -116,8 +116,8 @@ def daily(cid,tags=[]):
     if err:
         print 'ami-regex error ', err
         return {"errors": err}
-    shutil.move('target/fulltext.xml/results.xml', outputdirectory + 'regex_results.xml')
-    regex_results = outputdirectory + 'regex_results.xml'
+    shutil.move('target/fulltext.xml/results.xml', outputdirectory + '/regex_results.xml')
+    regex_results = outputdirectory + '/regex_results.xml'
     ns = etree.FunctionNamespace("http://www.xml-cml.org/ami")
     ns.prefix = "zf"
     tree = etree.parse(regex_results)
