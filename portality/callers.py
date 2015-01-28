@@ -61,8 +61,6 @@ class callers(object):
         
         output = []
 
-        print urls
-
         for url in urls:
             # have a look and see if this url already exists in the catalogue
             check = models.Catalogue.query(q='url.exact:"' + url + '"')

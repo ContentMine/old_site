@@ -1,0 +1,87 @@
+<compoundRegex title="concatenated">
+<regex weight="1.0" fields="flower pre word post">((.{1,50})([Ff]lower)\s+(.{1,50}))</regex>
+<regex weight="1.0" fields="word">([Dd]eep\s+[Rr]oot)</regex>
+<regex weight="1.0" fields="word">([Dd]rought\s+[Tt]olerance)</regex>
+<regex weight="1.0" fields="all pre word">(([Ff]ull|[Pp]artial)\s+([Ss]hade|[Ss]un))</regex>
+<regex weight="1.0" fields="all word">([Gg]rowing\s+[Dd]egree\s+[Dd]ays\s+[Uu]ntil\s+([^\s]+))</regex>
+<regex weight="1.0" fields="word">([Gg]rowth\s+[Rr]ate)</regex>
+<regex weight="1.0" fields="word">([Hh]eight\s+[Aa]t\s+[Mm]aturity)</regex>
+<regex weight="1.0" fields="word">([Ll]ifespan)</regex>
+<regex weight="1.0" fields="word">([Mm]inimum\s+[Tt]olerated\s+[Tt]emperature)</regex>
+<regex weight="1.0" fields="word">([Nn]itrogen\s+[Ff]ix[^\s+]+)</regex>
+<regex weight="1.0" fields="word">([Rr]oot\s+[Dd]epth)</regex>
+<regex weight="1.0" fields="word">([Rr]oot\s+[Tt]ype)</regex>
+<regex weight="1.0" fields="word">([Ss]hade\s+[Cc]over)</regex>
+<regex weight="1.0" fields="word">([Ss]oil\s+pH)</regex>
+<regex weight="1.0" fields="word">([Ss]oil\s+[Tt]ype)</regex>
+<regex weight="1.0" fields="word">([Tt]ap\s+[Rr]oot)</regex>
+<regex weight="1.0" fields="all pre word post">(([^\.]{1,200})([Ww]ater\s+[Uu]se)([^\.]{1,200}))</regex>
+<regex weight="1.0" fields="word">([Bb]lack\s+[Hh]oles?)</regex>
+<regex weight="1.0" fields="word">(CMB|[Cc]osmic\s+[Mm]icrowave\s+[Bb]ackground)</regex>
+<regex weight="1.0" fields="word">([Dd]warf|[Dw]arves|[Dd]warfs)</regex>
+<regex weight="1.0" fields="word">([Gg]ravity|[Gg]ravitational)</regex>
+<regex weight="1.0" fields="word">([Ss]upergiants?)</regex>
+<regex weight="1.0" fields="word" case="">\W(Ebola)\W</regex>
+<regex weight="1.0" fields="word">\W(Marburg)\W</regex>
+<regex weight="1.0" fields="word">\W([Hh]a?emorrhagic\s+fever)</regex>
+<regex weight="0.8" fields="word">(\W[Ss]udden\s+onset)</regex>
+<regex weight="0.6" fields="word">(\W[Vv]omiting\s+diarrho?ea)</regex>
+<regex weight="0.5" fields="word">(Guinea)</regex>
+<regex weight="0.5" fields="word">\W(Sierra\s+Leone)</regex>
+<regex weight="0.5" fields="word">\W(Liberia)</regex>
+<regex weight="0.5" fields="word">\W(Mali)\W</regex>
+<regex weight="0.6" fields="word">\W([Cc]ontact\s+tracing)</regex>
+<regex weight="0.5" fields="word">\W([Bb]ats?)</regex>
+<regex weight="0.5" fields="word">\W([Bb]ushmeat)</regex>
+<regex weight="0.5" fields="word">\W(Democratic Republic\s*(\s*of)?(\s*the)?\s*Congo)(DRC)</regex>
+<regex weight="0.6" fields="word">\W([Ss]afe\s+burial\s+practice?s)</regex>
+<regex weight="1.0" fields="word">\W([Ee]bola\s+treatment\s+units?)(ETU)</regex>
+<regex weight="1.0" fields="all pre word">([Ff]igure\s+(\d+|[A-Z])\s*\.?(.{1,100})?])</regex>
+<regex weight="1.0" url="http://contentmine.org/genbank" fields="word" case="required" title="genbank">\W([A-Z]{2}\d{6})[^0-9]\W</regex>
+<regex weight="1.0" url="http://contentmine.org/metadata" fields="word" title="doi">.*10\.1371/journal\.pone\.(\d{7}).*</regex>
+<regex weight="1.0" url="http://rcsb.org/" fields="word" title="Protein Databank">\[pdb\:\s*(\d[A-Za-z][A-Za-z][A-Za-z])\]</regex>
+<regex weight="1.0" url="books.google.co.uk/books?isbn=1118017862" fields="word">(ACCTRAN)</regex>
+<regex weight="0.5" fields="word">(align[^\W]*)</regex>
+<regex weight="0.6" fields="word">(apomorph[^\W]*)</regex>
+<regex weight="0.6" fields="word">(bayesian)</regex>
+<regex weight="0.6" fields="word">(BEAST)</regex>
+<regex weight="0.6" fields="all pre word post">(([^\.]{1,100})(bootstrap[^\W]*)([^\.]{1,100}))</regex>
+<regex weight="0.8" fields="word">(branch\s+lengths?)</regex>
+<regex weight="1.0" url="DOI: 10.1111/j.1096-0031.1994.tb00179.x" fields="word">(Bremer\s+support)</regex>
+<regex weight="0.5" fields="word">(cladist[^\W]*)</regex>
+<regex weight="0.8" fields="word">(consistency\s+ind(?:ex|ices))</regex>
+<regex weight="1.0" url="books.google.co.uk/books?isbn=1118017862" fields="word">(DELTRAN)</regex>
+<regex weight="0.4" url="http://datadryad.org/" fields="word">(DRYAD)</regex>
+<regex weight="0.8" url="https://www.nescent.org/wg_garli/Main_Page" case="required" fields="word">(GARLI)</regex>
+<regex weight="0.5" url="http://www.ncbi.nlm.nih.gov/genbank/" fields="word">(GenBank)</regex>
+<regex weight="0.8" url="http://www.cladistics.com/aboutTNT.html" fields="word">(Goloboff)</regex>
+<regex weight="0.9" url="Lectures on Mathematics in the Life Sciences (American Mathematical Society) 17: 57–86." fields="word">(GTR)</regex>
+<regex weight="0.5" url="https://en.wikipedia.org/wiki/Willi_Hennig" fields="word">(Hennig)</regex>
+<regex weight="0.7" fields="word">(jackknif[^\W]*)</regex>
+<regex weight="0.5" fields="word">(maximum\s+likelihood)</regex>
+<regex weight="0.5" fields="word">(maximum\s+parsimony)</regex>
+<regex weight="0.7" fields="word">(character\s+matrix)</regex>
+<regex weight="0.7" fields="word">(MEGA)</regex>
+<regex weight="1.0" fields="word">(MrBayes)</regex>
+<regex weight="0.9" fields="word">(MPT)</regex>
+<regex weight="0.8" fields="word">(multistate\s+characters?)</regex>
+<regex weight="0.5" fields="word">(neighbou?r\s+join[^\W]*)</regex>
+<regex weight="0.1" fields="word">(node)</regex>
+<regex weight="0.8" fields="word">(nona)</regex>
+<regex weight="0.8" fields="word">(ordered\s+characters?)</regex>
+<regex weight="0.5" fields="word">(outgroup)</regex>
+<regex weight="0.5" fields="word">([Pp]arsimon[^\W]*)</regex>
+<regex weight="1.0" url="http://paup.csit.fsu.edu/" title="Phylogenetic Analysis Using Parsimony" fields="pre word">(PAUP\*?\s*(\d+\.?\d*))</regex>
+<regex weight="0.5" fields="word">(PHYLIP)</regex>
+<regex weight="0.2" fields="word">(phylog[^\W]*)</regex>
+<regex weight="0.8" fields="word">(PHYML)</regex>
+<regex weight="1.0" fields="word">(POY)</regex>
+<regex weight="1.0" fields="word">(RAxML)</regex>
+<regex weight="0.8" fields="word">(Swofford)</regex>
+<regex weight="0.9" fields="word">(TBR)</regex>
+<regex weight="0.8" url="http://www.cladistics.com/aboutTNT.html" fields="word">(TNT)</regex>
+<regex weight="0.6" fields="word">(phylogenetic\s+tree)</regex>
+<regex weight="0.8" fields="word">(TreeBASE)</regex>
+<regex weight="0.5" fields="word">(unordered\s+characters?)</regex>
+<regex weight="1.0" fields="word">(Winclada)</regex>
+</compoundRegex>
