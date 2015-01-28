@@ -67,6 +67,7 @@ def daily(cid,tags=[]):
         '-o',
         normal
     ]
+    print co
     p = subprocess.Popen(co, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     out, err = p.communicate()
     if err:
