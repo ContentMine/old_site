@@ -123,7 +123,9 @@ class callers(object):
         co = [
             qs,
             '--output',
-            outputdirectory
+            outputdirectory,
+            '-f',
+            'bibjson'
         ]
         if scraper:
             co.append('--scraper')

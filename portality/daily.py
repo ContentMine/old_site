@@ -35,7 +35,9 @@ def daily(cid,tags=[]):
         '--scraper',
         '/opt/contentmine/src/journal-scrapers/scrapers/plos.json',
         '--url',
-        url
+        url,
+        '-f',
+        'bibjson'
     ]
     p = subprocess.Popen(co, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     out, err = p.communicate()        
@@ -181,3 +183,4 @@ def getdailies():
 
         
 getdailies()
+
