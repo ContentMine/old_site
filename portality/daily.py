@@ -147,9 +147,9 @@ def daily(cid,tags=[]):
 
 
 def getdailies():
-    print "getting dailies"
     dy = datetime.now() - timedelta(days=1)
     fdy = dy.strftime("%Y-%m-%d %H%M")
+    print "getting dailies since ", fdy
     q = {
         "query": {
             "filtered": {
@@ -179,6 +179,7 @@ def getdailies():
     }    
     results = requests.post('http://localhost:9200/contentmine/catalogue/_search', data=json.dumps(q))
 
+    print "ready to proces " + str(result in results.json().get('hits',{}).get('total',0)) + ' records.'
     for result in results.json().get('hits',{}).get('hits',[]):
         print "processing " + str(result['_id'])
         daily(result['_id'])

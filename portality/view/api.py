@@ -358,27 +358,24 @@ def fact():
         return resp
                 
     elif request.method == 'POST':
-        if current_user.is_anonymous():
-            abort(401)
+        f = models.Fact()
+        if request.json:
+            for k in request.json.keys():
+                if k.lower() not in ['submit','api_key']:
+                    f.data[k] = request.json[k]
         else:
-            f = models.Fact()
-            if request.json:
-                for k in request.json.keys():
-                    if k.lower() not in ['submit','api_key']:
-                        f.data[k] = request.json[k]
-            else:
-                for k, v in request.values.items():
-                    if k.lower() not in ['submit','api_key']:
-                        f.data[k] = v        
-            saved = f.save()
-            if saved.status_code in [200,201,202]:
-                resp = make_response( f.json )
-                resp.mimetype = "application/json"
-                return resp
-            else:
-                resp = make_response( json.dumps(saved.json()) )
-                resp.mimetype = "application/json"
-                return resp, saved.status_code
+            for k, v in request.values.items():
+                if k.lower() not in ['submit','api_key']:
+                    f.data[k] = v        
+        saved = f.save()
+        if saved.status_code in [200,201,202]:
+            resp = make_response( f.json )
+            resp.mimetype = "application/json"
+            return resp
+        else:
+            resp = make_response( json.dumps(saved.json()) )
+            resp.mimetype = "application/json"
+            return resp, saved.status_code
 
 @blueprint.route('/fact/<ident>', methods=['GET','POST'])
 @util.jsonp
